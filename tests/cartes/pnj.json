@@ -1,0 +1,67 @@
+{
+	"lignes": [
+		"#######",
+		"#.....#",
+		"#.....#",
+		"#.....#",
+		"#######"
+	],
+	"nom": "pnj",
+	"legende": {
+		"#": {
+			"nom": "mur",
+			"couleur": "#5b4a3f",
+			"solide": true
+		},
+		".": {
+			"nom": "sol",
+			"couleur": "#c9a97a",
+			"solide": false
+		}
+	},
+	"depart": [
+		1,
+		2
+	],
+	"portes": [],
+	"interactions": [],
+	"pnj": [
+		{
+			"id": "a",
+			"nom": "A",
+			"x": 3,
+			"y": 2,
+			"direction": "bas",
+			"couleur": "#ff0000",
+			"texte": [
+				"Salut.",
+				"Deuxieme page."
+			],
+			"pose": "a_parle"
+		},
+		{
+			"id": "b",
+			"nom": "B",
+			"x": 5,
+			"y": 1,
+			"direction": "bas",
+			"couleur": "#0000ff",
+			"visible_si": "b_apparait",
+			"texte": [
+				"Je viens d'arriver."
+			]
+		},
+		{
+			"id": "c",
+			"nom": "C",
+			"x": 1,
+			"y": 3,
+			"direction": "bas",
+			"couleur": "#00ff00",
+			"cache_si": "a_parle",
+			"texte": [
+				"Je disparais."
+			]
+		}
+	]
+}

@@ -1,0 +1,97 @@
+{
+	"bulbizarre": {
+		"numero": 1,
+		"nom": "Bulbizarre",
+		"types": [
+			"plante",
+			"poison"
+		],
+		"couleur": "#4fa86b",
+		"base": {
+			"pv": 45,
+			"atk": 49,
+			"def": 49,
+			"vit": 45,
+			"spe": 65
+		},
+		"exp_base": 64,
+		"attaques_niveau": [
+			[
+				1,
+				"charge"
+			],
+			[
+				1,
+				"rugissement"
+			],
+			[
+				13,
+				"fouet_lianes"
+			]
+		]
+	},
+	"salameche": {
+		"numero": 4,
+		"nom": "Salameche",
+		"types": [
+			"feu"
+		],
+		"couleur": "#e8702a",
+		"base": {
+			"pv": 39,
+			"atk": 52,
+			"def": 43,
+			"vit": 65,
+			"spe": 50
+		},
+		"exp_base": 65,
+		"attaques_niveau": [
+			[
+				1,
+				"griffe"
+			],
+			[
+				1,
+				"rugissement"
+			],
+			[
+				9,
+				"flammeche"
+			]
+		]
+	},
+	"carapuce": {
+		"numero": 7,
+		"nom": "Carapuce",
+		"types": [
+			"eau"
+		],
+		"couleur": "#4a86d8",
+		"base": {
+			"pv": 44,
+			"atk": 48,
+			"def": 65,
+			"vit": 43,
+			"spe": 50
+		},
+		"exp_base": 66,
+		"attaques_niveau": [
+			[
+				1,
+				"charge"
+			],
+			[
+				1,
+				"mimi_queue"
+			],
+			[
+				8,
+				"ecume"
+			],
+			[
+				15,
+				"pistolet_a_o"
+			]
+		]
+	}
+}

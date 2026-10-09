@@ -1,0 +1,51 @@
+{
+	"lignes": [
+		"#########",
+		"#.......#",
+		"#...g...#",
+		"#.......#",
+		"#########"
+	],
+	"nom": "evt",
+	"legende": {
+		"#": {
+			"nom": "mur",
+			"couleur": "#5b4a3f",
+			"solide": true
+		},
+		".": {
+			"nom": "sol",
+			"couleur": "#c9a97a",
+			"solide": false
+		},
+		"g": {
+			"nom": "hautes herbes",
+			"couleur": "#3c8f2e",
+			"solide": false
+		}
+	},
+	"depart": [
+		1,
+		3
+	],
+	"portes": [],
+	"interactions": [],
+	"declencheurs": [
+		{
+			"symbole": "g",
+			"evenement": "test",
+			"si_pas": "vu"
+		}
+	],
+	"pnj": [
+		{
+			"id": "chen",
+			"nom": "Chen",
+			"x": 7,
+			"y": 1,
+			"direction": "bas",
+			"couleur": "#ffffff",
+			"visible_si": "arrive"
+		}
+	]
+}

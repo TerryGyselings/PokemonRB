@@ -1,0 +1,81 @@
+{
+	"charge": {
+		"nom": "Charge",
+		"type": "normal",
+		"puissance": 35,
+		"precision": 95,
+		"pp": 35
+	},
+	"griffe": {
+		"nom": "Griffe",
+		"type": "normal",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 35
+	},
+	"rugissement": {
+		"nom": "Rugissement",
+		"type": "normal",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 40,
+		"effet": {
+			"stat": "atk",
+			"cible": "adversaire",
+			"stades": -1
+		}
+	},
+	"mimi_queue": {
+		"nom": "Mimi-Queue",
+		"type": "normal",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 30,
+		"effet": {
+			"stat": "def",
+			"cible": "adversaire",
+			"stades": -1
+		}
+	},
+	"fouet_lianes": {
+		"nom": "Fouet Lianes",
+		"type": "plante",
+		"puissance": 35,
+		"precision": 100,
+		"pp": 10
+	},
+	"flammeche": {
+		"nom": "Flammeche",
+		"type": "feu",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 25
+	},
+	"pistolet_a_o": {
+		"nom": "Pistolet a O",
+		"type": "eau",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 25
+	},
+	"ecume": {
+		"nom": "Ecume",
+		"type": "eau",
+		"puissance": 20,
+		"precision": 100,
+		"pp": 30,
+		"effet": {
+			"stat": "vit",
+			"cible": "adversaire",
+			"stades": -1,
+			"chance": 0.33
+		}
+	},
+	"lutte": {
+		"nom": "Lutte",
+		"type": "normal",
+		"puissance": 50,
+		"precision": 100,
+		"pp": 1
+	}
+}

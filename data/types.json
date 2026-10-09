@@ -1,0 +1,41 @@
+{
+	"types": [
+		"normal",
+		"feu",
+		"eau",
+		"plante",
+		"poison"
+	],
+	"speciaux": [
+		"feu",
+		"eau",
+		"plante",
+		"electrik",
+		"glace",
+		"psy",
+		"dragon"
+	],
+	"efficacite": {
+		"feu": {
+			"plante": 2.0,
+			"feu": 0.5,
+			"eau": 0.5
+		},
+		"eau": {
+			"feu": 2.0,
+			"eau": 0.5,
+			"plante": 0.5
+		},
+		"plante": {
+			"eau": 2.0,
+			"feu": 0.5,
+			"plante": 0.5,
+			"poison": 0.5
+		},
+		"poison": {
+			"plante": 2.0,
+			"poison": 0.5
+		},
+		"normal": {}
+	}
+}

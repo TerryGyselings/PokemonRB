@@ -1,0 +1,99 @@
+{
+	"lignes": [
+		"##########,,,,##########",
+		"##########,,,,##########",
+		"##........,,,,.....f.f##",
+		"##........,,,,,,,,,,,,##",
+		"##......##,,,,,,,,,,,,##",
+		"##llllll##llllll..,,,,##",
+		"##.f...f##gggggggggggg##",
+		"##f...f.##gggggggggggg##",
+		"##.f...f##gggggggggggg##",
+		"##f...f.##gggggggggggg##",
+		"##llllll##gggggggggggg##",
+		"##.f....##...,,,,,,,,,##",
+		"##f..........,,,,,,,,,##",
+		"##.f.........,,,gggggg##",
+		"##..............gggggg##",
+		"####llllll######gggggg##",
+		"####......######gggggg##",
+		"##...........,,,gggggg##",
+		"##...,,,,,,,,,,,...f.f##",
+		"##...,,,,,,,,,,,..f.f.##",
+		"##ll.llll..lllllllllll##",
+		"##...,,,,,,,,,,,,,,,,,##",
+		"##...,,,,,,,,,,,,,,,,,##",
+		"##................,,,,##",
+		"##..........gggggg,,,,##",
+		"############gggggg,,,,##",
+		"############ggggggllll##",
+		"##.f.f......gggggg,,,,##",
+		"##f.f.......gggggg,,,,##",
+		"##,,,,,,,,,,,,,,,,,,,,##",
+		"##,,,,,,,,,,,,,,,,,,,,##",
+		"##llll...Sllllllllllll##",
+		"##..ggggggg,,,,..ggggg##",
+		"##..ggggggg,,,,..ggggg##",
+		"##ggggggg.f,,,,gggggf.##",
+		"##gggggggf..gg.ggggg.f##",
+		"##FFFFFFFFFFggFFFFFFFF##",
+		"##.........FggF.......##",
+		"############gg##########",
+		"############gg##########"
+	],
+	"nom": "Route 1",
+	"legende": {
+		"#": {
+			"nom": "arbre",
+			"couleur": "#1f5e2e",
+			"solide": true
+		},
+		".": {
+			"nom": "herbe",
+			"couleur": "#7cc04f",
+			"solide": false
+		},
+		",": {
+			"nom": "chemin",
+			"couleur": "#e0d58a",
+			"solide": false
+		},
+		"S": {
+			"nom": "panneau",
+			"couleur": "#a8743a",
+			"solide": true
+		},
+		"f": {
+			"nom": "fleurs",
+			"couleur": "#e8708a",
+			"solide": false
+		},
+		"F": {
+			"nom": "cloture",
+			"couleur": "#f4f1e8",
+			"solide": true
+		},
+		"l": {
+			"nom": "rebord",
+			"couleur": "#8B4513",
+			"solide": false
+		},
+		"g": {
+			"nom": "hautes herbes",
+			"couleur": "#3f9a3a",
+			"solide": false
+		}
+	},
+	"portes": [],
+	"interactions": [
+		{
+			"x": 9,
+			"y": 31,
+			"texte": [
+				"ROUTE 1",
+				"Bourg Palette au sud."
+			]
+		}
+	],
+	"pnj": []
+}

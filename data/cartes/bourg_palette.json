@@ -1,0 +1,180 @@
+{
+	"lignes": [
+		"############,,##########",
+		"############,,##########",
+		"##,,,,,,,,,,,,,,,,,,,.##",
+		"##,,,,,,,,,,,,,,,,,,,.##",
+		"##,..ttttt.,..ttttt.,.##",
+		"##,..ttttt.,..ttttt.,.##",
+		"##,..MMMMM.,..MMMMM.,.##",
+		"##,.mMpMMM.,.mMpMMM.,.##",
+		"##,,,,,,,,,,,,,,,,,,,.##",
+		"##,,,,,,,,,,,,,,,,,,,.##",
+		"##,,,,,,,,,,.ttttttt,.##",
+		"##,,.FFFFS.,.ttttttt,.##",
+		"##,,.ffff..,.MMMMMMM,.##",
+		"##,,.ffff..,.MMMpMMM,.##",
+		"##,,.S.....,,,,,,,,,,.##",
+		"##,,,,,,,,,,........,.##",
+		"##,,,,,,,,,,.FFFSFF.,.##",
+		"##.....~~~~,,,,,,,,,,.##",
+		"##.....~~~~...........##",
+		"##.....~~~~...........##",
+		"######F~~~~FFFFFFF######",
+		"######F~~~~......F######"
+	],
+	"nom": "Bourg Palette",
+	"legende": {
+		"#": {
+			"nom": "arbre",
+			"couleur": "#1f5e2e",
+			"solide": true
+		},
+		".": {
+			"nom": "herbe",
+			"couleur": "#7cc04f",
+			"solide": false
+		},
+		",": {
+			"nom": "chemin",
+			"couleur": "#e0d58a",
+			"solide": false
+		},
+		"M": {
+			"nom": "mur de maison",
+			"couleur": "#d9d4c4",
+			"solide": true
+		},
+		"t": {
+			"nom": "toit",
+			"couleur": "#c0453a",
+			"solide": true
+		},
+		"P": {
+			"nom": "porte fermee",
+			"couleur": "#5a3a1c",
+			"solide": true
+		},
+		"p": {
+			"nom": "porte",
+			"couleur": "#7a4a25",
+			"solide": false
+		},
+		"S": {
+			"nom": "panneau",
+			"couleur": "#a8743a",
+			"solide": true
+		},
+		"f": {
+			"nom": "fleurs",
+			"couleur": "#e8708a",
+			"solide": false
+		},
+		"F": {
+			"nom": "cloture",
+			"couleur": "#f4f1e8",
+			"solide": true
+		},
+		"m": {
+			"nom": "boite_aux_lettres",
+			"couleur": "#ffe14a",
+			"solide": true
+		},
+		"~": {
+			"nom": "eau",
+			"couleur": "#90d5ff",
+			"solide": true
+		}
+	},
+	"portes": [
+		{
+			"x": 6,
+			"y": 7,
+			"vers": "maison_joueur",
+			"arrivee": [
+				4,
+				7
+			]
+		},
+		{
+			"x": 15,
+			"y": 7,
+			"vers": "maison_rival",
+			"arrivee": [
+				5,
+				7
+			]
+		},
+		{
+			"x": 16,
+			"y": 13,
+			"vers": "labo_chen",
+			"arrivee": [
+				7,
+				10
+			]
+		}
+	],
+	"interactions": [
+		{
+			"x": 9,
+			"y": 11,
+			"texte": [
+				"BOURG PALETTE",
+				"Un monde simple et tranquille..."
+			]
+		}
+	],
+	"pnj": [
+		{
+			"id": "femme_fleurs",
+			"nom": "Femme",
+			"x": 3,
+			"y": 12,
+			"direction": "gauche",
+			"couleur": "#c75ad6",
+			"texte": [
+				"Ces fleurs sont magnifiques, tu ne trouves pas ?"
+			]
+		},
+		{
+			"id": "homme_labo",
+			"nom": "Homme",
+			"x": 14,
+			"y": 17,
+			"direction": "haut",
+			"couleur": "#3f7fd0",
+			"texte": [
+				"Le laboratoire du Professeur Chen est juste derriere cette barriere.",
+				"On dit qu'il fait des recherches passionnantes."
+			]
+		},
+		{
+			"id": "prof_chen_bourg",
+			"nom": "Prof. Chen",
+			"x": 16,
+			"y": 14,
+			"direction": "haut",
+			"couleur": "#f4f4f4",
+			"visible_si": "chen_arrive",
+			"cache_si": "scenario_termine",
+			"texte": [
+				"Suis-moi au laboratoire."
+			]
+		}
+	],
+	"declencheurs": [
+		{
+			"x": 12,
+			"y": 1,
+			"evenement": "chen_intro",
+			"si_pas": "chen_intro_vu"
+		},
+		{
+			"x": 13,
+			"y": 1,
+			"evenement": "chen_intro",
+			"si_pas": "chen_intro_vu"
+		}
+	]
+}

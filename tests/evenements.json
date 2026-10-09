@@ -1,0 +1,45 @@
+{
+	"test": [
+		{
+			"pose": "vu"
+		},
+		{
+			"dire": [
+				"Qui va la ?"
+			]
+		},
+		{
+			"pose": "arrive"
+		},
+		{
+			"pnj_vers_joueur": "chen"
+		},
+		{
+			"dire": [
+				"Suis-moi.",
+				"Page 2."
+			]
+		},
+		{
+			"carte": "rdc",
+			"arrivee": [
+				3,
+				1
+			]
+		},
+		{
+			"pose": "fin"
+		}
+	],
+	"marche": [
+		{
+			"joueur_vers": [
+				7,
+				3
+			]
+		},
+		{
+			"pose": "arrive_au_bout"
+		}
+	]
+}

@@ -1,0 +1,59 @@
+{
+	"lignes": [
+		"########",
+		"#......#",
+		"#.T....#",
+		"#......#",
+		"#......#",
+		"#......#",
+		"#......#",
+		"###p####"
+	],
+	"nom": "Ta maison",
+	"legende": {
+		"#": {
+			"nom": "arbre",
+			"couleur": "#1f5e2e",
+			"solide": true
+		},
+		".": {
+			"nom": "herbe",
+			"couleur": "#7cc04f",
+			"solide": false
+		},
+		"p": {
+			"nom": "porte",
+			"couleur": "#7a4a25",
+			"solide": false
+		},
+		"T": {
+			"nom": "table",
+			"couleur": "#8a5a2b",
+			"solide": true
+		}
+	},
+	"depart": [
+		3,
+		6
+	],
+	"portes": [
+		{
+			"x": 3,
+			"y": 7,
+			"vers": "bourg_palette",
+			"arrivee": [
+				6,
+				7
+			]
+		}
+	],
+	"interactions": [
+		{
+			"x": 2,
+			"y": 2,
+			"texte": [
+				"Une table en bois."
+			]
+		}
+	]
+}

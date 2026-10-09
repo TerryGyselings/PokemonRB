@@ -1,0 +1,244 @@
+{
+	"lignes": [
+		"#BBoo#####BBBB#",
+		"#.............#",
+		"#B............#",
+		"#BMM.....TTT..#",
+		"#.MM..........#",
+		"#.............#",
+		"#.............#",
+		"#BBBBB...BBBBB#",
+		"#.............#",
+		"#.............#",
+		"#F...........F#",
+		"#######p#######"
+	],
+	"nom": "Laboratoire du Prof. Chen",
+	"legende": {
+		"#": {
+			"nom": "mur",
+			"couleur": "#5b4a3f",
+			"solide": true
+		},
+		".": {
+			"nom": "sol",
+			"couleur": "#c9a97a",
+			"solide": false
+		},
+		"p": {
+			"nom": "porte",
+			"couleur": "#7a4a25",
+			"solide": false
+		},
+		"T": {
+			"nom": "table",
+			"couleur": "#8a5a2b",
+			"solide": true
+		},
+		"o": {
+			"nom": "ordinateur",
+			"couleur": "#555a66",
+			"solide": true
+		},
+		"F": {
+			"nom": "fleur",
+			"couleur": "#e86fa0",
+			"solide": true
+		},
+		"M": {
+			"nom": "machine",
+			"couleur": "#7d8fa3",
+			"solide": true
+		},
+		"B": {
+			"nom": "etagere",
+			"couleur": "#6b4423",
+			"solide": true
+		}
+	},
+	"depart": [
+		7,
+		10
+	],
+	"portes": [
+		{
+			"x": 7,
+			"y": 11,
+			"vers": "bourg_palette",
+			"arrivee": [
+				16,
+				14
+			]
+		}
+	],
+	"interactions": [
+		{
+			"x": 1,
+			"y": 0,
+			"texte": [
+				"Des livres de recherche sur les Pokemon."
+			]
+		},
+		{
+			"x": 2,
+			"y": 0,
+			"texte": [
+				"Des livres de recherche sur les Pokemon."
+			]
+		},
+		{
+			"x": 9,
+			"y": 3,
+			"texte": [
+				"Une table de travail."
+			]
+		},
+		{
+			"x": 10,
+			"y": 3,
+			"texte": [
+				"Une table de travail."
+			]
+		},
+		{
+			"x": 11,
+			"y": 3,
+			"texte": [
+				"Une table de travail."
+			]
+		}
+	],
+	"pnj": [
+		{
+			"id": "prof_chen",
+			"nom": "Prof. Chen",
+			"x": 7,
+			"y": 2,
+			"direction": "bas",
+			"couleur": "#f4f4f4",
+			"visible_si": "scenario_termine",
+			"texte": [
+				"PROF. CHEN : Prends soin de ton POKEMON !"
+			],
+			"evenement": "chen_parle"
+		},
+		{
+			"id": "rival",
+			"nom": "Rival",
+			"x": 6,
+			"y": 3,
+			"direction": "haut",
+			"couleur": "#8a3fd0",
+			"visible_si": "scenario_termine",
+			"texte": [
+				"Tu en as mis du temps !"
+			],
+			"cache_si": "rival_parti"
+		},
+		{
+			"id": "assistant1",
+			"nom": "Assistant",
+			"x": 4,
+			"y": 9,
+			"direction": "bas",
+			"couleur": "#8a3fd0",
+			"texte": [
+				"J'assiste le Prof. CHEN. Je suis donc son ... ASSISTANT!"
+			]
+		},
+		{
+			"id": "assistant2",
+			"nom": "Assistant",
+			"x": 12,
+			"y": 8,
+			"direction": "gauche",
+			"couleur": "#8a3fd0",
+			"texte": [
+				"J'assiste le Prof. CHEN. Je suis donc son ... ASSISTANT!"
+			]
+		},
+		{
+			"id": "assistant3",
+			"nom": "Assistante",
+			"x": 3,
+			"y": 8,
+			"direction": "droite",
+			"couleur": "#8a3fd0",
+			"texte": [
+				"Le Prof. CHEN est une célébrité dans le monde des POKéMON.",
+				"Nombreux sont les Dresseurs qui lui portent un grand respect."
+			]
+		},
+		{
+			"id": "ball_salameche",
+			"nom": "POKe BALL",
+			"x": 9,
+			"y": 3,
+			"direction": "bas",
+			"couleur": "#e8553a",
+			"objet": true,
+			"si": "choix_starter_ouvert",
+			"si_pas": "starter_choisi",
+			"evenement": "choisir_salameche",
+			"cache_si": "pris_salameche",
+			"texte": [
+				"C'est une POKe BALL du Prof. CHEN."
+			]
+		},
+		{
+			"id": "ball_carapuce",
+			"nom": "POKe BALL",
+			"x": 10,
+			"y": 3,
+			"direction": "bas",
+			"couleur": "#3a8fe8",
+			"objet": true,
+			"si": "choix_starter_ouvert",
+			"si_pas": "starter_choisi",
+			"evenement": "choisir_carapuce",
+			"cache_si": "pris_carapuce",
+			"texte": [
+				"C'est une POKe BALL du Prof. CHEN."
+			]
+		},
+		{
+			"id": "ball_bulbizarre",
+			"nom": "POKe BALL",
+			"x": 11,
+			"y": 3,
+			"direction": "bas",
+			"couleur": "#4fa86b",
+			"objet": true,
+			"si": "choix_starter_ouvert",
+			"si_pas": "starter_choisi",
+			"evenement": "choisir_bulbizarre",
+			"cache_si": "pris_bulbizarre",
+			"texte": [
+				"C'est une POKe BALL du Prof. CHEN."
+			]
+		}
+	],
+	"declencheurs": [
+		{
+			"x": 6,
+			"y": 7,
+			"evenement": "rival_defi",
+			"si": "starter_choisi",
+			"si_pas": "combat_rival_fait"
+		},
+		{
+			"x": 7,
+			"y": 7,
+			"evenement": "rival_defi",
+			"si": "starter_choisi",
+			"si_pas": "combat_rival_fait"
+		},
+		{
+			"x": 8,
+			"y": 7,
+			"evenement": "rival_defi",
+			"si": "starter_choisi",
+			"si_pas": "combat_rival_fait"
+		}
+	]
+}

@@ -1,0 +1,365 @@
+{
+	"chen_intro": [
+		{
+			"pose": "chen_intro_vu"
+		},
+		{
+			"dire": [
+				"???: Attends ! Ne va pas plus loin !"
+			]
+		},
+		{
+			"pose": "chen_arrive"
+		},
+		{
+			"pnj_vers_joueur": "prof_chen_bourg"
+		},
+		{
+			"dire": [
+				"PROF. CHEN : Il est dangereux de s'aventurer dans les hautes herbes ! Des Pokemon sauvages y vivent.",
+				"PROF. CHEN : Il te faut un Pokemon pour te proteger. Suis-moi jusqu'a mon laboratoire !"
+			]
+		},
+		{
+			"escorte": {
+				"pnj": "prof_chen_bourg",
+				"vers": [
+					16,
+					13
+				]
+			}
+		},
+		{
+			"carte": "labo_chen",
+			"arrivee": [
+				7,
+				11
+			]
+		},
+		{
+			"pnj_place": {
+				"id": "prof_chen",
+				"x": 7,
+				"y": 10,
+				"direction": "haut"
+			}
+		},
+		{
+			"pose": "scenario_termine"
+		},
+		{
+			"attendre": 0.4
+		},
+		{
+			"pnj_marche": {
+				"id": "prof_chen",
+				"vers": [
+					7,
+					2
+				]
+			}
+		},
+		{
+			"pnj_tourne": {
+				"id": "prof_chen",
+				"direction": "bas"
+			}
+		},
+		{
+			"attendre": 0.3
+		},
+		{
+			"joueur_vers": [
+				7,
+				3
+			]
+		},
+		{
+			"pnj_regarde_joueur": "prof_chen"
+		},
+		{
+			"dire": [
+				"PROF. CHEN : Voila ! Mon laboratoire.",
+				"PROF. CHEN : Sur la table, il y a trois POKe BALLS. Choisis le POKEMON qui t'accompagnera !"
+			]
+		},
+		{
+			"pose": "choix_starter_ouvert"
+		}
+	],
+	"choisir_salameche": [
+		{
+			"choix": {
+				"question": "PROF. CHEN : Tu veux donc SALAMECHE, le Pokemon de feu ?",
+				"oui": [
+					{
+						"pose": "pris_salameche"
+					},
+					{
+						"pose": "starter_salameche"
+					},
+					{
+						"donne_pokemon": {
+							"espece": "salameche",
+							"niveau": 5
+						}
+					},
+					{
+						"pose": "starter_choisi"
+					},
+					{
+						"dire": [
+							"REGIS : Eh ! Prof. Chen ! Et moi ?",
+							"PROF. CHEN : Patience... Prends celui-la."
+						]
+					},
+					{
+						"pnj_marche": {
+							"id": "rival",
+							"vers": [
+								10,
+								4
+							]
+						}
+					},
+					{
+						"pnj_tourne": {
+							"id": "rival",
+							"direction": "haut"
+						}
+					},
+					{
+						"attendre": 0.3
+					},
+					{
+						"pose": "pris_carapuce"
+					},
+					{
+						"dire": [
+							"REGIS : Parfait ! Je prends celui-la !"
+						]
+					},
+					{
+						"pose": "rival_a_choisi"
+					}
+				],
+				"non": []
+			}
+		}
+	],
+	"choisir_carapuce": [
+		{
+			"choix": {
+				"question": "PROF. CHEN : Tu veux donc CARAPUCE, le Pokemon d'eau ?",
+				"oui": [
+					{
+						"pose": "pris_carapuce"
+					},
+					{
+						"pose": "starter_carapuce"
+					},
+					{
+						"donne_pokemon": {
+							"espece": "carapuce",
+							"niveau": 5
+						}
+					},
+					{
+						"pose": "starter_choisi"
+					},
+					{
+						"dire": [
+							"REGIS : Eh ! Prof. Chen ! Et moi ?",
+							"PROF. CHEN : Patience... Prends celui-la."
+						]
+					},
+					{
+						"pnj_marche": {
+							"id": "rival",
+							"vers": [
+								11,
+								4
+							]
+						}
+					},
+					{
+						"pnj_tourne": {
+							"id": "rival",
+							"direction": "haut"
+						}
+					},
+					{
+						"attendre": 0.3
+					},
+					{
+						"pose": "pris_bulbizarre"
+					},
+					{
+						"dire": [
+							"REGIS : Parfait ! Je prends celui-la !"
+						]
+					},
+					{
+						"pose": "rival_a_choisi"
+					}
+				],
+				"non": []
+			}
+		}
+	],
+	"choisir_bulbizarre": [
+		{
+			"choix": {
+				"question": "PROF. CHEN : Tu veux donc BULBIZARRE, le Pokemon de plante ?",
+				"oui": [
+					{
+						"pose": "pris_bulbizarre"
+					},
+					{
+						"pose": "starter_bulbizarre"
+					},
+					{
+						"donne_pokemon": {
+							"espece": "bulbizarre",
+							"niveau": 5
+						}
+					},
+					{
+						"pose": "starter_choisi"
+					},
+					{
+						"dire": [
+							"REGIS : Eh ! Prof. Chen ! Et moi ?",
+							"PROF. CHEN : Patience... Prends celui-la."
+						]
+					},
+					{
+						"pnj_marche": {
+							"id": "rival",
+							"vers": [
+								9,
+								4
+							]
+						}
+					},
+					{
+						"pnj_tourne": {
+							"id": "rival",
+							"direction": "haut"
+						}
+					},
+					{
+						"attendre": 0.3
+					},
+					{
+						"pose": "pris_salameche"
+					},
+					{
+						"dire": [
+							"REGIS : Parfait ! Je prends celui-la !"
+						]
+					},
+					{
+						"pose": "rival_a_choisi"
+					}
+				],
+				"non": []
+			}
+		}
+	],
+	"rival_defi": [
+		{
+			"pnj_vers_joueur": "rival"
+		},
+		{
+			"dire": [
+				"REGIS : Attends ! Avant de partir, battons-nous !",
+				"REGIS : Essayons nos POKEMON !"
+			]
+		},
+		{
+			"combat": {
+				"nom": "REGIS",
+				"pose_victoire": "combat_rival_gagne",
+				"equipe": [
+					{
+						"espece": "carapuce",
+						"niveau": 5,
+						"si": "starter_salameche"
+					},
+					{
+						"espece": "bulbizarre",
+						"niveau": 5,
+						"si": "starter_carapuce"
+					},
+					{
+						"espece": "salameche",
+						"niveau": 5,
+						"si": "starter_bulbizarre"
+					}
+				]
+			}
+		},
+		{
+			"pose": "combat_rival_fait"
+		},
+		{
+			"soigner": true
+		},
+		{
+			"si": {
+				"drapeau": "combat_rival_gagne",
+				"alors": [
+					{
+						"dire": [
+							"REGIS : Quoi ?! J'ai perdu ?!",
+							"REGIS : Bah, tu as eu de la chance. La prochaine fois, je gagnerai !"
+						]
+					}
+				],
+				"sinon": [
+					{
+						"dire": [
+							"REGIS : Ha ! Trop facile ! Tu devrais t'entrainer avant de partir !"
+						]
+					}
+				]
+			}
+		},
+		{
+			"pnj_marche": {
+				"id": "rival",
+				"vers": [
+					7,
+					11
+				]
+			}
+		},
+		{
+			"pose": "rival_parti"
+		}
+	],
+	"chen_parle": [
+		{
+			"si": {
+				"drapeau": "starter_choisi",
+				"alors": [
+					{
+						"dire": [
+							"PROF. CHEN : Prends soin de ton POKEMON, il compte sur toi !",
+							"PROF. CHEN : Un bon dresseur ecoute toujours ses POKEMON. Bonne route !"
+						]
+					}
+				],
+				"sinon": [
+					{
+						"dire": [
+							"PROF. CHEN : Alors, tu as choisi ? Les trois POKe BALLS sont sur la table.",
+							"PROF. CHEN : Prends ton temps : ce POKEMON sera ton premier compagnon de route !"
+						]
+					}
+				]
+			}
+		}
+	]
+}

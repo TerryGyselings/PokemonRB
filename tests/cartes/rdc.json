@@ -1,0 +1,43 @@
+{
+	"lignes": [
+		"#######",
+		"#...E.#",
+		"#.....#",
+		"#######"
+	],
+	"nom": "rdc",
+	"legende": {
+		"#": {
+			"nom": "mur",
+			"couleur": "#1f5e2e",
+			"solide": true
+		},
+		".": {
+			"nom": "sol",
+			"couleur": "#7cc04f",
+			"solide": false
+		},
+		"E": {
+			"nom": "escalier",
+			"couleur": "#7a4a25",
+			"solide": false
+		}
+	},
+	"depart": [
+		2,
+		2
+	],
+	"portes": [
+		{
+			"x": 4,
+			"y": 1,
+			"vers": "etage",
+			"arrivee": [
+				3,
+				1
+			],
+			"depuis": "gauche"
+		}
+	],
+	"interactions": []
+}
