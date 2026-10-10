@@ -346,10 +346,25 @@
 				"drapeau": "starter_choisi",
 				"alors": [
 					{
-						"dire": [
-							"PROF. CHEN : Prends soin de ton POKEMON, il compte sur toi !",
-							"PROF. CHEN : Un bon dresseur ecoute toujours ses POKEMON. Bonne route !"
-						]
+						"si": {
+							"drapeau": "pokedex_obtenu",
+							"alors": [
+								{
+									"dire": [
+										"PROF. CHEN : Complète le POKéDEX en capturant des POKéMON !",
+										"PROF. CHEN : Le vieil homme de JADIELLE peut t'apprendre à le faire."
+									]
+								}
+							],
+							"sinon": [
+								{
+									"dire": [
+										"PROF. CHEN : Prends soin de ton POKEMON, il compte sur toi !",
+										"PROF. CHEN : Un bon dresseur ecoute toujours ses POKEMON. Bonne route !"
+									]
+								}
+							]
+						}
 					}
 				],
 				"sinon": [
@@ -419,6 +434,343 @@
 				"INFIRMIÈRE : Merci d'avoir attendu !",
 				"INFIRMIÈRE : Tes POKÉMON sont en pleine forme.",
 				"INFIRMIÈRE : À bientôt !"
+			]
+		}
+	],
+	"vieux_bloque": [
+		{
+			"pnj_tourne": {
+				"id": "jadielle_vieil_homme",
+				"direction": "bas"
+			}
+		},
+		{
+			"dire": [
+				"VIEIL HOMME : Hé là ! Tu ne peux pas passer par ici !",
+				"VIEIL HOMME : Je n'ai pas encore bu mon café... et je suis de très mauvaise humeur !"
+			]
+		},
+		{
+			"joueur_marche": [
+				"bas"
+			]
+		}
+	],
+	"vieux_capture": [
+		{
+			"pnj_vers_joueur": "jadielle_vieil_homme_tuto"
+		},
+		{
+			"dire": [
+				"VIEIL HOMME : Hé, toi ! Tu as un POKéDEX ?",
+				"VIEIL HOMME : Mmh, mon café commence à faire effet... Bon, je suis pressé, mais je vais te montrer comment on capture un POKéMON !"
+			]
+		},
+		{
+			"demo_capture": {
+				"espece": "rattata",
+				"niveau": 3,
+				"dresseur": "VIEIL HOMME"
+			}
+		},
+		{
+			"dire": [
+				"VIEIL HOMME : Voilà comment on fait ! On affaiblit le POKéMON sauvage, puis on lance une POKé BALL.",
+				"VIEIL HOMME : Tu trouveras des POKé BALLS à la boutique. Elle est ouverte, maintenant !"
+			],
+			"pose": "capture_montree"
+		},
+		{
+			"pnj_marche": {
+				"id": "jadielle_vieil_homme_tuto",
+				"vers": [
+					9,
+					-73
+				]
+			}
+		},
+		{
+			"pnj_tourne": {
+				"id": "jadielle_vieil_homme_tuto",
+				"direction": "bas"
+			}
+		}
+	],
+	"vieux_parle": [
+		{
+			"si": {
+				"drapeau": "capture_montree",
+				"alors": [
+					{
+						"dire": [
+							"VIEIL HOMME : Alors, tu as capturé des POKéMON ?",
+							"VIEIL HOMME : Bonne route, dresseur !"
+						]
+					}
+				],
+				"sinon": [
+					{
+						"evenement": "vieux_capture"
+					}
+				]
+			}
+		}
+	],
+	"ouest_bloque": [
+		{
+			"dire": [
+				"Ce chemin mène à la ROUTE 22.",
+				"Mieux vaut ne pas s'y aventurer avant d'avoir terminé ce que le Prof. CHEN attend de toi."
+			]
+		},
+		{
+			"joueur_marche": [
+				"droite"
+			]
+		}
+	],
+	"boutique_colis": [
+		{
+			"pnj_tourne": {
+				"id": "boutique_vendeur",
+				"direction": "bas"
+			}
+		},
+		{
+			"dire": [
+				"VENDEUR : Hé, toi là ! Oui, toi ! Viens ici !"
+			]
+		},
+		{
+			"joueur_vers": [
+				3,
+				4
+			]
+		},
+		{
+			"joueur_regarde": "haut"
+		},
+		{
+			"dire": [
+				"VENDEUR : Tu viens de BOURG PALETTE, non ? Alors tu connais le Prof. CHEN !",
+				"VENDEUR : Il a commandé un colis qui est arrivé ce matin. Tu peux le lui apporter ?"
+			]
+		},
+		{
+			"donne_objet": {
+				"id": "colis_chen"
+			}
+		},
+		{
+			"pose": "colis_recupere"
+		},
+		{
+			"dire": [
+				"VENDEUR : Merci beaucoup ! Il t'attend à son laboratoire.",
+				"VENDEUR : Reviens me voir après, je t'accueillerai comme il se doit !"
+			]
+		}
+	],
+	"vendeur_parle": [
+		{
+			"si": {
+				"drapeau": "capture_montree",
+				"alors": [
+					{
+						"dire": [
+							"VENDEUR : Bienvenue !"
+						]
+					},
+					{
+						"boutique": {
+							"stock": [
+								"poke_ball",
+								"potion",
+								"antidote",
+								"anti_para",
+								"reveil",
+								"anti_brule"
+							]
+						}
+					}
+				],
+				"sinon": [
+					{
+						"dire": [
+							"Bienvenue !",
+							"La boutique n'est pas encore ouverte...",
+							"Reviens plus tard !"
+						]
+					}
+				]
+			}
+		}
+	],
+	"chen_pokedex": [
+		{
+			"joueur_vers": [
+				7,
+				3
+			]
+		},
+		{
+			"pnj_regarde_joueur": "prof_chen"
+		},
+		{
+			"dire": [
+				"PROF. CHEN : Oh, ${nom_joueur} ! Tu as mon colis ?",
+				"${nom_joueur} remet le COLIS DU PROF. CHEN.",
+				"PROF. CHEN : Parfait ! C'était la pièce qui me manquait pour terminer mon invention !"
+			]
+		},
+		{
+			"retire_objet": {
+				"id": "colis_chen"
+			}
+		},
+		{
+			"pose": "colis_livre"
+		},
+		{
+			"attendre": 0.3
+		},
+		{
+			"joueur_regarde": "bas"
+		},
+		{
+			"pose": "rival_arrive"
+		},
+		{
+			"dire": [
+				"REGIS : Grand-père ! J'en ai marre d'attendre !"
+			]
+		},
+		{
+			"pnj_marche": {
+				"id": "rival_pokedex",
+				"vers": [
+					6,
+					3
+				]
+			}
+		},
+		{
+			"pnj_tourne": {
+				"id": "rival_pokedex",
+				"direction": "haut"
+			}
+		},
+		{
+			"joueur_regarde": "haut"
+		},
+		{
+			"dire": [
+				"PROF. CHEN : REGIS ! Patience... Vous voilà tous les deux, c'est parfait.",
+				"PROF. CHEN : J'ai une faveur à vous demander. Voici mon invention : le POKéDEX !",
+				"PROF. CHEN : Il enregistre automatiquement les données des POKéMON que l'on voit ou que l'on capture.",
+				"PROF. CHEN : J'aimerais le compléter, mais je suis trop vieux pour parcourir le monde... Alors c'est à vous de le faire !"
+			]
+		},
+		{
+			"dire": [
+				"PROF. CHEN : Tenez, un POKéDEX chacun.",
+				"${nom_joueur} reçoit le POKéDEX !"
+			],
+			"pose": "pokedex_obtenu"
+		},
+		{
+			"dire": [
+				"REGIS : Compte sur moi, Grand-père ! Je vais compléter ce POKéDEX bien avant toi, ${nom_joueur} !",
+				"REGIS : À plus tard ! Et ne me ralentis pas !"
+			]
+		},
+		{
+			"pnj_marche": {
+				"id": "rival_pokedex",
+				"vers": [
+					7,
+					11
+				]
+			}
+		},
+		{
+			"pose": "rival_parti_2"
+		},
+		{
+			"attendre": 0.3
+		},
+		{
+			"pnj_regarde_joueur": "prof_chen"
+		},
+		{
+			"dire": [
+				"PROF. CHEN : Pour apprendre à capturer des POKéMON, va voir le vieil homme de JADIELLE.",
+				"PROF. CHEN : Il sera bien plus aimable une fois son café pris !"
+			]
+		}
+	],
+	"soeur_parle": [
+		{
+			"si": {
+				"drapeau": "starter_choisi",
+				"alors": [
+					{
+						"si": {
+							"drapeau": "carte_recue",
+							"alors": [
+								{
+									"dire": [
+										"MARGUERITE : Fais bien attention en voyageant, ${nom_joueur} !",
+										"MARGUERITE : Avec la CARTE, tu ne te perdras pas."
+									]
+								}
+							],
+							"sinon": [
+								{
+									"dire": [
+										"MARGUERITE : Oh, c'est toi, ${nom_joueur} ! Mon frère est déjà parti.",
+										"MARGUERITE : Je vois que tu as un POKéMON ! Alors tu vas voyager un peu partout...",
+										"MARGUERITE : Tiens, prends cette CARTE ! Elle te sera très utile."
+									]
+								},
+								{
+									"donne_objet": {
+										"id": "carte_region"
+									}
+								},
+								{
+									"pose": "carte_recue"
+								},
+								{
+									"dire": [
+										"MARGUERITE : Elle montre où tu te trouves dans la région. Bonne route !"
+									]
+								}
+							]
+						}
+					}
+				],
+				"sinon": [
+					{
+						"dire": [
+							"Bonjour ! Mon frere n'est pas a la maison.",
+							"Il est toujours dehors, il ne tient pas en place."
+						]
+					}
+				]
+			}
+		}
+	],
+	"vieux_bloque_nord": [
+		{
+			"dire": [
+				"VIEIL HOMME : Hé, toi, là-bas ! Tu ne peux pas passer non plus par là !",
+				"VIEIL HOMME : Reviens quand tu auras un POKéDEX !"
+			]
+		},
+		{
+			"joueur_marche": [
+				"bas"
 			]
 		}
 	]

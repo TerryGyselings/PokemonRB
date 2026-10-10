@@ -53,3 +53,11 @@ static func toutes_les_especes() -> Array:
 	var ids: Array = d.keys()
 	ids.sort_custom(func(a, b): return int(d[a].get("numero", 999)) < int(d[b].get("numero", 999)))
 	return ids
+
+# un objet de data/objets.json : { "nom", "prix", "description", "cle" } ({} s'il n'existe pas)
+static func objet(id: String) -> Dictionary:
+	var d: Dictionary = _lire("objets")
+	return d.get(id, {})
+
+static func nom_objet(id: String) -> String:
+	return String(objet(id).get("nom", id.replace("_", " ").to_upper()))

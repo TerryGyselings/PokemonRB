@@ -164,5 +164,12 @@
 		"nom": "chaise",
 		"couleur": "#b5733c",
 		"solide": false
+	},
+	"a": {
+		"nom": "arbuste",
+		"couleur": "#3fae7a",
+		"solide": true,
+		"coupable": true,
+		"apres_coupe": "."
 	}
 }

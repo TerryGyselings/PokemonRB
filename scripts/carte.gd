@@ -15,10 +15,17 @@ extends Node2D
 #   interactions : [ { "x", "y", "texte": ["page 1", "page 2"], "pose": "<drapeau>" } ]   (touche action, face a la case)
 #   declencheurs : [ { "symbole": "g" ou "x"+"y", "evenement": "<id>", "si": "<drapeau>", "si_pas": "<drapeau>" } ]
 #                  lance un evenement (data/evenements.json) quand le joueur arrive sur la case
+#                  ou "zone": [x1, y1, x2, y2] a la place de x / y : un rectangle de cases (bornes incluses)
+#   entree       : [ { "evenement": "<id>", "si": "<drapeau>", "si_pas": "<drapeau>" } ]
+#                  joue le premier evenement dont les conditions sont bonnes quand on entre dans la carte par une porte
 #   pnj          : [ { "id", "nom", "x", "y", "direction", "couleur", "texte": [...],
 #                      "visible_si": "<drapeau>", "cache_si": "<drapeau>", "pose": "<drapeau>",
 #                      "evenement": "<id>", "si": "<drapeau>", "si_pas": "<drapeau>", "objet": true } ]
 #                  les PNJ sont solides ; "visible_si" / "cache_si" les montrent ou les cachent selon l'histoire
+#
+# Une case de legende avec "coupable": true (ex : l'arbuste) est solide jusqu'a ce que le joueur la coupe avec COUPE
+# (touche action face a elle) ; elle devient alors la case "apres_coupe" (par defaut "." = herbe). L'etat est sauvegarde
+# dans les drapeaux ("coupe@<carte>@x,y").
 #
 # Dans la legende, une case peut avoir "saut": "bas" (ou "haut", "gauche", "droite") : elle ne se franchit que
 # dans ce sens-la, en sautant par-dessus (comme les rebords du jeu). Une case dont le nom commence par "rebord"
@@ -44,6 +51,8 @@ var depart := Vector2i.ZERO
 var depart_defini := false
 var pnj_donnees: Array = []
 var declencheurs: Array = []
+var cases_coupees := {}              # cases (monde) dont l'arbuste "coupable" a ete coupe
+var entrees: Array = []              # evenements joues quand le joueur entre dans la carte par une porte
 var _regions: Array = []             # { id, origine, lignes, legende, largeur, hauteur }
 var _portes := {}
 var _interactions := {}
@@ -84,6 +93,8 @@ func charger(id_carte: String) -> bool:
 	_interactions.clear()
 	pnj_donnees = []
 	declencheurs = []
+	entrees = []
+	cases_coupees = {}
 	for rid in ids:
 		var d = _lire_json("%s/%s.json" % [dossier, rid])
 		if not (d is Dictionary):
@@ -135,12 +146,23 @@ func charger(id_carte: String) -> bool:
 			pnj_donnees.append(q)
 		for t in d.get("declencheurs", []):
 			var q: Dictionary = t.duplicate(true)
+			if q.has("zone"):     # rectangle [x1, y1, x2, y2] (inclus) : un declencheur par case
+				var z: Array = q["zone"]
+				q.erase("zone")
+				for zy in range(int(z[1]), int(z[3]) + 1):
+					for zx in range(int(z[0]), int(z[2]) + 1):
+						var qz: Dictionary = q.duplicate(true)
+						qz["x"] = zx + o.x
+						qz["y"] = zy + o.y
+						declencheurs.append(qz)
+				continue
 			if q.has("symbole"):
 				q["_region"] = r["id"]
 			else:
 				q["x"] = int(t.get("x", 0)) + o.x
 				q["y"] = int(t.get("y", 0)) + o.y
 			declencheurs.append(q)
+	entrees = _regions[0]["donnees"].get("entree", []).duplicate(true)
 	_verifier()
 	queue_redraw()
 	return true
@@ -217,7 +239,34 @@ func symbole(c: Vector2i) -> String:
 	if r.is_empty():
 		return ""
 	var l: Vector2i = c - r["origine"]
-	return String(r["lignes"][l.y])[l.x]
+	var ch := String(r["lignes"][l.y])[l.x]
+	if cases_coupees.has(c):
+		return String(r["legende"].get(ch, {}).get("apres_coupe", "."))
+	return ch
+
+# case "coupable" (legende : "coupable": true) qui n'a pas encore ete coupee
+func est_coupable(c: Vector2i) -> bool:
+	var r := _region_a(c)
+	if r.is_empty() or cases_coupees.has(c):
+		return false
+	var l: Vector2i = c - r["origine"]
+	return bool(r["legende"].get(String(r["lignes"][l.y])[l.x], {}).get("coupable", false))
+
+# coordonnees locales (dans sa carte JSON) de la case c du monde
+func local_de(c: Vector2i) -> Vector2i:
+	var r := _region_a(c)
+	return c - r["origine"] if not r.is_empty() else c
+
+func couper(c: Vector2i) -> void:
+	cases_coupees[c] = true
+	queue_redraw()
+
+# remet en etat une case coupee (carte "rid", coordonnees locales) : utilise au chargement a partir des drapeaux
+func marquer_coupe(rid: String, local: Vector2i) -> void:
+	for r in _regions:
+		if String(r["id"]) == rid:
+			cases_coupees[r["origine"] + local] = true
+	queue_redraw()
 
 func solide(c: Vector2i) -> bool:
 	var r := _region_a(c)
@@ -272,6 +321,9 @@ func _draw() -> void:
 		for y in r["hauteur"]:
 			var l := String(r["lignes"][y])
 			for x in l.length():
-				var def: Dictionary = r["legende"].get(l[x], {})
+				var ch := l[x]
+				if not cases_coupees.is_empty() and cases_coupees.has(Vector2i(o.x + x, o.y + y)):
+					ch = String(r["legende"].get(ch, {}).get("apres_coupe", "."))
+				var def: Dictionary = r["legende"].get(ch, {})
 				var couleur := Color(def.get("couleur", "#ff00ff"))
 				draw_rect(Rect2((o.x + x) * TAILLE, (o.y + y) * TAILLE, TAILLE, TAILLE), couleur)

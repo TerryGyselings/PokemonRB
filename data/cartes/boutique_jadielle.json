@@ -67,7 +67,8 @@
 				"Bienvenue !",
 				"La boutique n'est pas encore ouverte...",
 				"Reviens plus tard !"
-			]
+			],
+			"evenement": "vendeur_parle"
 		},
 		{
 			"id": "boutique_client_1",
@@ -91,6 +92,13 @@
 			"texte": [
 				"On vend des ANTIDOTES dans cette boutique."
 			]
+		}
+	],
+	"entree": [
+		{
+			"evenement": "boutique_colis",
+			"si": "starter_choisi",
+			"si_pas": "colis_recupere"
 		}
 	]
 }

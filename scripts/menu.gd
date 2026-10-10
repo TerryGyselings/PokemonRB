@@ -136,7 +136,7 @@ func _resume_pokemon(p) -> void:
 # ---------- SAC ----------
 
 func _nom_objet(id: String) -> String:
-	return id.replace("_", " ").to_upper()
+	return Donnees.nom_objet(id)
 
 func _sac() -> void:
 	var ecran := _plein_ecran()

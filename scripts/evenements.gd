@@ -17,6 +17,10 @@ extends RefCounted
 #   { "pnj_tourne": { "id": "<id pnj>", "direction": "haut" } }
 #   { "choix": { "question": "texte", "oui": [actions], "non": [actions] } }   question OUI / NON
 #   { "donne_pokemon": { "espece": "salameche", "niveau": 5 } }   ajoute un Pokemon a l'equipe
+#   { "donne_objet": { "id": "colis_chen", "quantite": 1 } }  ajoute un objet au sac (data/objets.json) et le dit
+#   { "retire_objet": { "id": "colis_chen" } }                retire un objet du sac
+#   { "demo_capture": { "espece": "rattata", "niveau": 3, "dresseur": "VIEIL HOMME" } }   demonstration de capture (ecran de combat)
+#   { "boutique": { "stock": ["poke_ball", "potion"] } }       ouvre la boutique (ACHETER / VENDRE / SORTIR)
 #   { "soigner": true }                                       soigne toute l'equipe
 #   { "si": { "drapeau": "<nom>", "alors": [actions], "sinon": [actions] } }
 #   { "evenement": "<id>" }                                   joue un autre evenement
@@ -27,6 +31,7 @@ extends RefCounted
 #       et la suite de l'evenement est annulee. "blackout": false pour un combat d'histoire qui continue quand meme.
 
 const Pnj := preload("res://scripts/pnj.gd")
+const Donnees := preload("res://scripts/donnees.gd")
 
 var chemin_fichier := "res://data/evenements.json"
 var _main
@@ -140,6 +145,24 @@ func _action(a: Dictionary) -> void:
 		_main.donner_pokemon(String(d["espece"]), int(d["niveau"]))
 		var nom := String(_main.equipe[-1].nom).to_upper()
 		await _main.dire_attendre(["Tu recois %s !" % nom])
+	elif a.has("donne_objet"):
+		var o: Dictionary = a["donne_objet"]
+		var q := int(o.get("quantite", 1))
+		_main.donner_objet(String(o["id"]), q)
+		var nom_o: String = Donnees.nom_objet(String(o["id"]))
+		await _main.dire_attendre(["${nom_joueur} recoit %s%s !" % [nom_o, (" x%d" % q) if q > 1 else ""]])
+	elif a.has("retire_objet"):
+		var o2: Dictionary = a["retire_objet"]
+		_main.retirer_objet(String(o2["id"]), int(o2.get("quantite", 1)))
+	elif a.has("demo_capture"):
+		var dc: Dictionary = a["demo_capture"]
+		var t: Tween = _main.create_tween()
+		t.tween_property(_main.voile, "modulate:a", 1.0, 0.3)
+		await t.finished
+		await _main.combat.demo_capture(String(dc["espece"]), int(dc.get("niveau", 3)), String(dc.get("dresseur", "Dresseur")))
+		_main.voile.modulate.a = 0.0
+	elif a.has("boutique"):
+		await _main.boutique.ouvrir(a["boutique"].get("stock", []))
 	elif a.has("soigner"):
 		for p in _main.equipe:
 			p.soigner()

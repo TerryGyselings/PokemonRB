@@ -1,0 +1,52 @@
+{
+	"poke_ball": {
+		"nom": "POKé BALL",
+		"prix": 200,
+		"description": "Sert à capturer un POKéMON sauvage.",
+		"bonus": {
+			"par": 10,
+			"objet": "honor_ball",
+			"quantite": 1
+		}
+	},
+	"potion": {
+		"nom": "POTION",
+		"prix": 300,
+		"description": "Rend 20 PV à un POKéMON."
+	},
+	"antidote": {
+		"nom": "ANTIDOTE",
+		"prix": 100,
+		"description": "Soigne un POKéMON empoisonné."
+	},
+	"anti_para": {
+		"nom": "ANTI-PARA",
+		"prix": 200,
+		"description": "Soigne un POKéMON paralysé."
+	},
+	"reveil": {
+		"nom": "RÉVEIL",
+		"prix": 250,
+		"description": "Réveille un POKéMON endormi."
+	},
+	"anti_brule": {
+		"nom": "ANTI-BRÛLE",
+		"prix": 250,
+		"description": "Soigne un POKéMON brûlé."
+	},
+	"colis_chen": {
+		"nom": "COLIS DU PROF. CHEN",
+		"description": "Un colis pour le Prof. CHEN. À lui apporter au laboratoire.",
+		"cle": true
+	},
+	"honor_ball": {
+		"nom": "HONOR BALL",
+		"prix": 200,
+		"description": "Une POKé BALL spéciale, offerte en bonus à l'achat de 10 POKé BALLS."
+	},
+	"carte_region": {
+		"nom": "CARTE",
+		"description": "La carte de la région. Elle montre où tu te trouves.",
+		"cle": true
+	}
+}

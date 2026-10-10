@@ -1,4 +1,5 @@
 {
+	"nom": "Maison de ${nom_joueur}",
 	"lignes": [
 		"WKKeeWvWWWWWWW",
 		"W__________EEW",
@@ -10,7 +11,6 @@
 		"W____________W",
 		"WWWWpWWWWWWWWW"
 	],
-	"nom": "Ta maison",
 	"depart": [
 		3,
 		6

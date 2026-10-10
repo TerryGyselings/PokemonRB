@@ -28,6 +28,9 @@ func _init() -> void:
 		for t in c.declencheurs:
 			if not evts.has(String(t.get("evenement", ""))):
 				ko("%s : declencheur vers l'evenement inconnu '%s'" % [id, t.get("evenement", "")])
+		for e in c.entrees:
+			if not evts.has(String(e.get("evenement", ""))):
+				ko("%s : entree vers l'evenement inconnu '%s'" % [id, e.get("evenement", "")])
 		if c.depart_defini and c.solide(c.depart):
 			ko("%s : depart %s sur une case solide" % [id, c.depart])
 		for pos in c._portes:

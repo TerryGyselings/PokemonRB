@@ -93,5 +93,31 @@
 				"pistolet_a_o"
 			]
 		]
+	},
+	"rattata": {
+		"numero": 19,
+		"nom": "Rattata",
+		"types": [
+			"normal"
+		],
+		"couleur": "#a66fb5",
+		"base": {
+			"pv": 30,
+			"atk": 56,
+			"def": 35,
+			"vit": 72,
+			"spe": 25
+		},
+		"exp_base": 57,
+		"attaques_niveau": [
+			[
+				1,
+				"charge"
+			],
+			[
+				1,
+				"mimi_queue"
+			]
+		]
 	}
 }

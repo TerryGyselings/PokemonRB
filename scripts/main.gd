@@ -11,6 +11,7 @@ const Donnees := preload("res://scripts/donnees.gd")
 const Sauvegarde := preload("res://scripts/sauvegarde.gd")
 const Titre := preload("res://scripts/titre.gd")
 const Menu := preload("res://scripts/menu.gd")
+const Boutique := preload("res://scripts/boutique.gd")
 
 # les 8 badges (nom + couleur affichee dans la fiche du joueur)
 const BADGES := [
@@ -39,6 +40,7 @@ var evenements: RefCounted
 var combat: CanvasLayer
 var menu_jeu: CanvasLayer
 var titre: CanvasLayer
+var boutique: CanvasLayer
 var avec_titre := false       # vrai quand le jeu est lance normalement (scene/lancement.tscn) ; faux dans les tests
 var equipe: Array = []        # les Pokemon du joueur (6 maximum)
 # etat de la partie (tout ca est sauvegarde)
@@ -85,6 +87,9 @@ func _ready() -> void:
 	menu_jeu.installer(self)
 	add_child(menu_jeu)
 	menu_jeu.quitter_demande.connect(func(): get_tree().quit())
+	boutique = Boutique.new()
+	boutique.installer(self)
+	add_child(boutique)
 	if avec_titre:
 		_demarrer()
 	else:
@@ -273,6 +278,11 @@ func charger_carte(id: String, arrivee = null) -> void:
 	camera.limit_right = (carte.origine.x + carte.largeur) * Carte.TAILLE
 	camera.limit_bottom = (carte.origine.y + carte.hauteur) * Carte.TAILLE
 	camera.reset_smoothing()
+	for k in drapeaux:        # arbustes deja coupes ("coupe@<carte>@x,y")
+		if String(k).begins_with("coupe@") and drapeaux[k]:
+			var parts: PackedStringArray = String(k).split("@")
+			var xy: PackedStringArray = parts[2].split(",")
+			carte.marquer_coupe(parts[1], Vector2i(int(xy[0]), int(xy[1])))
 	_creer_pnj()
 
 # ---------- drapeaux et PNJ ----------
@@ -349,6 +359,10 @@ func _passer_porte(p: Dictionary) -> void:
 	joueur.bloque = true
 	var a: Array = p.get("arrivee", [])
 	await changer_carte(String(p["vers"]), Vector2i(int(a[0]), int(a[1])) if a.size() == 2 else null)
+	for e in carte.entrees:      # evenement d'entree de la carte (premier dont les conditions sont bonnes)
+		if conditions_ok(e):
+			await evenements.jouer(String(e["evenement"]))
+			break
 	joueur.bloque = false
 
 # fondu au noir, changement de carte, fondu retour (a utiliser avec await)
@@ -401,7 +415,7 @@ func chemin(depart: Vector2i, arrivee: Vector2i, eviter_portes := false) -> Arra
 # ---------- interactions et dialogues ----------
 
 func _unhandled_input(event: InputEvent) -> void:
-	if combat.en_cours:
+	if combat.en_cours or boutique.actif:
 		return
 	if _choix_actif:
 		if event.is_action_pressed("haut") or event.is_action_pressed("bas"):
@@ -440,13 +454,42 @@ func _interagir(cible: Vector2i) -> void:
 	var i: Dictionary = carte.interaction(cible)
 	if not i.is_empty():
 		_parler(i)
+		return
+	if carte.est_coupable(cible):
+		_couper(cible)
+
+# qui peut utiliser COUPE ? (nom du Pokemon en majuscules, "" si personne)
+# Un Pokemon de l'equipe qui connait l'attaque "coupe", ou le drapeau "capacite_coupe" (en attendant les CS).
+func qui_coupe() -> String:
+	for p in equipe:
+		for a in p.attaques:
+			if String(a["id"]) == "coupe":
+				return String(p.nom).to_upper()
+	if a_drapeau("capacite_coupe"):
+		return String(equipe[0].nom).to_upper() if not equipe.is_empty() else nom_joueur.to_upper()
+	return ""
+
+func _couper(c: Vector2i) -> void:
+	var nom := qui_coupe()
+	if nom == "":
+		dire(["Cet arbuste a l'air de pouvoir etre coupe !"])
+		return
+	if await oui_non("Cet arbuste peut etre coupe !\nUtiliser COUPE ?"):
+		await dire_attendre(["%s utilise COUPE !" % nom])
+		var l: Vector2i = carte.local_de(c)
+		carte.couper(c)
+		poser_drapeau("coupe@%s@%d,%d" % [carte.region_id_a(c), l.x, l.y])
+	joueur.bloque = false
 
 # case de comptoir (legende "pnj_ok") sur laquelle il n'y a rien : on peut parler par-dessus
 func _est_comptoir_vide(c: Vector2i) -> bool:
 	return carte.pnj_ok(c) and pnj_a(c) == null and carte.interaction(c).is_empty()
 
+func _interactif_direct(c: Vector2i) -> bool:
+	return pnj_a(c) != null or not carte.interaction(c).is_empty() or carte.est_coupable(c)
+
 func _interactif(c: Vector2i) -> bool:
-	if pnj_a(c) != null or not carte.interaction(c).is_empty():
+	if _interactif_direct(c):
 		return true
 	if _est_comptoir_vide(c):
 		for d in [Vector2i.DOWN, Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP]:
@@ -465,7 +508,7 @@ func case_sous(pos: Vector2) -> Vector2i:
 
 func _monde_libre() -> bool:
 	return partie_en_cours and not boite.visible and not _choix_actif and not _transition and not evenement_en_cours \
-		and not joueur.bloque and not combat.en_cours and not menu_jeu.actif
+		and not joueur.bloque and not combat.en_cours and not menu_jeu.actif and not boutique.actif
 
 # clic sur un PNJ, une pancarte ou un objet : on se tourne vers lui (en marchant jusqu'a lui si besoin) et on interagit.
 # Derriere un comptoir, cliquer sur le PNJ ou sur le comptoir revient au meme : on se place devant le comptoir.
@@ -473,7 +516,7 @@ func _clic_monde(c: Vector2i) -> void:
 	if not _interactif(c) or joueur.en_marche():
 		return
 	var places: Array = []     # [ case ou se placer, direction a regarder, case visee ]
-	if pnj_a(c) != null or not carte.interaction(c).is_empty():
+	if _interactif_direct(c):
 		for d in [Vector2i.DOWN, Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP]:
 			places.append([c + d, -d, c])
 			var n: Vector2i = c + d       # comptoir juste devant : on se place de l'autre cote
@@ -545,7 +588,7 @@ func rect_choix(k: int) -> Rect2:
 func _input(event: InputEvent) -> void:
 	if not (event is InputEventMouseButton or event is InputEventMouseMotion):
 		return
-	if combat.en_cours or menu_jeu.actif or (is_instance_valid(titre) and titre.actif):
+	if combat.en_cours or menu_jeu.actif or boutique.actif or (is_instance_valid(titre) and titre.actif):
 		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 		return
 	if _choix_actif:
@@ -600,6 +643,20 @@ func _afficher_choix() -> void:
 	_choix_labels[0].text = ("> " if _choix_index == 0 else "  ") + "OUI"
 	_choix_labels[1].text = ("> " if _choix_index == 1 else "  ") + "NON"
 
+func donner_objet(id: String, quantite := 1) -> void:
+	sac[id] = int(sac.get(id, 0)) + quantite
+
+# retire jusqu'a "quantite" exemplaires ; renvoie vrai si le sac en contenait assez
+func retirer_objet(id: String, quantite := 1) -> bool:
+	var a := int(sac.get(id, 0))
+	if a < quantite:
+		return false
+	if a == quantite:
+		sac.erase(id)
+	else:
+		sac[id] = a - quantite
+	return true
+
 func donner_pokemon(espece: String, niveau: int) -> void:
 	equipe.append(Pokemon.creer(espece, niveau))
 	enregistrer_capture(espece)
@@ -608,9 +665,30 @@ func donner_pokemon(espece: String, niveau: int) -> void:
 func remplacer_variables(t: String) -> String:
 	return t.replace("${nom_joueur}", nom_joueur).replace("${argent}", str(argent))
 
+# decoupe un texte trop long pour la boite de dialogue (2 lignes) en plusieurs pages, aux espaces
+func _paginer(t: String) -> Array:
+	var f: Font = texte.get_theme_font("font")
+	var taille := 14
+	var h := f.get_height(taille)
+	var max_lignes := maxi(1, int(floor(40.0 / h)))
+	var nb := func(x: String) -> int: return int(round(f.get_multiline_string_size(x, HORIZONTAL_ALIGNMENT_LEFT, 448.0, taille).y / h))
+	var res: Array = []
+	var cur := ""
+	for m in t.split(" "):
+		var essai: String = m if cur == "" else cur + " " + m
+		if cur != "" and nb.call(essai) > max_lignes:
+			res.append(cur)
+			cur = m
+		else:
+			cur = essai
+	res.append(cur)
+	return res
+
 func dire(pages, drapeau := "") -> void:
 	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
-	_pages = (pages if pages is Array else [str(pages)]).map(func(t): return remplacer_variables(str(t)))
+	_pages = []
+	for t in (pages if pages is Array else [str(pages)]):
+		_pages.append_array(_paginer(remplacer_variables(str(t))))
 	if _pages.is_empty():
 		return
 	_page = 0

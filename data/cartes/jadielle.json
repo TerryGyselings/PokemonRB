@@ -6,7 +6,7 @@
 		"GGGGGGGG##########F.rrr.########################",
 		"GGGGGGGG##########F.rrr.########################",
 		"GGGGGGGGFFFFFFFFFFF.rrr.####.rrrrrrrrrrrrr######",
-		"GGGGGGGG............rrr......rrrrrrrrrrrrr######",
+		"GGGGGGGG..........a.rrr......rrrrrrrrrrrrr######",
 		"GGGGGGGG.F########F.rrrrrrrrrrrrrrrrrrrrrr######",
 		"GGGGGGGG.F########FBrrrrrrrrrrrr.TTTTTTrrr######",
 		"GGGGGGGG.F########F.rrrrrrrrrrrr.TTTTTTrrr######",
@@ -25,7 +25,7 @@
 		"GGGGGGG.......;;;;..rrrrrrrrrrrrrrrrrrrrrr######",
 		"GGGGGGG.......;;;;..rrrrrrrrrrrrrrrrrrrrrr######",
 		"GGGGGGG####....;;;;.rrr.TTTTT.rrr.f.f..rrr######",
-		"GGGGGGG####.##.;;;;.rrr.TTTTT.rrr..f.f.rrr######",
+		"GGGGGGG####a##.;;;;.rrr.TTTTT.rrr..f.f.rrr######",
 		"GGGGGGG,,,,.##......rrr.MMMMM.rrr.f.f..rrr######",
 		"GGGGGGG,,,,~~~~~~...rrr.MMpMM.rrr..f.f.rrr######",
 		"GGGGGGG.,,,~~~~~~...rrrrrrrrrrrrrrrrrrrrrr######",
@@ -120,6 +120,66 @@
 			]
 		}
 	],
-	"pnj": [],
-	"declencheurs": []
+	"pnj": [
+		{
+			"id": "jadielle_vieil_homme",
+			"nom": "Vieil homme",
+			"x": 21,
+			"y": 11,
+			"direction": "bas",
+			"couleur": "#a89878",
+			"cache_si": "pokedex_obtenu",
+			"texte": [
+				"VIEIL HOMME : Tu ne peux pas passer !",
+				"VIEIL HOMME : Je n'ai pas bu mon café..."
+			]
+		},
+		{
+			"id": "jadielle_vieil_homme_tuto",
+			"nom": "Vieil homme",
+			"x": 21,
+			"y": 6,
+			"direction": "bas",
+			"couleur": "#a89878",
+			"visible_si": "pokedex_obtenu",
+			"texte": [
+				"VIEIL HOMME : Alors, tu as capturé des POKéMON ?",
+				"VIEIL HOMME : Bonne route, dresseur !"
+			],
+			"evenement": "vieux_parle"
+		}
+	],
+	"declencheurs": [
+		{
+			"zone": [
+				20,
+				11,
+				22,
+				11
+			],
+			"evenement": "vieux_bloque",
+			"si_pas": "pokedex_obtenu"
+		},
+		{
+			"zone": [
+				19,
+				6,
+				41,
+				6
+			],
+			"evenement": "vieux_capture",
+			"si": "pokedex_obtenu",
+			"si_pas": "capture_montree"
+		},
+		{
+			"zone": [
+				1,
+				16,
+				1,
+				19
+			],
+			"evenement": "ouest_bloque",
+			"si_pas": "pokedex_obtenu"
+		}
+	]
 }

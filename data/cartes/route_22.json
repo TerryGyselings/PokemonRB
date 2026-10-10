@@ -1,0 +1,40 @@
+{
+	"nom": "Route 22",
+	"lignes": [
+		"GGGGGGGTTTTTTTTTGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+		"GGGGGGGTTTTTTTTTGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+		"GGGGGGGTTTTTTTTTGGGGGGGGGGGGGGGGGGGGG........GGGGGG",
+		"GGGGGGGTTTTTTTTTGGGGGGGGGGGGGGGGGGGGGllll.lllGGGGGG",
+		"GGGGGFFMMMMMMMMMFFFFFFFFFrrrrrrrrrrrrrrrrrr..GGGGGG",
+		"GGGGGFBMMMMpMMMMBttttttttrrrrrrrrrrrrrrrrrr..GGGGGG",
+		"GGGGGFBB..rrr..BBFrrrrrrrrrrrrrrrrrrrrrrrrr##......",
+		"GGGGGFrrrrrrrrrrrF.............GGGGGG......##.,,,,,",
+		"GGGGGFrrrrrrrrrrrFlllllll~~~~~~GGGGGGll..ll##.,,,,,",
+		"GGGGGFlllllll..llFggggggg~~~~~~GGGGGGgggggg##.,,,,,",
+		"GGGGGF...........Fggggggg~~~~~~GGGGGGgggggg##.,,,GG",
+		"GGGGGF...........Fggggggg~~~~~~GGGGGGgggggg##.,,,GG",
+		"GGGGGFF...SFFFFFFFggggggg......GGGGGGgggggg##.,,,GG",
+		"GGGGGGG...........ggggggg......GGGGGGgggggg##.,,,GG",
+		"GGGGGGG........................GGGGGG............GG",
+		"GGGGGGGlllllllllllllllllllllllllllllllllll..lllllGG",
+		"GGGGGGGrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrGG",
+		"GGGGGGGrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrGG",
+		"GGGGGGGrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrGG",
+		"GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+		"GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+		"GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+		"GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+		"GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+		"GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+	],
+	"portes": [
+		{
+			"x": 11,
+			"y": 5,
+			"vers": "route_victoire",
+			"arrivee": []
+		}
+	],
+	"interactions": [],
+	"pnj": []
+}

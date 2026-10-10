@@ -6,6 +6,7 @@ extends "res://scripts/ecran.gd"
 # Pas encore fonctionnel : SAC, POKEMON (changer), FUITE (impossible contre un dresseur).
 
 const Donnees := preload("res://scripts/donnees.gd")
+const Pokemon := preload("res://scripts/pokemon.gd")
 const LARGEUR_BARRE := 110.0
 
 var auto := false                 # tests : pas d'attente, choix lus dans script_choix (0 par defaut)
@@ -21,6 +22,7 @@ var en_cours := false
 var _fond: ColorRect
 var _sprite := {}                 # "j" / "e" -> ColorRect
 var _info := {}                   # "j" / "e" -> { nom, niv, rempli, pv }
+var _panneaux := {}               # "j" / "e" -> panneau d'information
 var _boite: Panel
 var _texte: Label
 var _menu_zone: Panel
@@ -67,6 +69,7 @@ func _construire() -> void:
 		_sprite[cote] = s
 		var p := _panneau(Rect2(12, 12, 230, 50) if cote == "e" else Rect2(246, 150, 224, 62))
 		add_child(p)
+		_panneaux[cote] = p
 		var nom := _label(p, Vector2(8, 2))
 		var niv := _label(p, Vector2(150, 2))
 		var fond := ColorRect.new()
@@ -183,6 +186,61 @@ func combattre(eq: Array, en: Array, nom_dresseur := "Dresseur") -> bool:
 	actif = false
 	en_cours = false
 	return victoire
+
+# Demonstration de capture (le joueur regarde, rien n'est ajoute a l'equipe ni au Pokedex) :
+# un Pokemon sauvage apparait, "dresseur" l'affaiblit puis lui lance une POKe BALL.
+func demo_capture(espece: String, niveau: int, dresseur: String, couleur := "#8a6a4a") -> void:
+	var sauvage = Pokemon.creer(espece, niveau)
+	ennemis = [sauvage]
+	equipe = []
+	actif_e = sauvage
+	actif_j = null
+	en_cours = true
+	visible = true
+	actif = not auto
+	_maj("e", false)
+	_panneaux["j"].visible = false
+	_sprite["j"].color = Color(couleur)
+	_sprite["j"].visible = true
+	var nom_e: String = sauvage.nom.to_upper()
+	await _msg("Un %s sauvage apparait !" % nom_e)
+	await _msg("%s : D'abord, il faut affaiblir le POKEMON sauvage." % dresseur.to_upper())
+	sauvage.pv = maxi(1, int(sauvage.stats["pv"] / 5))
+	_maj("e")
+	await _pause(0.6)
+	await _msg("Le %s est affaibli ! Ses PV sont tres bas." % nom_e)
+	await _msg("%s : Maintenant, on lance une POKe BALL !" % dresseur.to_upper())
+	await _msg("%s lance une POKe BALL !" % dresseur.to_upper(), false)
+	var balle := ColorRect.new()
+	balle.color = Color(0.85, 0.15, 0.15)
+	balle.size = Vector2(12, 12)
+	balle.position = _sprite["j"].position + Vector2(70, 20)
+	add_child(balle)
+	var cible: Vector2 = _sprite["e"].position + Vector2(30, 30)
+	if not auto:
+		var t := create_tween()
+		t.tween_property(balle, "position", cible, 0.6)
+		await t.finished
+	else:
+		balle.position = cible
+	_sprite["e"].visible = false
+	for k in 3:
+		await _pause(0.5)
+		if not auto:
+			var t2 := create_tween()
+			t2.tween_property(balle, "position:x", cible.x + 6, 0.1)
+			t2.tween_property(balle, "position:x", cible.x - 6, 0.2)
+			t2.tween_property(balle, "position:x", cible.x, 0.1)
+	await _pause(0.5)
+	balle.color = Color(0.4, 0.4, 0.4)
+	await _msg("Ca y est ! %s est capture !" % nom_e)
+	balle.queue_free()
+	_panneaux["j"].visible = true
+	_sprite["e"].visible = true
+	visible = false
+	actif = false
+	en_cours = false
+	ennemis = []
 
 # renvoie l'id de l'attaque choisie par le joueur
 func _choisir_action() -> String:
