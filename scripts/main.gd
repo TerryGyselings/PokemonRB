@@ -19,6 +19,7 @@ const BADGES := [
 	{"id": "ame", "nom": "Ame", "couleur": "#b05ac0"}, {"id": "marais", "nom": "Marais", "couleur": "#e0709a"},
 	{"id": "volcan", "nom": "Volcan", "couleur": "#e8553a"}, {"id": "terre", "nom": "Terre", "couleur": "#8b6a3a"}]
 
+const POINT_SOIN_DEPART := {"carte": "maison_joueur", "arrivee": [4, 7]}   # avant le premier soin : la maison
 const CARTE_DEPART := "etage_joueur"   # le jeu commence dans ta chambre, a la case "depart" de la carte
 
 var carte: Node2D
@@ -48,6 +49,7 @@ var temps_jeu := 0.0          # secondes
 var vus: Array = []           # especes vues (Pokedex)
 var captures: Array = []      # especes capturees
 var sac := {}                 # objet -> quantite
+var point_soin := {}          # { "carte": id, "arrivee": [x, y] } : dernier endroit ou l'equipe a ete soignee
 var slot_actuel := 0          # emplacement de sauvegarde de la partie en cours (1..3), 0 = aucun
 var partie_en_cours := false
 var _choix_panneau: Panel
@@ -123,6 +125,7 @@ func nouvelle_partie(slot: int, nom: String) -> void:
 	sac = {}
 	nom_joueur = nom
 	slot_actuel = slot
+	point_soin = POINT_SOIN_DEPART.duplicate(true)
 	charger_carte(CARTE_DEPART)
 
 func exporter() -> Dictionary:
@@ -130,7 +133,7 @@ func exporter() -> Dictionary:
 		"nom": nom_joueur, "argent": argent, "badges": badges.duplicate(), "temps": temps_jeu,
 		"drapeaux": drapeaux.duplicate(), "vus": vus.duplicate(), "captures": captures.duplicate(), "sac": sac.duplicate(),
 		"equipe": equipe.map(func(p): return p.en_dictionnaire()),
-		"carte": carte.id, "position": [joueur.case.x, joueur.case.y], "direction": [joueur.direction.x, joueur.direction.y],
+		"point_soin": point_soin.duplicate(true), "carte": carte.id, "position": [joueur.case.x, joueur.case.y], "direction": [joueur.direction.x, joueur.direction.y],
 	}
 
 func importer(d: Dictionary, slot: int) -> void:
@@ -151,6 +154,7 @@ func importer(d: Dictionary, slot: int) -> void:
 		if not Donnees.espece(String(pd.get("espece", ""))).is_empty():
 			equipe.append(Pokemon.depuis_dictionnaire(pd))
 	slot_actuel = slot
+	point_soin = d.get("point_soin", POINT_SOIN_DEPART).duplicate(true)
 	var pos: Array = d.get("position", [0, 0])
 	var id := String(d.get("carte", CARTE_DEPART))
 	if not carte.charger(id):
@@ -168,6 +172,18 @@ func enregistrer_capture(espece: String) -> void:
 	enregistrer_vu(espece)
 	if not captures.has(espece):
 		captures.append(espece)
+
+# tous les Pokemon sont K.O. : retour au dernier point de soin, equipe soignee
+func blackout() -> void:
+	var p: Dictionary = point_soin if not point_soin.is_empty() else POINT_SOIN_DEPART
+	await dire_attendre(["${nom_joueur} n'a plus de POKEMON capable de se battre !", "${nom_joueur} s'evanouit..."])
+	for pk in equipe:
+		pk.soigner()
+	var a: Array = p["arrivee"]
+	await changer_carte(String(p["carte"]), Vector2i(int(a[0]), int(a[1])))
+	joueur.direction = Vector2i.DOWN
+	joueur.queue_redraw()
+	await dire_attendre(["${nom_joueur} se reveille. Ses POKEMON ont ete soignes."])
 
 func ouvrir_menu() -> void:
 	joueur.bloque = true
@@ -543,6 +559,7 @@ func _parler(d: Dictionary) -> void:
 
 # pose une question OUI / NON et renvoie la reponse (a utiliser avec await)
 func oui_non(question: String) -> bool:
+	question = remplacer_variables(question)
 	_pages = [question]
 	_page = 0
 	texte.text = question
@@ -562,9 +579,13 @@ func donner_pokemon(espece: String, niveau: int) -> void:
 	equipe.append(Pokemon.creer(espece, niveau))
 	enregistrer_capture(espece)
 
+# remplace les variables ecrites dans les textes des JSON : ${nom_joueur}, ${argent}
+func remplacer_variables(t: String) -> String:
+	return t.replace("${nom_joueur}", nom_joueur).replace("${argent}", str(argent))
+
 func dire(pages, drapeau := "") -> void:
 	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
-	_pages = pages if pages is Array else [str(pages)]
+	_pages = (pages if pages is Array else [str(pages)]).map(func(t): return remplacer_variables(str(t)))
 	if _pages.is_empty():
 		return
 	_page = 0

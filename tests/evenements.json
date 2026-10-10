@@ -41,5 +41,38 @@
 		{
 			"pose": "arrive_au_bout"
 		}
+	],
+	"defaite_blackout": [
+		{
+			"combat": {
+				"nom": "X",
+				"equipe": [
+					{
+						"espece": "carapuce",
+						"niveau": 30
+					}
+				]
+			}
+		},
+		{
+			"pose": "apres_combat"
+		}
+	],
+	"defaite_histoire": [
+		{
+			"combat": {
+				"nom": "X",
+				"blackout": false,
+				"equipe": [
+					{
+						"espece": "carapuce",
+						"niveau": 30
+					}
+				]
+			}
+		},
+		{
+			"pose": "apres_combat"
+		}
 	]
 }

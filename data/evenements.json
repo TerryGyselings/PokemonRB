@@ -297,7 +297,8 @@
 						"niveau": 5,
 						"si": "starter_bulbizarre"
 					}
-				]
+				],
+				"blackout": false
 			}
 		},
 		{
@@ -360,6 +361,35 @@
 					}
 				]
 			}
+		}
+	],
+	"maman_soin": [
+		{
+			"dire": [
+				"MAMAN : ${nom_joueur}, tu as l'air fatigue...",
+				"MAMAN : Repose-toi un peu, je m'occupe de tes POKEMON."
+			]
+		},
+		{
+			"fondu": 0.6
+		},
+		{
+			"soigner": true
+		},
+		{
+			"point_soin": {
+				"carte": "maison_joueur",
+				"arrivee": [
+					4,
+					7
+				]
+			}
+		},
+		{
+			"dire": [
+				"MAMAN : Voila, tes POKEMON sont en pleine forme !",
+				"MAMAN : Fais bien attention a toi dehors, ${nom_joueur}."
+			]
 		}
 	]
 }

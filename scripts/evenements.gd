@@ -20,12 +20,17 @@ extends RefCounted
 #   { "soigner": true }                                       soigne toute l'equipe
 #   { "si": { "drapeau": "<nom>", "alors": [actions], "sinon": [actions] } }
 #   { "evenement": "<id>" }                                   joue un autre evenement
-#   { "combat": { "nom": "RIVAL", "equipe": [ { "espece", "niveau", "si": "<drapeau>" } ], "pose_victoire": "<drapeau>" } }
+#   { "fondu": 0.6 }                                          ecran noir un instant (soin, passage de temps...)
+#   { "point_soin": { "carte": "<id carte>", "arrivee": [x, y] } }   dernier endroit ou l'equipe a ete soignee (on y revient si tous les Pokemon sont K.O.)
+#   { "combat": { "nom": "RIVAL", "equipe": [ { "espece", "niveau", "si": "<drapeau>" } ], "pose_victoire": "<drapeau>", "blackout": false } }
+#       blackout (vrai par defaut) : si tous les Pokemon du joueur sont K.O., il revient au point de soin, l'equipe est soignee
+#       et la suite de l'evenement est annulee. "blackout": false pour un combat d'histoire qui continue quand meme.
 
 const Pnj := preload("res://scripts/pnj.gd")
 
 var chemin_fichier := "res://data/evenements.json"
 var _main
+var _stop := false   # un blackout interrompt l'evenement en cours
 
 func installer(m) -> void:
 	_main = m
@@ -51,12 +56,16 @@ func jouer(id: String) -> void:
 		return
 	_main.evenement_en_cours = true
 	_main.joueur.bloque = true
+	_stop = false
 	await _liste(tous[id])
+	_stop = false
 	_main.evenement_en_cours = false
 	_main.joueur.bloque = false
 
 func _liste(actions: Array) -> void:
 	for a in actions:
+		if _stop:
+			break
 		await _action(a)
 
 func _action(a: Dictionary) -> void:
@@ -102,6 +111,17 @@ func _action(a: Dictionary) -> void:
 				if t.has("direction"):
 					d["direction"] = String(t["direction"])
 		_main._creer_pnj()
+	elif a.has("fondu"):
+		var t: Tween = _main.create_tween()
+		t.tween_property(_main.voile, "modulate:a", 1.0, 0.25)
+		await t.finished
+		await _main.get_tree().create_timer(float(a["fondu"])).timeout
+		t = _main.create_tween()
+		t.tween_property(_main.voile, "modulate:a", 0.0, 0.25)
+		await t.finished
+	elif a.has("point_soin"):
+		var ps: Dictionary = a["point_soin"]
+		_main.point_soin = {"carte": String(ps["carte"]), "arrivee": [int(ps["arrivee"][0]), int(ps["arrivee"][1])]}
 	elif a.has("pnj_tourne"):
 		var t: Dictionary = a["pnj_tourne"]
 		var p = _pnj(String(t["id"]))
@@ -210,3 +230,6 @@ func _combat(c: Dictionary) -> void:
 	_main.voile.modulate.a = 0.0
 	if gagne and c.has("pose_victoire"):
 		_main.poser_drapeau(String(c["pose_victoire"]))
+	if not gagne and bool(c.get("blackout", true)):
+		await _main.blackout()
+		_stop = true

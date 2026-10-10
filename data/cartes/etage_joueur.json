@@ -96,6 +96,14 @@
 			"texte": [
 				"Ton ordinateur."
 			]
+		},
+		{
+			"x": 6,
+			"y": 4,
+			"texte": [
+				"${nom_joueur} joue à la Switch 2!",
+				"... Bon! Faut y aller!"
+			]
 		}
 	]
 }

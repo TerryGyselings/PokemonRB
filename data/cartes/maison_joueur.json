@@ -129,12 +129,14 @@
 			"nom": "Maman",
 			"x": 8,
 			"y": 3,
-			"direction": "bas",
+			"direction": "gauche",
 			"couleur": "#e58fb0",
 			"texte": [
 				"Bonjour mon grand !",
 				"Fais bien attention a toi dehors."
-			]
+			],
+			"evenement": "maman_soin",
+			"si": "starter_choisi"
 		}
 	]
 }
