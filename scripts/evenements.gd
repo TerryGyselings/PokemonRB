@@ -201,6 +201,8 @@ func _combat(c: Dictionary) -> void:
 	if ennemis.is_empty() or _main.equipe.is_empty():
 		push_warning("Combat impossible : equipe vide")
 		return
+	for e in ennemis:
+		_main.enregistrer_vu(e.espece_id)
 	var t: Tween = _main.create_tween()
 	t.tween_property(_main.voile, "modulate:a", 1.0, 0.3)
 	await t.finished

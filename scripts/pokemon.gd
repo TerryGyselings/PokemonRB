@@ -95,3 +95,20 @@ func gagner_exp(quantite: int) -> Array:
 					_ajouter_attaque(id)
 					msgs.append("%s apprend %s !" % [nom, Donnees.attaque(id).get("nom", id)])
 	return msgs
+
+# ---------- sauvegarde ----------
+
+func en_dictionnaire() -> Dictionary:
+	return {"espece": espece_id, "niveau": niveau, "exp": exp, "pv": pv, "attaques": attaques.duplicate(true)}
+
+static func depuis_dictionnaire(d: Dictionary):
+	var p = creer(String(d["espece"]), int(d["niveau"]))
+	p.exp = int(d.get("exp", p.exp))
+	p.pv = clampi(int(d.get("pv", p.pv)), 0, p.stats["pv"])
+	var att: Array = []
+	for a in d.get("attaques", []):
+		if not Donnees.attaque(String(a["id"])).is_empty():
+			att.append({"id": String(a["id"]), "pp": int(a["pp"]), "pp_max": int(a["pp_max"])})
+	if not att.is_empty():
+		p.attaques = att
+	return p

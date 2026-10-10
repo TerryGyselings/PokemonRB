@@ -46,3 +46,10 @@ static func efficacite(type_attaque: String, types_defenseur: Array) -> float:
 	for t in types_defenseur:
 		m *= float(tab.get(t, 1.0))
 	return m
+
+# identifiants de toutes les especes, dans l'ordre du Pokedex
+static func toutes_les_especes() -> Array:
+	var d: Dictionary = _lire("pokemon")
+	var ids: Array = d.keys()
+	ids.sort_custom(func(a, b): return int(d[a].get("numero", 999)) < int(d[b].get("numero", 999)))
+	return ids

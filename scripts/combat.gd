@@ -1,11 +1,9 @@
-extends CanvasLayer
+extends "res://scripts/ecran.gd"
 # Ecran de combat (style Pokemon Rouge/Bleu, formules de la 1re generation).
 # Utilisation : var victoire = await combat.combattre(equipe, ennemis, "RIVAL")
 #   equipe / ennemis : listes de Pokemon (scripts/pokemon.gd)
 # Touches : fleches pour le curseur, Entree/Espace/E pour valider, X/Retour arriere pour annuler.
 # Pas encore fonctionnel : SAC, POKEMON (changer), FUITE (impossible contre un dresseur).
-
-signal touche(nom: String)
 
 const Donnees := preload("res://scripts/donnees.gd")
 const LARGEUR_BARRE := 110.0
@@ -34,18 +32,6 @@ func _ready() -> void:
 	visible = false
 	rng.randomize()
 	_construire()
-
-func _input(event: InputEvent) -> void:
-	if not visible or auto:
-		return
-	for nom in ["action", "annuler", "haut", "bas", "gauche", "droite"]:
-		if event.is_action_pressed(nom):
-			get_viewport().set_input_as_handled()
-			touche.emit(nom)
-			return
-
-func appuyer(nom: String) -> void:
-	touche.emit(nom)
 
 # ---------- construction de l'ecran ----------
 
@@ -151,35 +137,14 @@ func _msg(t: String, attendre := true) -> void:
 			break
 	_fleche.visible = false
 
-# renvoie l'index choisi, ou -1 si annule
+# renvoie l'index choisi, ou -1 si annule (clavier et souris : voir ecran.gd)
 func _menu(options: Array, zone: Panel, colonnes: int, larg_col: int, annulable := false) -> int:
 	if auto:
 		return int(script_choix.pop_front()) if not script_choix.is_empty() else 0
-	var labels: Array = []
-	for c in zone.get_children():
-		c.queue_free()
-	for k in options.size():
-		var l := _label(zone, Vector2(12 + (k % colonnes) * larg_col, 8 + (k / colonnes) * 28), 14)
-		labels.append(l)
 	zone.visible = true
-	var i := 0
-	while true:
-		for k in labels.size():
-			labels[k].text = ("> " if k == i else "  ") + String(options[k])
-		var n: String = await touche
-		match n:
-			"haut": if i - colonnes >= 0: i -= colonnes
-			"bas": if i + colonnes < options.size(): i += colonnes
-			"gauche": if i % colonnes > 0: i -= 1
-			"droite": if i % colonnes < colonnes - 1 and i + 1 < options.size(): i += 1
-			"action":
-				zone.visible = false
-				return i
-			"annuler":
-				if annulable:
-					zone.visible = false
-					return -1
-	return -1
+	var r: int = await choisir(options, zone, colonnes, larg_col, 28, annulable)
+	zone.visible = false
+	return r
 
 # ---------- deroulement ----------
 
@@ -199,6 +164,7 @@ func combattre(eq: Array, en: Array, nom_dresseur := "Dresseur") -> bool:
 	actif_e = ennemis[0]
 	en_cours = true
 	visible = true
+	actif = not auto
 	_maj("j", false)
 	_maj("e", false)
 	await _msg("%s veut se battre !" % nom_dresseur.to_upper())
@@ -214,6 +180,7 @@ func combattre(eq: Array, en: Array, nom_dresseur := "Dresseur") -> bool:
 	for p in equipe + ennemis:
 		p.reinitialiser_stades()
 	visible = false
+	actif = false
 	en_cours = false
 	return victoire
 

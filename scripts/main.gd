@@ -7,6 +7,17 @@ const Pnj := preload("res://scripts/pnj.gd")
 const Evenements := preload("res://scripts/evenements.gd")
 const Combat := preload("res://scripts/combat.gd")
 const Pokemon := preload("res://scripts/pokemon.gd")
+const Donnees := preload("res://scripts/donnees.gd")
+const Sauvegarde := preload("res://scripts/sauvegarde.gd")
+const Titre := preload("res://scripts/titre.gd")
+const Menu := preload("res://scripts/menu.gd")
+
+# les 8 badges (nom + couleur affichee dans la fiche du joueur)
+const BADGES := [
+	{"id": "roche", "nom": "Roche", "couleur": "#a0896a"}, {"id": "cascade", "nom": "Cascade", "couleur": "#4a90e2"},
+	{"id": "foudre", "nom": "Foudre", "couleur": "#f2c230"}, {"id": "prisme", "nom": "Prisme", "couleur": "#6cc070"},
+	{"id": "ame", "nom": "Ame", "couleur": "#b05ac0"}, {"id": "marais", "nom": "Marais", "couleur": "#e0709a"},
+	{"id": "volcan", "nom": "Volcan", "couleur": "#e8553a"}, {"id": "terre", "nom": "Terre", "couleur": "#8b6a3a"}]
 
 const CARTE_DEPART := "etage_joueur"   # le jeu commence dans ta chambre, a la case "depart" de la carte
 
@@ -25,7 +36,20 @@ var _drapeau_apres_dialogue := ""
 var evenement_en_cours := false
 var evenements: RefCounted
 var combat: CanvasLayer
+var menu_jeu: CanvasLayer
+var titre: CanvasLayer
+var avec_titre := false       # vrai quand le jeu est lance normalement (scene/lancement.tscn) ; faux dans les tests
 var equipe: Array = []        # les Pokemon du joueur (6 maximum)
+# etat de la partie (tout ca est sauvegarde)
+var nom_joueur := "ROUGE"
+var argent := 3000
+var badges: Array = []        # ids des badges obtenus
+var temps_jeu := 0.0          # secondes
+var vus: Array = []           # especes vues (Pokedex)
+var captures: Array = []      # especes capturees
+var sac := {}                 # objet -> quantite
+var slot_actuel := 0          # emplacement de sauvegarde de la partie en cours (1..3), 0 = aucun
+var partie_en_cours := false
 var _choix_panneau: Panel
 var _choix_labels: Array = []
 var _choix_index := 0
@@ -55,7 +79,100 @@ func _ready() -> void:
 	_creer_interface()
 	combat = Combat.new()
 	add_child(combat)
+	menu_jeu = Menu.new()
+	menu_jeu.installer(self)
+	add_child(menu_jeu)
+	menu_jeu.quitter_demande.connect(func(): get_tree().quit())
+	if avec_titre:
+		_demarrer()
+	else:
+		charger_carte(CARTE_DEPART)
+		partie_en_cours = true
+
+func _process(delta: float) -> void:
+	if partie_en_cours:
+		temps_jeu += delta
+	# une touche de direction interrompt la marche automatique commandee a la souris
+	if Input.is_action_pressed("haut") or Input.is_action_pressed("bas") or Input.is_action_pressed("gauche") or Input.is_action_pressed("droite"):
+		_marche_auto += 1
+
+# ---------- ecran titre, nouvelle partie, sauvegarde ----------
+
+func _demarrer() -> void:
+	partie_en_cours = false
+	joueur.bloque = true
+	titre = Titre.new()
+	add_child(titre)
+	var r: Dictionary = await titre.lancer()
+	titre.queue_free()
+	if String(r["mode"]) == "nouveau":
+		nouvelle_partie(int(r["slot"]), String(r["nom"]))
+	else:
+		importer(r["donnees"], int(r["slot"]))
+	joueur.bloque = false
+	partie_en_cours = true
+
+func nouvelle_partie(slot: int, nom: String) -> void:
+	drapeaux = {}
+	equipe = []
+	argent = 3000
+	badges = []
+	temps_jeu = 0.0
+	vus = []
+	captures = []
+	sac = {}
+	nom_joueur = nom
+	slot_actuel = slot
 	charger_carte(CARTE_DEPART)
+
+func exporter() -> Dictionary:
+	return {
+		"nom": nom_joueur, "argent": argent, "badges": badges.duplicate(), "temps": temps_jeu,
+		"drapeaux": drapeaux.duplicate(), "vus": vus.duplicate(), "captures": captures.duplicate(), "sac": sac.duplicate(),
+		"equipe": equipe.map(func(p): return p.en_dictionnaire()),
+		"carte": carte.id, "position": [joueur.case.x, joueur.case.y], "direction": [joueur.direction.x, joueur.direction.y],
+	}
+
+func importer(d: Dictionary, slot: int) -> void:
+	nom_joueur = String(d.get("nom", "ROUGE"))
+	argent = int(d.get("argent", 0))
+	badges = Array(d.get("badges", []))
+	temps_jeu = float(d.get("temps", 0.0))
+	drapeaux = {}
+	for k in d.get("drapeaux", {}):
+		drapeaux[k] = bool(d["drapeaux"][k])
+	vus = Array(d.get("vus", []))
+	captures = Array(d.get("captures", []))
+	sac = {}
+	for k in d.get("sac", {}):
+		sac[k] = int(d["sac"][k])
+	equipe = []
+	for pd in d.get("equipe", []):
+		if not Donnees.espece(String(pd.get("espece", ""))).is_empty():
+			equipe.append(Pokemon.depuis_dictionnaire(pd))
+	slot_actuel = slot
+	var pos: Array = d.get("position", [0, 0])
+	var id := String(d.get("carte", CARTE_DEPART))
+	if not carte.charger(id):
+		id = CARTE_DEPART
+	charger_carte(id, Vector2i(int(pos[0]), int(pos[1])) if d.has("position") else null)
+	var dir: Array = d.get("direction", [0, 1])
+	joueur.direction = Vector2i(int(dir[0]), int(dir[1]))
+	joueur.queue_redraw()
+
+func enregistrer_vu(espece: String) -> void:
+	if not vus.has(espece):
+		vus.append(espece)
+
+func enregistrer_capture(espece: String) -> void:
+	enregistrer_vu(espece)
+	if not captures.has(espece):
+		captures.append(espece)
+
+func ouvrir_menu() -> void:
+	joueur.bloque = true
+	await menu_jeu.ouvrir()
+	joueur.bloque = false
 
 func _declarer_touches() -> void:
 	_touche("haut", [KEY_UP, KEY_W, KEY_Z])
@@ -63,7 +180,8 @@ func _declarer_touches() -> void:
 	_touche("gauche", [KEY_LEFT, KEY_A, KEY_Q])
 	_touche("droite", [KEY_RIGHT, KEY_D])
 	_touche("action", [KEY_ENTER, KEY_SPACE, KEY_E])
-	_touche("annuler", [KEY_X, KEY_BACKSPACE, KEY_ESCAPE])
+	_touche("annuler", [KEY_X, KEY_BACKSPACE])
+	_touche("menu", [KEY_TAB, KEY_M, KEY_ESCAPE])
 
 func _touche(nom: String, touches: Array) -> void:
 	if not InputMap.has_action(nom):
@@ -229,9 +347,15 @@ func changer_carte(id: String, arrivee = null) -> void:
 	await t.finished
 	_transition = false
 
+func _declencheur_actif(c: Vector2i) -> bool:
+	for t in carte.declencheurs_en(c):
+		if conditions_ok(t):
+			return true
+	return false
+
 # plus court chemin (4 directions) en evitant les cases bloquees ; renvoie les cases a parcourir
 # (sans la case de depart), ou [] s'il n'y en a pas. Le joueur est un obstacle sauf sur l'arrivee.
-func chemin(depart: Vector2i, arrivee: Vector2i) -> Array:
+func chemin(depart: Vector2i, arrivee: Vector2i, eviter_portes := false) -> Array:
 	if depart == arrivee:
 		return []
 	var precedent := {depart: depart}
@@ -250,6 +374,8 @@ func chemin(depart: Vector2i, arrivee: Vector2i) -> Array:
 				continue
 			if n != arrivee and (case_bloquee(n) or n == joueur.case):
 				continue
+			if eviter_portes and (not carte.porte(n).is_empty() or _declencheur_actif(n)):
+				continue   # marche automatique : on ne passe jamais par une porte ni par un declencheur d'evenement
 			if n == arrivee and (carte.solide(n) or pnj_a(n) != null):
 				continue
 			precedent[n] = c
@@ -266,34 +392,25 @@ func _unhandled_input(event: InputEvent) -> void:
 			_choix_index = 1 - _choix_index
 			_afficher_choix()
 		elif event.is_action_pressed("action"):
-			_choix_actif = false
-			_choix_panneau.visible = false
-			boite.visible = false
-			choix_fait.emit(_choix_index == 0)
+			_valider_choix(_choix_index == 0)
 		elif event.is_action_pressed("annuler"):
-			_choix_actif = false
-			_choix_panneau.visible = false
-			boite.visible = false
-			choix_fait.emit(false)
+			_valider_choix(false)
+		return
+	if event.is_action_pressed("menu") and partie_en_cours and not _transition and not boite.visible \
+			and not joueur.bloque and not joueur.en_marche() and not evenement_en_cours:
+		ouvrir_menu()
 		return
 	if not event.is_action_pressed("action") or _transition:
 		return
 	if boite.visible:
-		_page += 1
-		if _page >= _pages.size():
-			boite.visible = false
-			joueur.bloque = evenement_en_cours
-			if _drapeau_apres_dialogue != "":
-				var nom := _drapeau_apres_dialogue
-				_drapeau_apres_dialogue = ""
-				poser_drapeau(nom)
-			dialogue_fini.emit()
-		else:
-			texte.text = _pages[_page]
+		_avancer_dialogue()
 		return
 	if joueur.en_marche() or evenement_en_cours:
 		return
-	var cible: Vector2i = joueur.case + joueur.direction
+	_interagir(joueur.case + joueur.direction)
+
+# parle au PNJ / lit la pancarte / examine l'objet de la case "cible"
+func _interagir(cible: Vector2i) -> void:
 	var p = pnj_a(cible)
 	if p != null:
 		if not p.donnees.get("objet", false):
@@ -303,6 +420,119 @@ func _unhandled_input(event: InputEvent) -> void:
 	var i: Dictionary = carte.interaction(cible)
 	if not i.is_empty():
 		_parler(i)
+
+func _interactif(c: Vector2i) -> bool:
+	return pnj_a(c) != null or not carte.interaction(c).is_empty()
+
+# ---------- souris dans le monde ----------
+
+var _marche_auto := 0     # numero de la marche automatique en cours (changer ce numero l'annule)
+
+# case du monde sous un point de l'ecran
+func case_sous(pos: Vector2) -> Vector2i:
+	var w: Vector2 = get_canvas_transform().affine_inverse() * pos
+	return Vector2i(floori(w.x / Carte.TAILLE), floori(w.y / Carte.TAILLE))
+
+func _monde_libre() -> bool:
+	return partie_en_cours and not boite.visible and not _choix_actif and not _transition and not evenement_en_cours \
+		and not joueur.bloque and not combat.en_cours and not menu_jeu.actif
+
+# clic sur un PNJ, une pancarte ou un objet : on se tourne vers lui (en marchant jusqu'a lui si besoin) et on interagit
+func _clic_monde(c: Vector2i) -> void:
+	if not _interactif(c) or joueur.en_marche():
+		return
+	var delta: Vector2i = c - joueur.case
+	if absi(delta.x) + absi(delta.y) == 1:
+		_marche_auto += 1
+		joueur.direction = delta
+		joueur.queue_redraw()
+		_interagir(c)
+		return
+	_marche_auto += 1
+	var mon := _marche_auto
+	var meilleur: Array = []
+	var trouve := false
+	for d in [Vector2i.DOWN, Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP]:
+		var v: Vector2i = c + d
+		if v == joueur.case or carte.solide(v) or pnj_a(v) != null or not carte.dans_carte(v):
+			continue
+		var ch := chemin(joueur.case, v, true)
+		if not ch.is_empty() and (not trouve or ch.size() < meilleur.size()):
+			meilleur = ch
+			trouve = true
+	if not trouve:
+		return
+	for pas in meilleur:
+		if mon != _marche_auto or not _monde_libre():
+			return
+		if not joueur.deplacer(pas - joueur.case):
+			return
+		await joueur.arrive
+	if mon == _marche_auto and _monde_libre():
+		var dd: Vector2i = c - joueur.case
+		if absi(dd.x) + absi(dd.y) == 1:
+			joueur.direction = dd
+			joueur.queue_redraw()
+			_interagir(c)
+
+func _avancer_dialogue() -> void:
+	_page += 1
+	if _page >= _pages.size():
+		boite.visible = false
+		joueur.bloque = evenement_en_cours
+		if _drapeau_apres_dialogue != "":
+			var nom := _drapeau_apres_dialogue
+			_drapeau_apres_dialogue = ""
+			poser_drapeau(nom)
+		dialogue_fini.emit()
+	else:
+		texte.text = _pages[_page]
+
+func _valider_choix(oui: bool) -> void:
+	_choix_actif = false
+	_choix_panneau.visible = false
+	boite.visible = false
+	choix_fait.emit(oui)
+
+# zone cliquable de la ligne k (0 = OUI, 1 = NON) de la question OUI / NON
+func rect_choix(k: int) -> Rect2:
+	var r := _choix_panneau.get_global_rect()
+	return Rect2(r.position + Vector2(4, 4 + k * 22), Vector2(r.size.x - 8, 22))
+
+# souris dans le monde : un clic fait avancer un dialogue, survol / clic choisissent OUI ou NON
+# (les menus, l'ecran titre et le combat gerent leur souris eux-memes)
+func _input(event: InputEvent) -> void:
+	if not (event is InputEventMouseButton or event is InputEventMouseMotion):
+		return
+	if combat.en_cours or menu_jeu.actif or (is_instance_valid(titre) and titre.actif):
+		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
+		return
+	if _choix_actif:
+		var k := -1
+		for j in 2:
+			if rect_choix(j).has_point(event.position):
+				k = j
+		if event is InputEventMouseMotion:
+			if k >= 0 and k != _choix_index:
+				_choix_index = k
+				_afficher_choix()
+		elif event.pressed:
+			get_viewport().set_input_as_handled()
+			if event.button_index == MOUSE_BUTTON_LEFT and k >= 0:
+				_choix_index = k
+				_valider_choix(k == 0)
+			elif event.button_index == MOUSE_BUTTON_RIGHT:
+				_valider_choix(false)
+	elif boite.visible and not _transition and event is InputEventMouseButton and event.pressed \
+			and event.button_index == MOUSE_BUTTON_LEFT:
+		get_viewport().set_input_as_handled()
+		_avancer_dialogue()
+	elif _monde_libre() or (partie_en_cours and joueur.en_marche() and not boite.visible):
+		# le curseur devient une main au-dessus de ce avec quoi on peut interagir
+		if event is InputEventMouseMotion:
+			Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND if _interactif(case_sous(event.position)) else Input.CURSOR_ARROW)
+		elif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT and _monde_libre():
+			_clic_monde(case_sous(event.position))
 
 # une entree de JSON (PNJ ou interaction) : lance son evenement si les conditions sont bonnes, sinon son texte
 func _parler(d: Dictionary) -> void:
@@ -330,8 +560,10 @@ func _afficher_choix() -> void:
 
 func donner_pokemon(espece: String, niveau: int) -> void:
 	equipe.append(Pokemon.creer(espece, niveau))
+	enregistrer_capture(espece)
 
 func dire(pages, drapeau := "") -> void:
+	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 	_pages = pages if pages is Array else [str(pages)]
 	if _pages.is_empty():
 		return
