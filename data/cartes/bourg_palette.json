@@ -4,14 +4,14 @@
 		"############,,##########",
 		"##,,,,,,,,,,,,,,,,,,,.##",
 		"##,,,,,,,,,,,,,,,,,,,.##",
-		"##,..ttttt.,..ttttt.,.##",
-		"##,..ttttt.,..ttttt.,.##",
+		"##,..TTTTT.,..TTTTT.,.##",
+		"##,..TTTTT.,..TTTTT.,.##",
 		"##,..MMMMM.,..MMMMM.,.##",
-		"##,.mMpMMM.,.mMpMMM.,.##",
+		"##,.bMpMMM.,.bMpMMM.,.##",
 		"##,,,,,,,,,,,,,,,,,,,.##",
 		"##,,,,,,,,,,,,,,,,,,,.##",
-		"##,,,,,,,,,,.ttttttt,.##",
-		"##,,.FFFFS.,.ttttttt,.##",
+		"##,,,,,,,,,,.TTTTTTT,.##",
+		"##,,.FFFFS.,.TTTTTTT,.##",
 		"##,,.ffff..,.MMMMMMM,.##",
 		"##,,.ffff..,.MMMpMMM,.##",
 		"##,,.S.....,,,,,,,,,,.##",
@@ -24,68 +24,6 @@
 		"######F~~~~......F######"
 	],
 	"nom": "Bourg Palette",
-	"legende": {
-		"#": {
-			"nom": "arbre",
-			"couleur": "#1f5e2e",
-			"solide": true
-		},
-		".": {
-			"nom": "herbe",
-			"couleur": "#7cc04f",
-			"solide": false
-		},
-		",": {
-			"nom": "chemin",
-			"couleur": "#e0d58a",
-			"solide": false
-		},
-		"M": {
-			"nom": "mur de maison",
-			"couleur": "#d9d4c4",
-			"solide": true
-		},
-		"t": {
-			"nom": "toit",
-			"couleur": "#c0453a",
-			"solide": true
-		},
-		"P": {
-			"nom": "porte fermee",
-			"couleur": "#5a3a1c",
-			"solide": true
-		},
-		"p": {
-			"nom": "porte",
-			"couleur": "#7a4a25",
-			"solide": false
-		},
-		"S": {
-			"nom": "panneau",
-			"couleur": "#a8743a",
-			"solide": true
-		},
-		"f": {
-			"nom": "fleurs",
-			"couleur": "#e8708a",
-			"solide": false
-		},
-		"F": {
-			"nom": "cloture",
-			"couleur": "#f4f1e8",
-			"solide": true
-		},
-		"m": {
-			"nom": "boite_aux_lettres",
-			"couleur": "#ffe14a",
-			"solide": true
-		},
-		"~": {
-			"nom": "eau",
-			"couleur": "#90d5ff",
-			"solide": true
-		}
-	},
 	"portes": [
 		{
 			"x": 6,
@@ -122,6 +60,13 @@
 			"texte": [
 				"BOURG PALETTE",
 				"Un monde de couleurs s'ouvre à vous !"
+			]
+		},
+		{
+			"x": 16,
+			"y": 16,
+			"texte": [
+				"Laboratoire Pokémon du Prof. CHEN"
 			]
 		}
 	],

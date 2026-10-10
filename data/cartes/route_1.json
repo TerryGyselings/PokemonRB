@@ -42,48 +42,6 @@
 		"############gg##########"
 	],
 	"nom": "Route 1",
-	"legende": {
-		"#": {
-			"nom": "arbre",
-			"couleur": "#1f5e2e",
-			"solide": true
-		},
-		".": {
-			"nom": "herbe",
-			"couleur": "#7cc04f",
-			"solide": false
-		},
-		",": {
-			"nom": "chemin",
-			"couleur": "#e0d58a",
-			"solide": false
-		},
-		"S": {
-			"nom": "panneau",
-			"couleur": "#a8743a",
-			"solide": true
-		},
-		"f": {
-			"nom": "fleurs",
-			"couleur": "#e8708a",
-			"solide": false
-		},
-		"F": {
-			"nom": "cloture",
-			"couleur": "#f4f1e8",
-			"solide": true
-		},
-		"l": {
-			"nom": "rebord",
-			"couleur": "#8B4513",
-			"solide": false
-		},
-		"g": {
-			"nom": "hautes herbes",
-			"couleur": "#3f9a3a",
-			"solide": false
-		}
-	},
 	"portes": [],
 	"interactions": [
 		{

@@ -1,0 +1,89 @@
+{
+	"nom": "CENTRE POKÉMON",
+	"lignes": [
+		"WWVeeWWWWWWWoWcWW",
+		"W____CXX___C____W",
+		"W____CCCCCCC____W",
+		"W_______________W",
+		"W___________cc__W",
+		"W___________tt_cW",
+		"W___________tt_cW",
+		"W_______________W",
+		"WWWWWWWWpWWWWWWWW"
+	],
+	"depart": [
+		8,
+		7
+	],
+	"portes": [
+		{
+			"x": 8,
+			"y": 8,
+			"vers": "jadielle",
+			"arrivee": [
+				14,
+				-52
+			]
+		}
+	],
+	"interactions": [
+		{
+			"x": 12,
+			"y": 0,
+			"texte": [
+				"Un ordinateur. Il est éteint."
+			]
+		}
+	],
+	"pnj": [
+		{
+			"id": "centre_infirmiere",
+			"nom": "Infirmière",
+			"x": 8,
+			"y": 1,
+			"direction": "bas",
+			"couleur": "#f2a1b8",
+			"texte": [
+				"Bienvenue au CENTRE POKÉMON !",
+				"Reviens quand tu auras un POKÉMON."
+			],
+			"evenement": "infirmiere_soin",
+			"si": "starter_choisi"
+		},
+		{
+			"id": "centre_client_1",
+			"nom": "Client",
+			"x": 5,
+			"y": 6,
+			"direction": "bas",
+			"couleur": "#7a8fb0",
+			"texte": [
+				"Il y a un centre Pokémon dans chaque grande ville.",
+				"Tu peux y soigner gratuitement tes Pokémons !"
+			]
+		},
+		{
+			"id": "centre_client_2",
+			"nom": "Client",
+			"x": 3,
+			"y": 2,
+			"direction": "haut",
+			"couleur": "#8a6f4f",
+			"texte": [
+				"Les Centres Pokémon soignent tous les Pokémons bléssés ou KO !"
+			]
+		},
+		{
+			"id": "centre_client_3",
+			"nom": "Client",
+			"x": 13,
+			"y": 4,
+			"direction": "bas",
+			"couleur": "#a05a4a",
+			"texte": [
+				"Tu peux utiliser le PC.",
+				"C'est l'hôtesse qui me l'a dit ! Elle est mignonne en plus !"
+			]
+		}
+	]
+}

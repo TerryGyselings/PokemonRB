@@ -1,0 +1,73 @@
+{
+	"nom": "Maison",
+	"lignes": [
+		"WWWWWWvWWWWWW",
+		"W___________W",
+		"W___________W",
+		"W____cttc___W",
+		"W____cttc___W",
+		"W___________W",
+		"WV_________VW",
+		"WWWWWpWWWWWWW"
+	],
+	"depart": [
+		5,
+		6
+	],
+	"portes": [
+		{
+			"x": 5,
+			"y": 7,
+			"vers": "jadielle",
+			"arrivee": [
+				13,
+				-67
+			]
+		}
+	],
+	"interactions": [
+		{
+			"x": 6,
+			"y": 0,
+			"texte": [
+				"Une télévision. Rien d'intéressant ne passe."
+			]
+		}
+	],
+	"pnj": [
+		{
+			"id": "maison2_pere",
+			"nom": "Père",
+			"x": 8,
+			"y": 3,
+			"direction": "gauche",
+			"couleur": "#4f6f9a",
+			"texte": [
+				"Trouver des noms, c'est rigolo mais c'est dur !",
+				"Les noms les plus simples sont les plus faciles à retenir."
+			]
+		},
+		{
+			"id": "maison2_fille",
+			"nom": "Fille",
+			"x": 3,
+			"y": 2,
+			"direction": "bas",
+			"couleur": "#e8a0c0",
+			"texte": [
+				"Mon papa aime les Pokémons aussi."
+			]
+		},
+		{
+			"id": "maison2_piafabec",
+			"nom": "Piaffy",
+			"x": 7,
+			"y": 5,
+			"direction": "gauche",
+			"couleur": "#b08850",
+			"texte": [
+				"Piaffy : Cui-cui !"
+			]
+		}
+	]
+}

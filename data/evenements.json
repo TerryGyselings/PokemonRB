@@ -391,5 +391,35 @@
 				"MAMAN : Fais bien attention a toi dehors, ${nom_joueur}."
 			]
 		}
+	],
+	"infirmiere_soin": [
+		{
+			"dire": [
+				"INFIRMIÈRE : Bienvenue au CENTRE POKÉMON !",
+				"INFIRMIÈRE : Nous allons soigner tes POKÉMON."
+			]
+		},
+		{
+			"fondu": 0.6
+		},
+		{
+			"soigner": true
+		},
+		{
+			"point_soin": {
+				"carte": "centre_pokemon_jadielle",
+				"arrivee": [
+					8,
+					7
+				]
+			}
+		},
+		{
+			"dire": [
+				"INFIRMIÈRE : Merci d'avoir attendu !",
+				"INFIRMIÈRE : Tes POKÉMON sont en pleine forme.",
+				"INFIRMIÈRE : À bientôt !"
+			]
+		}
 	]
 }

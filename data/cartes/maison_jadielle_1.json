@@ -1,0 +1,77 @@
+{
+	"nom": "Maison",
+	"lignes": [
+		"WWWWWWWWmWWW",
+		"W________eeW",
+		"W__________W",
+		"W____tt____W",
+		"W____cc____W",
+		"W__________W",
+		"WV________VW",
+		"WWWWWpWWWWWW"
+	],
+	"depart": [
+		5,
+		6
+	],
+	"portes": [
+		{
+			"x": 5,
+			"y": 7,
+			"vers": "jadielle",
+			"arrivee": [
+				12,
+				-60
+			]
+		}
+	],
+	"interactions": [
+		{
+			"x": 8,
+			"y": 0,
+			"texte": [
+				"Le tableau explique les attaques de statut :",
+				"poison, paralysie, sommeil, brûlure, gel..."
+			]
+		},
+		{
+			"x": 9,
+			"y": 1,
+			"texte": [
+				"Une étagère remplie de livres."
+			]
+		},
+		{
+			"x": 10,
+			"y": 1,
+			"texte": [
+				"Une étagère remplie de livres."
+			]
+		}
+	],
+	"pnj": [
+		{
+			"id": "maison1_professeure",
+			"nom": "Professeure",
+			"x": 7,
+			"y": 1,
+			"direction": "bas",
+			"couleur": "#8a5aa8",
+			"texte": [
+				"OK !",
+				"Lis attentivement le tableau avant de partir !"
+			]
+		},
+		{
+			"id": "maison1_eleve",
+			"nom": "Élève",
+			"x": 5,
+			"y": 4,
+			"direction": "haut",
+			"couleur": "#e0a050",
+			"texte": [
+				"Pfouh ! J'essaie d'apprendre mes leçons."
+			]
+		}
+	]
+}

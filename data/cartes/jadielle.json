@@ -1,89 +1,125 @@
 {
 	"nom": "Jadielle",
-	"legende": {
-		"#": {
-			"nom": "arbre",
-			"couleur": "#1f5e2e",
-			"solide": true
-		},
-		".": {
-			"nom": "herbe",
-			"couleur": "#7cc04f",
-			"solide": false
-		},
-		",": {
-			"nom": "chemin",
-			"couleur": "#e0d58a",
-			"solide": false
-		},
-		"M": {
-			"nom": "mur de maison",
-			"couleur": "#d9d4c4",
-			"solide": true
-		},
-		"t": {
-			"nom": "toit",
-			"couleur": "#c0453a",
-			"solide": true
-		},
-		"P": {
-			"nom": "porte fermee",
-			"couleur": "#5a3a1c",
-			"solide": true
-		},
-		"p": {
-			"nom": "porte",
-			"couleur": "#7a4a25",
-			"solide": false
-		},
-		"S": {
-			"nom": "panneau",
-			"couleur": "#a8743a",
-			"solide": true
-		},
-		"f": {
-			"nom": "fleurs",
-			"couleur": "#e8708a",
-			"solide": false
-		},
-		"F": {
-			"nom": "cloture",
-			"couleur": "#f4f1e8",
-			"solide": true
-		},
-		"m": {
-			"nom": "boite_aux_lettres",
-			"couleur": "#ffe14a",
-			"solide": true
-		},
-		"~": {
-			"nom": "eau",
-			"couleur": "#90d5ff",
-			"solide": true
-		},
-		"l": {
-			"nom": "rebord",
-			"couleur": "#8B4513",
-			"solide": false
-		},
-		"g": {
-			"nom": "hautes herbes",
-			"couleur": "#3f9a3a",
-			"solide": false
-		}
-	},
 	"lignes": [
-		"############",
-		"#..........#",
-		"#..........#",
-		"#..........#",
-		"#..........#",
-		"#..........#",
-		"#..........#",
-		"############"
+		"GGGGGGGG##########F.rrr.########################",
+		"GGGGGGGG##########F.rrrS########################",
+		"GGGGGGGG##########F.rrr.########################",
+		"GGGGGGGG##########F.rrr.########################",
+		"GGGGGGGGFFFFFFFFFFF.rrr.####.rrrrrrrrrrrrr######",
+		"GGGGGGGG............rrr......rrrrrrrrrrrrr######",
+		"GGGGGGGG.F########F.rrrrrrrrrrrrrrrrrrrrrr######",
+		"GGGGGGGG.F########FBrrrrrrrrrrrr.TTTTTTrrr######",
+		"GGGGGGGG.F########F.rrrrrrrrrrrr.TTTTTTrrr######",
+		"GGGGGGGG.F########FBrrrBTTTTT....MMMMMMrrr######",
+		"GGGGGGGG.F########F.rrr;TTTTT...SMMMPMMrrr######",
+		"GGGGGGGG.F########FBrrrBMpMMM..........rrr######",
+		"GGGGGGGG.F########F.rrr;;;;BBlllllllllllll######",
+		"GGGGGGGG.F########FBrrr................f.f######",
+		"GGGGGGGG.F########F.rrr...............f.f.######",
+		"GGGGGG...F########FBrrr.....FFFFFFFFFFFFFF######",
+		".........FFFFFFFFFF.SrrBTTTT......TTTT....######",
+		",,,,,,,,,....rrrrrrrrrr;TTTT.rrr..TTTT.rrr######",
+		",,,,,,,,,....rrrrrrrrrrBpMMM.rrr..MMMM.rrr######",
+		",,,,,,,,,....rrrrrrrrrr;;;;;.rrr..MMpM.rrr######",
+		"GGGGGGG.............rrrrrrrrrrrrrrrrrrrrrr######",
+		"GGGGGGG.......;;;;..rrrrrrrrrrrrrrrrrrrrrr######",
+		"GGGGGGG.......;;;;..rrrrrrrrrrrrrrrrrrrrrr######",
+		"GGGGGGG####....;;;;.rrr.TTTTT.rrr.f.f..rrr######",
+		"GGGGGGG####.##.;;;;.rrr.TTTTT.rrr..f.f.rrr######",
+		"GGGGGGG,,,,.##......rrr.MMMMM.rrr.f.f..rrr######",
+		"GGGGGGG,,,,~~~~~~...rrr.MMpMM.rrr..f.f.rrr######",
+		"GGGGGGG.,,,~~~~~~...rrrrrrrrrrrrrrrrrrrrrr######",
+		"GGGGGGG....~~~~~~...rrrrrrrrrrrrrrrrrrrrrr######",
+		"GGGGGGGllll~~~~~~lll...lllllllllllllllllll######",
+		"GGGGGGG.............S.......f.f.f...f.f.f.######",
+		"GGGGGGG.......,,,,,,,,,,,,,,,,,,,,,,,,,,..######",
+		"GGGGGGG.......,,,,,,,,,,,,,,,,,,,,,,,,,,..######",
+		"GGGGGG########,,,,,,,,,,,,,,,,,,,,,,,,,,..######",
+		"GGGGGG########........,,,,................######",
+		"GGGGGG################,,,,######################",
+		"GGGGGG################,,,,######################",
+		"GGGGGG################,,,,######################",
+		"GGGGGG################,,,,######################"
 	],
-	"portes": [],
-	"interactions": [],
+	"portes": [
+		{
+			"x": 24,
+			"y": 18,
+			"vers": "maison_jadielle_1",
+			"arrivee": [
+				5,
+				6
+			]
+		},
+		{
+			"x": 25,
+			"y": 11,
+			"vers": "maison_jadielle_2",
+			"arrivee": [
+				5,
+				6
+			]
+		},
+		{
+			"x": 36,
+			"y": 19,
+			"vers": "boutique_jadielle",
+			"arrivee": [
+				5,
+				6
+			]
+		},
+		{
+			"x": 26,
+			"y": 26,
+			"vers": "centre_pokemon_jadielle",
+			"arrivee": [
+				8,
+				7
+			]
+		}
+	],
+	"interactions": [
+		{
+			"x": 36,
+			"y": 10,
+			"texte": [
+				"La porte de l'ARÈNE est verrouillée...",
+				"Le Champion n'est pas là pour le moment."
+			]
+		},
+		{
+			"x": 32,
+			"y": 10,
+			"texte": [
+				"ARÈNE POKÉMON DE JADIELLE",
+				"Le Champion est un dresseur mystérieux..."
+			]
+		},
+		{
+			"x": 23,
+			"y": 1,
+			"texte": [
+				"ROUTE 2",
+				"↑ FORÊT DE JADE"
+			]
+		},
+		{
+			"x": 20,
+			"y": 16,
+			"texte": [
+				"Soigne gratuitement tes POKÉMON au CENTRE POKÉMON !"
+			]
+		},
+		{
+			"x": 20,
+			"y": 30,
+			"texte": [
+				"JADIELLE",
+				"La cité éternellement verte."
+			]
+		}
+	],
 	"pnj": [],
 	"declencheurs": []
 }

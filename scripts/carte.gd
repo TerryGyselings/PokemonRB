@@ -4,7 +4,8 @@ extends Node2D
 #
 # Format du JSON d'une carte (Terry le modifie a la main) :
 #   nom          : nom affiche
-#   legende      : { "<symbole>": { "nom", "couleur", "solide" } }
+#   legende      : (facultatif) { "<symbole>": { "nom", "couleur", "solide" } } : les symboles de TOUTES les cartes sont
+#                  dans data/legende.json ; la legende d'une carte ne sert qu'a en redefinir un pour cette carte seulement
 #   lignes       : tableau de textes, un caractere = une case
 #   depart       : [x, y] case de depart si on charge la carte sans arrivee precise
 #   portes       : [ { "x", "y", "vers": "<id carte>", "arrivee": [x, y], "depuis": "gauche" } ]
@@ -33,6 +34,7 @@ const TAILLE := 16
 
 var dossier := "res://data/cartes"   # change par les tests
 var fichier_monde := "res://data/monde.json"
+var fichier_legende := "res://data/legende.json"   # symboles communs a toutes les cartes
 var id := ""
 var nom := ""
 var largeur := 0                     # taille de l'ensemble charge (cases)
@@ -72,6 +74,11 @@ func charger(id_carte: String) -> bool:
 	for k in groupe:
 		if k != id_carte:
 			ids.append(k)
+	var legende_commune: Dictionary = {}
+	if fichier_legende != "" and FileAccess.file_exists(fichier_legende):
+		var lc = _lire_json(fichier_legende)
+		if lc is Dictionary:
+			legende_commune = lc
 	_regions.clear()
 	_portes.clear()
 	_interactions.clear()
@@ -84,8 +91,10 @@ func charger(id_carte: String) -> bool:
 				return false
 			continue
 		var o: Array = groupe.get(rid, [0, 0])
+		var legende_carte: Dictionary = legende_commune.duplicate(true)
+		legende_carte.merge(d.get("legende", {}), true)   # la legende d'une carte, si elle en a une, prime sur la commune
 		var r := {"id": rid, "origine": Vector2i(int(o[0]), int(o[1])), "lignes": d.get("lignes", []),
-			"legende": d.get("legende", {}), "hauteur": 0, "largeur": 0, "donnees": d}
+			"legende": legende_carte, "hauteur": 0, "largeur": 0, "donnees": d}
 		r["hauteur"] = r["lignes"].size()
 		for l in r["lignes"]:
 			r["largeur"] = maxi(r["largeur"], String(l).length())
@@ -172,7 +181,7 @@ func _verifier() -> void:
 		var qui := "%s (%s)" % [n.get("nom", "?"), n.get("id", "?")]
 		if not dans_carte(c):
 			push_warning("le PNJ %s est hors de la carte en %s" % [qui, c])
-		elif solide(c) and not n.get("objet", false):
+		elif solide(c) and not n.get("objet", false) and not pnj_ok(c):
 			push_warning("le PNJ %s est sur une case solide en %s" % [qui, c])
 		elif _portes.has(c):
 			push_warning("le PNJ %s est sur une porte en %s" % [qui, c])
@@ -181,6 +190,13 @@ func _verifier() -> void:
 		occupees[c] = true
 		if not ["haut", "bas", "gauche", "droite"].has(String(n.get("direction", "bas"))):
 			push_warning("le PNJ %s a une direction invalide" % [qui])
+
+# un PNJ peut se tenir sur cette case solide si sa legende a "pnj_ok": true (ex : le comptoir)
+func pnj_ok(c: Vector2i) -> bool:
+	var r := _region_a(c)
+	if r.is_empty():
+		return false
+	return bool(r["legende"].get(symbole(c), {}).get("pnj_ok", false))
 
 # carte (region) qui contient la case c du monde, ou {}
 func _region_a(c: Vector2i) -> Dictionary:

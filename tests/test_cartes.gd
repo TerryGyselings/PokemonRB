@@ -48,7 +48,7 @@ func _init() -> void:
 		var vus := {}
 		for n in c.pnj_donnees:
 			var pos := Vector2i(int(n["x"]), int(n["y"]))
-			if not c.dans_carte(pos) or (c.solide(pos) and not n.get("objet", false)):
+			if not c.dans_carte(pos) or (c.solide(pos) and not n.get("objet", false) and not c.pnj_ok(pos)):
 				ko("%s : PNJ %s en %s hors carte ou sur une case solide" % [id, n.get("id", "?"), pos])
 			if c._portes.has(pos):
 				ko("%s : PNJ %s sur une porte en %s" % [id, n.get("id", "?"), pos])

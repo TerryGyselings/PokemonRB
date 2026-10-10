@@ -12,7 +12,7 @@ func _init() -> void:
 	var j = main.joueur
 	var o := Vector2i(0, -40)     # coin haut-gauche de la Route 1 dans le monde
 	main.charger_carte("bourg_palette", Vector2i(12, 3))
-	ok(main.carte.origine.y == -40 and main.carte.hauteur == 62, "monde : hauteur %d (40 + 22)" % main.carte.hauteur)
+	ok(main.carte.origine.y == -79 and main.carte.hauteur == 101, "monde : hauteur %d (39 + 40 + 22)" % main.carte.hauteur)
 	ok(main.carte.region_id_a(Vector2i(12, -1)) == "route_1" and main.carte.region_id_a(Vector2i(12, 0)) == "bourg_palette", "pas de superposition")
 	ok(main.carte.symbole(Vector2i(12, -1)) == "g" or main.carte.symbole(Vector2i(12, -1)) == "", "raccord au bourg (symbole %s)" % main.carte.symbole(Vector2i(12, -1)))
 	var rebord := o + Vector2i(3, 5)

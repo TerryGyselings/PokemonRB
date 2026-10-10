@@ -426,7 +426,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	_interagir(joueur.case + joueur.direction)
 
 # parle au PNJ / lit la pancarte / examine l'objet de la case "cible"
+# (si c'est un comptoir vide, on parle "par-dessus" a ce qu'il y a juste derriere)
 func _interagir(cible: Vector2i) -> void:
+	var derriere: Vector2i = cible + joueur.direction
+	if _est_comptoir_vide(cible) and _interactif(derriere):
+		cible = derriere
 	var p = pnj_a(cible)
 	if p != null:
 		if not p.donnees.get("objet", false):
@@ -437,8 +441,18 @@ func _interagir(cible: Vector2i) -> void:
 	if not i.is_empty():
 		_parler(i)
 
+# case de comptoir (legende "pnj_ok") sur laquelle il n'y a rien : on peut parler par-dessus
+func _est_comptoir_vide(c: Vector2i) -> bool:
+	return carte.pnj_ok(c) and pnj_a(c) == null and carte.interaction(c).is_empty()
+
 func _interactif(c: Vector2i) -> bool:
-	return pnj_a(c) != null or not carte.interaction(c).is_empty()
+	if pnj_a(c) != null or not carte.interaction(c).is_empty():
+		return true
+	if _est_comptoir_vide(c):
+		for d in [Vector2i.DOWN, Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP]:
+			if pnj_a(c + d) != null or not carte.interaction(c + d).is_empty():
+				return true
+	return false
 
 # ---------- souris dans le monde ----------
 
@@ -453,29 +467,42 @@ func _monde_libre() -> bool:
 	return partie_en_cours and not boite.visible and not _choix_actif and not _transition and not evenement_en_cours \
 		and not joueur.bloque and not combat.en_cours and not menu_jeu.actif
 
-# clic sur un PNJ, une pancarte ou un objet : on se tourne vers lui (en marchant jusqu'a lui si besoin) et on interagit
+# clic sur un PNJ, une pancarte ou un objet : on se tourne vers lui (en marchant jusqu'a lui si besoin) et on interagit.
+# Derriere un comptoir, cliquer sur le PNJ ou sur le comptoir revient au meme : on se place devant le comptoir.
 func _clic_monde(c: Vector2i) -> void:
 	if not _interactif(c) or joueur.en_marche():
 		return
-	var delta: Vector2i = c - joueur.case
-	if absi(delta.x) + absi(delta.y) == 1:
-		_marche_auto += 1
-		joueur.direction = delta
-		joueur.queue_redraw()
-		_interagir(c)
-		return
+	var places: Array = []     # [ case ou se placer, direction a regarder, case visee ]
+	if pnj_a(c) != null or not carte.interaction(c).is_empty():
+		for d in [Vector2i.DOWN, Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP]:
+			places.append([c + d, -d, c])
+			var n: Vector2i = c + d       # comptoir juste devant : on se place de l'autre cote
+			if _est_comptoir_vide(n):
+				places.append([n + d, -d, c])
+	else:     # clic sur le comptoir
+		for d in [Vector2i.DOWN, Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP]:
+			if pnj_a(c + d) != null or not carte.interaction(c + d).is_empty():
+				places.append([c - d, d, c + d])
 	_marche_auto += 1
 	var mon := _marche_auto
+	for pl in places:
+		if pl[0] == joueur.case:
+			joueur.direction = pl[1]
+			joueur.queue_redraw()
+			_interagir(joueur.case + joueur.direction)
+			return
 	var meilleur: Array = []
 	var trouve := false
-	for d in [Vector2i.DOWN, Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP]:
-		var v: Vector2i = c + d
-		if v == joueur.case or carte.solide(v) or pnj_a(v) != null or not carte.dans_carte(v):
+	var but: Array = []
+	for pl in places:
+		var v: Vector2i = pl[0]
+		if carte.solide(v) or pnj_a(v) != null or not carte.dans_carte(v):
 			continue
 		var ch := chemin(joueur.case, v, true)
 		if not ch.is_empty() and (not trouve or ch.size() < meilleur.size()):
 			meilleur = ch
 			trouve = true
+			but = pl
 	if not trouve:
 		return
 	for pas in meilleur:
@@ -484,12 +511,10 @@ func _clic_monde(c: Vector2i) -> void:
 		if not joueur.deplacer(pas - joueur.case):
 			return
 		await joueur.arrive
-	if mon == _marche_auto and _monde_libre():
-		var dd: Vector2i = c - joueur.case
-		if absi(dd.x) + absi(dd.y) == 1:
-			joueur.direction = dd
-			joueur.queue_redraw()
-			_interagir(c)
+	if mon == _marche_auto and _monde_libre() and joueur.case == but[0]:
+		joueur.direction = but[1]
+		joueur.queue_redraw()
+		_interagir(joueur.case + joueur.direction)
 
 func _avancer_dialogue() -> void:
 	_page += 1

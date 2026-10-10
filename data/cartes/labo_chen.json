@@ -1,61 +1,19 @@
 {
 	"lignes": [
-		"#BBoo#####BBBB#",
-		"#.............#",
-		"#B............#",
-		"#BMM.....TTT..#",
-		"#.MM..........#",
-		"#.............#",
-		"#.............#",
-		"#BBBBB...BBBBB#",
-		"#.............#",
-		"#.............#",
-		"#F...........F#",
-		"#######p#######"
+		"WeeooWWWWWeeeeW",
+		"W_____________W",
+		"We____________W",
+		"WeXX_____ttt__W",
+		"W_XX__________W",
+		"W_____________W",
+		"W_____________W",
+		"Weeeee___eeeeeW",
+		"W_____________W",
+		"W_____________W",
+		"WV___________VW",
+		"WWWWWWWpWWWWWWW"
 	],
 	"nom": "Laboratoire du Prof. Chen",
-	"legende": {
-		"#": {
-			"nom": "mur",
-			"couleur": "#5b4a3f",
-			"solide": true
-		},
-		".": {
-			"nom": "sol",
-			"couleur": "#c9a97a",
-			"solide": false
-		},
-		"p": {
-			"nom": "porte",
-			"couleur": "#7a4a25",
-			"solide": false
-		},
-		"T": {
-			"nom": "table",
-			"couleur": "#8a5a2b",
-			"solide": true
-		},
-		"o": {
-			"nom": "ordinateur",
-			"couleur": "#555a66",
-			"solide": true
-		},
-		"F": {
-			"nom": "fleur",
-			"couleur": "#e86fa0",
-			"solide": true
-		},
-		"M": {
-			"nom": "machine",
-			"couleur": "#7d8fa3",
-			"solide": true
-		},
-		"B": {
-			"nom": "etagere",
-			"couleur": "#6b4423",
-			"solide": true
-		}
-	},
 	"depart": [
 		7,
 		10

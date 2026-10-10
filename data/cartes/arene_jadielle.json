@@ -1,0 +1,47 @@
+{
+	"nom": "Arène de Jadielle",
+	"lignes": [
+		"WWWWWWWWWWWWWWW",
+		"W_____________W",
+		"W_____________W",
+		"W_____________W",
+		"W__WW_____WW__W",
+		"W_____________W",
+		"W_____________W",
+		"W__WW_____WW__W",
+		"W_____________W",
+		"W_____________W",
+		"W_____________W",
+		"W_____________W",
+		"WWWWWWWpWWWWWWW"
+	],
+	"depart": [
+		7,
+		11
+	],
+	"portes": [
+		{
+			"x": 7,
+			"y": 12,
+			"vers": "jadielle",
+			"arrivee": [
+				24,
+				-68
+			]
+		}
+	],
+	"interactions": [],
+	"pnj": [
+		{
+			"id": "champion",
+			"nom": "Champion",
+			"x": 7,
+			"y": 2,
+			"direction": "bas",
+			"couleur": "#8a5a2b",
+			"texte": [
+				"..."
+			]
+		}
+	]
+}

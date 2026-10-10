@@ -1,0 +1,96 @@
+{
+	"nom": "Boutique POKÉMON",
+	"lignes": [
+		"WWWWWWeeeeWWW",
+		"W_V_C_______W",
+		"W___C_______W",
+		"WCCCC___ee_eW",
+		"W_______ee_eW",
+		"W_CC____ee_eW",
+		"W___________W",
+		"WWWWWpWWWWWWW"
+	],
+	"depart": [
+		5,
+		6
+	],
+	"portes": [
+		{
+			"x": 5,
+			"y": 7,
+			"vers": "jadielle",
+			"arrivee": [
+				24,
+				-59
+			]
+		}
+	],
+	"interactions": [
+		{
+			"x": 6,
+			"y": 0,
+			"texte": [
+				"Des POKé BALLS et des POTIONS..."
+			]
+		},
+		{
+			"x": 7,
+			"y": 0,
+			"texte": [
+				"Des POKé BALLS et des POTIONS..."
+			]
+		},
+		{
+			"x": 8,
+			"y": 0,
+			"texte": [
+				"Des POKé BALLS et des POTIONS..."
+			]
+		},
+		{
+			"x": 9,
+			"y": 0,
+			"texte": [
+				"Des POKé BALLS et des POTIONS..."
+			]
+		}
+	],
+	"pnj": [
+		{
+			"id": "boutique_vendeur",
+			"nom": "Vendeur",
+			"x": 3,
+			"y": 2,
+			"direction": "droite",
+			"couleur": "#4a6fd0",
+			"texte": [
+				"Bienvenue !",
+				"La boutique n'est pas encore ouverte...",
+				"Reviens plus tard !"
+			]
+		},
+		{
+			"id": "boutique_client_1",
+			"nom": "Client",
+			"x": 7,
+			"y": 1,
+			"direction": "haut",
+			"couleur": "#5f7f5a",
+			"texte": [
+				"Je dois acheter les POTIONS.",
+				"On ne sait jamais quand un Pokémon peut en avoir besoin !"
+			]
+		},
+		{
+			"id": "boutique_cliente_1",
+			"nom": "Cliente",
+			"x": 10,
+			"y": 4,
+			"direction": "gauche",
+			"couleur": "#d98aa8",
+			"texte": [
+				"On vend des ANTIDOTES dans cette boutique."
+			]
+		}
+	]
+}

@@ -1,0 +1,168 @@
+{
+	".": {
+		"nom": "herbe",
+		"couleur": "#7cc04f",
+		"solide": false
+	},
+	";": {
+		"nom": "herbe claire",
+		"couleur": "#bfe0a9",
+		"solide": false
+	},
+	",": {
+		"nom": "chemin",
+		"couleur": "#e0d58a",
+		"solide": false
+	},
+	"r": {
+		"nom": "route",
+		"couleur": "#d3d3d3",
+		"solide": false
+	},
+	"g": {
+		"nom": "hautes herbes",
+		"couleur": "#3f9a3a",
+		"solide": false
+	},
+	"f": {
+		"nom": "fleurs",
+		"couleur": "#e8708a",
+		"solide": false
+	},
+	"~": {
+		"nom": "eau",
+		"couleur": "#90d5ff",
+		"solide": true
+	},
+	"l": {
+		"nom": "rebord",
+		"couleur": "#c9a56b",
+		"solide": false
+	},
+	"#": {
+		"nom": "arbre",
+		"couleur": "#1f5e2e",
+		"solide": true
+	},
+	"B": {
+		"nom": "buisson",
+		"couleur": "#57b56e",
+		"solide": true
+	},
+	"G": {
+		"nom": "montagne",
+		"couleur": "#7a6f66",
+		"solide": true
+	},
+	"F": {
+		"nom": "cloture",
+		"couleur": "#f4f1e8",
+		"solide": true
+	},
+	"S": {
+		"nom": "panneau",
+		"couleur": "#a8743a",
+		"solide": true
+	},
+	"b": {
+		"nom": "boite aux lettres",
+		"couleur": "#ffe14a",
+		"solide": true
+	},
+	"M": {
+		"nom": "mur de maison",
+		"couleur": "#d9d4c4",
+		"solide": true
+	},
+	"T": {
+		"nom": "toit",
+		"couleur": "#c0453a",
+		"solide": true
+	},
+	"p": {
+		"nom": "porte",
+		"couleur": "#7a4a25",
+		"solide": false
+	},
+	"P": {
+		"nom": "porte fermee",
+		"couleur": "#5a3a1c",
+		"solide": true
+	},
+	"W": {
+		"nom": "mur",
+		"couleur": "#5b4a3f",
+		"solide": true
+	},
+	"_": {
+		"nom": "sol",
+		"couleur": "#c9a97a",
+		"solide": false
+	},
+	"E": {
+		"nom": "escalier",
+		"couleur": "#9a8f85",
+		"solide": false
+	},
+	"t": {
+		"nom": "table",
+		"couleur": "#8a5a2b",
+		"solide": true
+	},
+	"v": {
+		"nom": "television",
+		"couleur": "#2b2f3a",
+		"solide": true
+	},
+	"e": {
+		"nom": "etagere",
+		"couleur": "#6b4423",
+		"solide": true
+	},
+	"K": {
+		"nom": "cuisine",
+		"couleur": "#b9c4cc",
+		"solide": true
+	},
+	"o": {
+		"nom": "ordinateur",
+		"couleur": "#555a66",
+		"solide": true
+	},
+	"L": {
+		"nom": "lit",
+		"couleur": "#4a6fd0",
+		"solide": true
+	},
+	"V": {
+		"nom": "vase de fleurs",
+		"couleur": "#e86fa0",
+		"solide": true
+	},
+	"X": {
+		"nom": "machine",
+		"couleur": "#7d8fa3",
+		"solide": true
+	},
+	"s": {
+		"nom": "barriere",
+		"couleur": "#b08a55",
+		"solide": true
+	},
+	"C": {
+		"nom": "comptoir",
+		"couleur": "#e8dcc0",
+		"solide": true,
+		"pnj_ok": true
+	},
+	"m": {
+		"nom": "carte",
+		"couleur": "#9fc4a8",
+		"solide": true
+	},
+	"c": {
+		"nom": "chaise",
+		"couleur": "#b5733c",
+		"solide": false
+	}
+}
