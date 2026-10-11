@@ -7,6 +7,7 @@ func marcher(j, d: Vector2i) -> void:
 	j.deplacer(d)
 	await create_timer(0.3).timeout
 func _init() -> void:
+	load("res://scripts/pokemon.gd").deterministe = true
 	var main = load("res://scene/main.tscn").instantiate()
 	root.add_child(main)
 	await process_frame

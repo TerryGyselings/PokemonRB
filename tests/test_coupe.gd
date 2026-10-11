@@ -18,6 +18,7 @@ func attendre(main, f: Callable, max := 100) -> void:
 		await create_timer(0.05).timeout
 		n += 1
 func _init() -> void:
+	load("res://scripts/pokemon.gd").deterministe = true
 	var main = load("res://scene/main.tscn").instantiate()
 	root.add_child(main)
 	await process_frame

@@ -22,7 +22,8 @@
 	"g": {
 		"nom": "hautes herbes",
 		"couleur": "#3f9a3a",
-		"solide": false
+		"solide": false,
+		"rencontre": "herbe"
 	},
 	"f": {
 		"nom": "fleurs",

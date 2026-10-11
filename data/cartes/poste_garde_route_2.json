@@ -1,0 +1,57 @@
+{
+	"nom": "Poste de garde",
+	"lignes": [
+		"WWWWppWWWW",
+		"W________W",
+		"W__e____eW",
+		"W________W",
+		"W_V____V_W",
+		"W________W",
+		"W________W",
+		"WWWWppWWWW"
+	],
+	"depart": [
+		4,
+		6
+	],
+	"portes": [
+		{
+			"x": 4,
+			"y": 0,
+			"vers": "route_2",
+			"arrivee": [
+				18,
+				-117
+			]
+		},
+		{
+			"x": 5,
+			"y": 0,
+			"vers": "route_2",
+			"arrivee": [
+				19,
+				-117
+			]
+		},
+		{
+			"x": 4,
+			"y": 7,
+			"vers": "route_2",
+			"arrivee": [
+				18,
+				-111
+			]
+		},
+		{
+			"x": 5,
+			"y": 7,
+			"vers": "route_2",
+			"arrivee": [
+				19,
+				-111
+			]
+		}
+	],
+	"interactions": [],
+	"pnj": []
+}

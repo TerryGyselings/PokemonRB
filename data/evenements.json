@@ -463,7 +463,8 @@
 		{
 			"dire": [
 				"VIEIL HOMME : Hé, toi ! Tu as un POKéDEX ?",
-				"VIEIL HOMME : Mmh, mon café commence à faire effet... Bon, je suis pressé, mais je vais te montrer comment on capture un POKéMON !"
+				"VIEIL HOMME : Mmh, mon café commence à faire effet...",
+				"VIEIL HOMME : Bon, je suis pressé, mais je vais te montrer comment on capture un POKéMON !"
 			]
 		},
 		{
@@ -772,6 +773,16 @@
 			"joueur_marche": [
 				"bas"
 			]
+		}
+	],
+	"pc_ouvrir": [
+		{
+			"dire": [
+				"${nom_joueur} allume l'ordinateur."
+			]
+		},
+		{
+			"pc": true
 		}
 	]
 }

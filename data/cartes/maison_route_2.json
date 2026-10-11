@@ -1,0 +1,52 @@
+{
+	"nom": "Maison",
+	"lignes": [
+		"WWWWWWWWmWWW",
+		"W________eeW",
+		"W__________W",
+		"W____tt____W",
+		"W____cc____W",
+		"W__________W",
+		"WV________VW",
+		"WWWWWpWWWWWW"
+	],
+	"depart": [
+		5,
+		6
+	],
+	"portes": [
+		{
+			"x": 5,
+			"y": 7,
+			"vers": "route_2",
+			"arrivee": [
+				17,
+				-135
+			]
+		}
+	],
+	"interactions": [
+		{
+			"x": 8,
+			"y": 0,
+			"texte": [
+				"Une carte de la region."
+			]
+		},
+		{
+			"x": 9,
+			"y": 1,
+			"texte": [
+				"Une etagere remplie de livres."
+			]
+		},
+		{
+			"x": 10,
+			"y": 1,
+			"texte": [
+				"Une etagere remplie de livres."
+			]
+		}
+	],
+	"pnj": []
+}

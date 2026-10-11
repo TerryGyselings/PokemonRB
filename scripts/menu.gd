@@ -90,7 +90,7 @@ func _pokemon() -> void:
 			var p = _jeu.equipe[k]
 			textes.append("%s   Nv%d\n      PV %d/%d" % [p.nom.to_upper(), p.niveau, p.pv, p.stats["pv"]])
 			var c := ColorRect.new()
-			c.color = _couleur(p.espece_id)
+			c.color = Color(p.couleur())
 			c.position = Vector2(400, 12 + k * 48)
 			c.size = Vector2(28, 28)
 			deco.add_child(c)
@@ -106,7 +106,7 @@ func _resume_pokemon(p) -> void:
 	var ecran := _plein_ecran()
 	etiquette(ecran, Vector2(16, 8), 22, "%s   Nv%d" % [p.nom.to_upper(), p.niveau])
 	var c := ColorRect.new()
-	c.color = _couleur(p.espece_id)
+	c.color = Color(p.couleur())
 	c.position = Vector2(24, 50)
 	c.size = Vector2(96, 96)
 	ecran.add_child(c)
@@ -115,11 +115,11 @@ func _resume_pokemon(p) -> void:
 	etiquette(ecran, Vector2(16, 176), 12, "N° %03d" % int(Donnees.espece(p.espece_id).get("numero", 0)))
 	var st: Dictionary = p.stats
 	var lignes := ["PV         %d / %d" % [p.pv, st["pv"]], "ATTAQUE    %d" % st["atk"], "DEFENSE    %d" % st["def"],
-		"VITESSE    %d" % st["vit"], "SPECIAL    %d" % st["spe"]]
+		"ATT. SPE.  %d" % st["spa"], "DEF. SPE.  %d" % st["spd"], "VITESSE    %d" % st["vit"]]
 	for k in lignes.size():
 		etiquette(ecran, Vector2(170, 64 + k * 22), 15, lignes[k])
 	_barre(ecran, Vector2(170, 50), 150.0, float(p.pv) / float(st["pv"]))
-	var prochain: int = p.exp_pour_niveau(p.niveau + 1) if p.niveau < 100 else p.exp
+	var prochain: int = p.exp_seuil(p.niveau + 1) if p.niveau < 100 else p.exp
 	etiquette(ecran, Vector2(170, 180), 13, "POINTS EXP   %d" % p.exp)
 	etiquette(ecran, Vector2(170, 196), 13, "NIVEAU SUIVANT  dans %d" % maxi(0, prochain - p.exp))
 	var att := panneau(Rect2(8, 214, 464, 98), ecran)

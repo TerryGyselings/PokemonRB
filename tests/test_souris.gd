@@ -22,6 +22,7 @@ func clic(cible, pos: Vector2, bouton := MOUSE_BUTTON_LEFT) -> void:
 	cible._input(e)
 	await process_frame
 func _init() -> void:
+	load("res://scripts/pokemon.gd").deterministe = true
 	var Sauvegarde := load("res://scripts/sauvegarde.gd")
 	Sauvegarde.dossier = "user://test_sauvegardes"
 	for s in range(1, 4): Sauvegarde.supprimer(s)
@@ -107,7 +108,9 @@ func _init() -> void:
 	cb.combattre(main.equipe, en, "REGIS")
 	await process_frame
 	for i in 3:
+		await create_timer(0.35).timeout                  # (pause d'animation entre deux messages)
 		await clic(cb, Vector2(240, 280))                 # messages d'introduction
+	await create_timer(0.4).timeout
 	ok(textes(cb).contains("Que doit faire"), "combat : 3 clics font avancer les messages jusqu'au menu")
 	await bouge(cb, cb.centre_ligne(3))
 	ok(textes(cb).contains("> FUITE"), "combat : survol de FUITE")

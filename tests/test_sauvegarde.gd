@@ -5,6 +5,7 @@ func ok(c: bool, msg: String) -> void:
 	print(("OK   " if c else "FAIL ") + msg)
 	if not c: erreurs += 1
 func _init() -> void:
+	load("res://scripts/pokemon.gd").deterministe = true
 	var Sauvegarde := load("res://scripts/sauvegarde.gd")
 	Sauvegarde.dossier = "user://test_sauvegardes"
 	for s in range(1, 4): Sauvegarde.supprimer(s)

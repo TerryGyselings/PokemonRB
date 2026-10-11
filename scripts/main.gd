@@ -12,6 +12,7 @@ const Sauvegarde := preload("res://scripts/sauvegarde.gd")
 const Titre := preload("res://scripts/titre.gd")
 const Menu := preload("res://scripts/menu.gd")
 const Boutique := preload("res://scripts/boutique.gd")
+const PC := preload("res://scripts/pc.gd")
 
 # les 8 badges (nom + couleur affichee dans la fiche du joueur)
 const BADGES := [
@@ -41,6 +42,7 @@ var combat: CanvasLayer
 var menu_jeu: CanvasLayer
 var titre: CanvasLayer
 var boutique: CanvasLayer
+var pc: CanvasLayer
 var avec_titre := false       # vrai quand le jeu est lance normalement (scene/lancement.tscn) ; faux dans les tests
 var equipe: Array = []        # les Pokemon du joueur (6 maximum)
 # etat de la partie (tout ca est sauvegarde)
@@ -82,7 +84,9 @@ func _ready() -> void:
 
 	_creer_interface()
 	combat = Combat.new()
+	combat.jeu = self
 	add_child(combat)
+	rng_rencontres.randomize()
 	menu_jeu = Menu.new()
 	menu_jeu.installer(self)
 	add_child(menu_jeu)
@@ -90,6 +94,9 @@ func _ready() -> void:
 	boutique = Boutique.new()
 	boutique.installer(self)
 	add_child(boutique)
+	pc = PC.new()
+	pc.installer(self)
+	add_child(pc)
 	if avec_titre:
 		_demarrer()
 	else:
@@ -128,6 +135,7 @@ func nouvelle_partie(slot: int, nom: String) -> void:
 	vus = []
 	captures = []
 	sac = {}
+	_vider_boites()
 	nom_joueur = nom
 	slot_actuel = slot
 	point_soin = POINT_SOIN_DEPART.duplicate(true)
@@ -138,6 +146,7 @@ func exporter() -> Dictionary:
 		"nom": nom_joueur, "argent": argent, "badges": badges.duplicate(), "temps": temps_jeu,
 		"drapeaux": drapeaux.duplicate(), "vus": vus.duplicate(), "captures": captures.duplicate(), "sac": sac.duplicate(),
 		"equipe": equipe.map(func(p): return p.en_dictionnaire()),
+		"boites": boites.map(func(b): return b.map(func(p): return p.en_dictionnaire() if p != null else {})),
 		"point_soin": point_soin.duplicate(true), "carte": carte.id, "position": [joueur.case.x, joueur.case.y], "direction": [joueur.direction.x, joueur.direction.y],
 	}
 
@@ -158,6 +167,13 @@ func importer(d: Dictionary, slot: int) -> void:
 	for pd in d.get("equipe", []):
 		if not Donnees.espece(String(pd.get("espece", ""))).is_empty():
 			equipe.append(Pokemon.depuis_dictionnaire(pd))
+	_vider_boites()
+	var sauvees: Array = d.get("boites", [])
+	for b in mini(sauvees.size(), boites.size()):
+		for i in mini(sauvees[b].size(), boites[b].size()):
+			var pd: Dictionary = sauvees[b][i]
+			if not pd.is_empty() and not Donnees.espece(String(pd.get("espece", ""))).is_empty():
+				boites[b][i] = Pokemon.depuis_dictionnaire(pd)
 	slot_actuel = slot
 	point_soin = d.get("point_soin", POINT_SOIN_DEPART).duplicate(true)
 	var pos: Array = d.get("position", [0, 0])
@@ -168,6 +184,40 @@ func importer(d: Dictionary, slot: int) -> void:
 	var dir: Array = d.get("direction", [0, 1])
 	joueur.direction = Vector2i(int(dir[0]), int(dir[1]))
 	joueur.queue_redraw()
+
+# ---------- PC : boites de stockage ----------
+
+var boites: Array = []        # boites[b][i] : un Pokemon ou null
+
+func _vider_boites() -> void:
+	boites = []
+	for b in int(Donnees.regle("nb_boites", 14)):
+		var l: Array = []
+		l.resize(int(Donnees.regle("taille_boite", 30)))
+		boites.append(l)
+
+# premiere place libre en partant de la boite "depuis" (puis les suivantes) : Vector2i(boite, case), (-1, -1) si tout est plein
+func place_libre_boite(depuis := 0) -> Vector2i:
+	if boites.is_empty():
+		_vider_boites()
+	for k in boites.size():
+		var b := (depuis + k) % boites.size()
+		for i in boites[b].size():
+			if boites[b][i] == null:
+				return Vector2i(b, i)
+	return Vector2i(-1, -1)
+
+# donne un Pokemon au joueur : dans l'equipe s'il reste de la place, sinon dans une boite du PC
+func recevoir_pokemon(p) -> Dictionary:
+	enregistrer_capture(p.espece_id)
+	if equipe.size() < int(Donnees.regle("taille_equipe", 6)):
+		equipe.append(p)
+		return {"ou": "equipe"}
+	var pos := place_libre_boite()
+	if pos.x < 0:
+		return {"ou": "perdu"}
+	boites[pos.x][pos.y] = p
+	return {"ou": "boite", "boite": pos.x}
 
 func enregistrer_vu(espece: String) -> void:
 	if not vus.has(espece):
@@ -354,6 +404,47 @@ func _sur_case_arrivee(c: Vector2i) -> void:
 		if conditions_ok(t):
 			evenements.jouer(String(t["evenement"]))
 			return
+	_tester_rencontre(c)
+
+# ---------- rencontres sauvages ----------
+
+var rencontres_actives := true                 # false : tests / zone sure
+var rng_rencontres := RandomNumberGenerator.new()
+
+# chaque pas dans les hautes herbes (legende "rencontre") peut declencher un combat (data/rencontres.json : "taux" en % par pas)
+func _tester_rencontre(c: Vector2i) -> bool:
+	if not rencontres_actives or equipe.is_empty() or joueur.bloque:
+		return false
+	var type: String = carte.rencontre_a(c)
+	if type == "":
+		return false
+	var table: Dictionary = Donnees.rencontres(carte.region_id_a(c), type)
+	if table.is_empty() or rng_rencontres.randi_range(1, 100) > int(table.get("taux", 10)):
+		return false
+	var vivant := false
+	for p in equipe:
+		if not p.ko():
+			vivant = true
+	if not vivant:
+		return false
+	var tirage: Dictionary = Donnees.tirer_rencontre(table, rng_rencontres)
+	if tirage.is_empty():
+		return false
+	lancer_rencontre(Pokemon.creer(String(tirage["espece"]), int(tirage["niveau"])))
+	return true
+
+# combat contre un Pokemon sauvage (fondu, combat, blackout si defaite) ; renvoie "victoire", "defaite", "fuite" ou "capture"
+func lancer_rencontre(sauvage: Pokemon) -> String:
+	joueur.bloque = true
+	var t := create_tween()
+	t.tween_property(voile, "modulate:a", 1.0, 0.3)
+	await t.finished
+	var fin: String = await combat.combat_sauvage(equipe, sauvage)
+	voile.modulate.a = 0.0
+	if fin == "defaite":
+		await blackout()
+	joueur.bloque = evenement_en_cours
+	return fin
 
 func _passer_porte(p: Dictionary) -> void:
 	joueur.bloque = true
@@ -415,7 +506,7 @@ func chemin(depart: Vector2i, arrivee: Vector2i, eviter_portes := false) -> Arra
 # ---------- interactions et dialogues ----------
 
 func _unhandled_input(event: InputEvent) -> void:
-	if combat.en_cours or boutique.actif:
+	if combat.en_cours or boutique.actif or pc.actif:
 		return
 	if _choix_actif:
 		if event.is_action_pressed("haut") or event.is_action_pressed("bas"):
@@ -508,7 +599,7 @@ func case_sous(pos: Vector2) -> Vector2i:
 
 func _monde_libre() -> bool:
 	return partie_en_cours and not boite.visible and not _choix_actif and not _transition and not evenement_en_cours \
-		and not joueur.bloque and not combat.en_cours and not menu_jeu.actif and not boutique.actif
+		and not joueur.bloque and not combat.en_cours and not menu_jeu.actif and not boutique.actif and not pc.actif
 
 # clic sur un PNJ, une pancarte ou un objet : on se tourne vers lui (en marchant jusqu'a lui si besoin) et on interagit.
 # Derriere un comptoir, cliquer sur le PNJ ou sur le comptoir revient au meme : on se place devant le comptoir.
@@ -588,7 +679,7 @@ func rect_choix(k: int) -> Rect2:
 func _input(event: InputEvent) -> void:
 	if not (event is InputEventMouseButton or event is InputEventMouseMotion):
 		return
-	if combat.en_cours or menu_jeu.actif or boutique.actif or (is_instance_valid(titre) and titre.actif):
+	if combat.en_cours or menu_jeu.actif or boutique.actif or pc.actif or (is_instance_valid(titre) and titre.actif):
 		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 		return
 	if _choix_actif:

@@ -31,8 +31,11 @@
 		{
 			"x": 11,
 			"y": 5,
-			"vers": "route_victoire",
-			"arrivee": []
+			"vers": "poste_garde_route_23",
+			"arrivee": [
+				5,
+				6
+			]
 		}
 	],
 	"interactions": [],

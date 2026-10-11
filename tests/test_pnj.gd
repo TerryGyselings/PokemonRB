@@ -14,6 +14,7 @@ func appuyer(main) -> void:
 	e.pressed = true
 	main._unhandled_input(e)
 func _init() -> void:
+	load("res://scripts/pokemon.gd").deterministe = true
 	var main = load("res://scene/main.tscn").instantiate()
 	root.add_child(main)
 	await process_frame

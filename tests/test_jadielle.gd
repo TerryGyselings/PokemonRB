@@ -22,6 +22,7 @@ func _chemin(carte, a: Vector2i, b: Vector2i) -> bool:
 			file.append(n)
 	return false
 func _init() -> void:
+	load("res://scripts/pokemon.gd").deterministe = true
 	var main = load("res://scene/main.tscn").instantiate()
 	root.add_child(main)
 	await process_frame

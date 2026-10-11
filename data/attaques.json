@@ -1,88 +1,6829 @@
 {
-	"charge": {
-		"nom": "Charge",
+	"ecrasface": {
+		"nom": "Écras’Face",
 		"type": "normal",
-		"puissance": 35,
-		"precision": 95,
-		"pp": 35
+		"categorie": "physique",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 35,
+		"id_en": "pound",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"poing_karate": {
+		"nom": "Poing Karaté",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 50,
+		"precision": 100,
+		"pp": 25,
+		"id_en": "karate-chop",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 44,
+		"effets": {
+			"crit": 1,
+			"meta": 0
+		},
+		"description_en": "Has an increased chance for a critical hit."
+	},
+	"torgnoles": {
+		"nom": "Torgnoles",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 15,
+		"precision": 85,
+		"pp": 10,
+		"id_en": "double-slap",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 30,
+		"effets": {
+			"coups": [
+				2,
+				5
+			],
+			"meta": 0
+		},
+		"description_en": "Hits 2-5 times in one turn."
+	},
+	"poing_comete": {
+		"nom": "Poing Comète",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 18,
+		"precision": 85,
+		"pp": 15,
+		"id_en": "comet-punch",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 30,
+		"effets": {
+			"coups": [
+				2,
+				5
+			],
+			"meta": 0
+		},
+		"description_en": "Hits 2-5 times in one turn."
+	},
+	"ultimapoing": {
+		"nom": "Ultimapoing",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 80,
+		"precision": 85,
+		"pp": 20,
+		"id_en": "mega-punch",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"jackpot": {
+		"nom": "Jackpot",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "pay-day",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 35,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Scatters money on the ground worth five times the user’s level."
+	},
+	"poing_feu": {
+		"nom": "Poing Feu",
+		"type": "feu",
+		"categorie": "physique",
+		"puissance": 75,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "fire-punch",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 5,
+		"chance_effet": 10,
+		"effets": {
+			"statut": "brulure",
+			"statut_chance": 10,
+			"meta": 4
+		},
+		"description_en": "Has a chance to burn the target."
+	},
+	"poing_glace": {
+		"nom": "Poing Glace",
+		"type": "glace",
+		"categorie": "physique",
+		"puissance": 75,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "ice-punch",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 6,
+		"chance_effet": 10,
+		"effets": {
+			"statut": "gel",
+			"statut_chance": 10,
+			"meta": 4
+		},
+		"description_en": "Has a chance to freeze the target."
+	},
+	"poing_eclair": {
+		"nom": "Poing Éclair",
+		"type": "electrik",
+		"categorie": "physique",
+		"puissance": 75,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "thunder-punch",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 7,
+		"chance_effet": 10,
+		"effets": {
+			"statut": "paralysie",
+			"statut_chance": 10,
+			"meta": 4
+		},
+		"description_en": "Has a chance to paralyze the target."
 	},
 	"griffe": {
 		"nom": "Griffe",
 		"type": "normal",
+		"categorie": "physique",
 		"puissance": 40,
 		"precision": 100,
-		"pp": 35
+		"pp": 35,
+		"id_en": "scratch",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
 	},
-	"rugissement": {
-		"nom": "Rugissement",
+	"force_poigne": {
+		"nom": "Force Poigne",
 		"type": "normal",
-		"puissance": 0,
-		"precision": 100,
-		"pp": 40,
-		"effet": {
-			"stat": "atk",
-			"cible": "adversaire",
-			"stades": -1
-		}
-	},
-	"mimi_queue": {
-		"nom": "Mimi-Queue",
-		"type": "normal",
-		"puissance": 0,
+		"categorie": "physique",
+		"puissance": 55,
 		"precision": 100,
 		"pp": 30,
-		"effet": {
-			"stat": "def",
-			"cible": "adversaire",
-			"stades": -1
-		}
+		"id_en": "vice-grip",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
 	},
-	"fouet_lianes": {
-		"nom": "Fouet Lianes",
-		"type": "plante",
-		"puissance": 35,
-		"precision": 100,
-		"pp": 10
-	},
-	"flammeche": {
-		"nom": "Flammeche",
-		"type": "feu",
-		"puissance": 40,
-		"precision": 100,
-		"pp": 25
-	},
-	"pistolet_a_o": {
-		"nom": "Pistolet a O",
-		"type": "eau",
-		"puissance": 40,
-		"precision": 100,
-		"pp": 25
-	},
-	"ecume": {
-		"nom": "Ecume",
-		"type": "eau",
-		"puissance": 20,
-		"precision": 100,
-		"pp": 30,
-		"effet": {
-			"stat": "vit",
-			"cible": "adversaire",
-			"stades": -1,
-			"chance": 0.33
-		}
-	},
-	"lutte": {
-		"nom": "Lutte",
+	"guillotine": {
+		"nom": "Guillotine",
 		"type": "normal",
-		"puissance": 50,
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 30,
+		"pp": 5,
+		"id_en": "guillotine",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 39,
+		"effets": {
+			"meta": 9
+		},
+		"description_en": "Causes a one-hit KO."
+	},
+	"coupe_vent": {
+		"nom": "Coupe-Vent",
+		"type": "normal",
+		"categorie": "speciale",
+		"puissance": 80,
 		"precision": 100,
-		"pp": 1
+		"pp": 10,
+		"id_en": "razor-wind",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 40,
+		"effets": {
+			"crit": 1,
+			"meta": 0
+		},
+		"description_en": "Requires a turn to charge before attacking."
+	},
+	"danse_lames": {
+		"nom": "Danse Lames",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "swords-dance",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 51,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": 2,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Attack by two stages."
 	},
 	"coupe": {
 		"nom": "Coupe",
 		"type": "normal",
+		"categorie": "physique",
 		"puissance": 50,
 		"precision": 95,
-		"pp": 30
+		"pp": 30,
+		"id_en": "cut",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"machine": "CS01",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"tornade": {
+		"nom": "Tornade",
+		"type": "vol",
+		"categorie": "speciale",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 35,
+		"id_en": "gust",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 150,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage and can hit Pokémon in the air."
+	},
+	"cru_ailes": {
+		"nom": "Cru-Ailes",
+		"type": "vol",
+		"categorie": "physique",
+		"puissance": 60,
+		"precision": 100,
+		"pp": 35,
+		"id_en": "wing-attack",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"cyclone": {
+		"nom": "Cyclone",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "whirlwind",
+		"priorite": -6,
+		"cible": "selected-pokemon",
+		"effet_id": 29,
+		"effets": {
+			"meta": 12
+		},
+		"description_en": "Immediately ends wild battles.  Forces trainers to switch Pokémon."
+	},
+	"vol": {
+		"nom": "Vol",
+		"type": "vol",
+		"categorie": "physique",
+		"puissance": 90,
+		"precision": 95,
+		"pp": 15,
+		"id_en": "fly",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 156,
+		"machine": "CS02",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "User flies high into the air, dodging all attacks, and hits next turn."
+	},
+	"etreinte": {
+		"nom": "Étreinte",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 15,
+		"precision": 85,
+		"pp": 20,
+		"id_en": "bind",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 43,
+		"chance_effet": 100,
+		"effets": {
+			"statut": "piege",
+			"statut_chance": 100,
+			"tours": [
+				5,
+				6
+			],
+			"meta": 4
+		},
+		"description_en": "Prevents the target from fleeing and inflicts damage for 2-5 turns."
+	},
+	"souplesse": {
+		"nom": "Souplesse",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 80,
+		"precision": 75,
+		"pp": 20,
+		"id_en": "slam",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"fouet_lianes": {
+		"nom": "Fouet Lianes",
+		"type": "plante",
+		"categorie": "physique",
+		"puissance": 45,
+		"precision": 100,
+		"pp": 25,
+		"id_en": "vine-whip",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"ecrasement": {
+		"nom": "Écrasement",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 65,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "stomp",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 151,
+		"chance_effet": 30,
+		"effets": {
+			"peur": 30,
+			"meta": 0
+		},
+		"description_en": "Has a chance to make the target flinch."
+	},
+	"double_pied": {
+		"nom": "Double Pied",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 30,
+		"precision": 100,
+		"pp": 30,
+		"id_en": "double-kick",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 45,
+		"effets": {
+			"coups": [
+				2,
+				2
+			],
+			"meta": 0
+		},
+		"description_en": "Hits twice in one turn."
+	},
+	"ultimawashi": {
+		"nom": "Ultimawashi",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 120,
+		"precision": 75,
+		"pp": 5,
+		"id_en": "mega-kick",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"pied_saute": {
+		"nom": "Pied Sauté",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 100,
+		"precision": 95,
+		"pp": 10,
+		"id_en": "jump-kick",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 46,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "If the user misses, it takes half the damage it would have inflicted in recoil."
+	},
+	"mawashi_geri": {
+		"nom": "Mawashi Geri",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 60,
+		"precision": 85,
+		"pp": 15,
+		"id_en": "rolling-kick",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 32,
+		"chance_effet": 30,
+		"effets": {
+			"peur": 30,
+			"meta": 0
+		},
+		"description_en": "Has a chance to make the target flinch."
+	},
+	"jet_de_sable": {
+		"nom": "Jet de Sable",
+		"type": "sol",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "sand-attack",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 24,
+		"effets": {
+			"stades": [
+				{
+					"stat": "precision",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s accuracy by one stage."
+	},
+	"coup_dboule": {
+		"nom": "Coup d’Boule",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 70,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "headbutt",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 32,
+		"chance_effet": 30,
+		"effets": {
+			"peur": 30,
+			"meta": 0
+		},
+		"description_en": "Has a chance to make the target flinch."
+	},
+	"koudkorne": {
+		"nom": "Koud’Korne",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 65,
+		"precision": 100,
+		"pp": 25,
+		"id_en": "horn-attack",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"furie": {
+		"nom": "Furie",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 15,
+		"precision": 85,
+		"pp": 20,
+		"id_en": "fury-attack",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 30,
+		"effets": {
+			"coups": [
+				2,
+				5
+			],
+			"meta": 0
+		},
+		"description_en": "Hits 2-5 times in one turn."
+	},
+	"empalkorne": {
+		"nom": "Empal’Korne",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 30,
+		"pp": 5,
+		"id_en": "horn-drill",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 39,
+		"effets": {
+			"meta": 9
+		},
+		"description_en": "Causes a one-hit KO."
+	},
+	"charge": {
+		"nom": "Charge",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 35,
+		"id_en": "tackle",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"plaquage": {
+		"nom": "Plaquage",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 85,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "body-slam",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 7,
+		"chance_effet": 30,
+		"effets": {
+			"statut": "paralysie",
+			"statut_chance": 30,
+			"meta": 4
+		},
+		"description_en": "Has a chance to paralyze the target."
+	},
+	"ligotage": {
+		"nom": "Ligotage",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 15,
+		"precision": 90,
+		"pp": 20,
+		"id_en": "wrap",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 43,
+		"chance_effet": 100,
+		"effets": {
+			"statut": "piege",
+			"statut_chance": 100,
+			"tours": [
+				2,
+				4
+			],
+			"meta": 4
+		},
+		"description_en": "Prevents the target from fleeing and inflicts damage for 2-5 turns."
+	},
+	"belier": {
+		"nom": "Bélier",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 90,
+		"precision": 85,
+		"pp": 20,
+		"id_en": "take-down",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 49,
+		"effets": {
+			"recul": 25,
+			"meta": 0
+		},
+		"description_en": "User receives 1/4 the damage it inflicts in recoil."
+	},
+	"mania": {
+		"nom": "Mania",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 120,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "thrash",
+		"priorite": 0,
+		"cible": "random-opponent",
+		"effet_id": 28,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Hits every turn for 2-3 turns, then confuses the user."
+	},
+	"damocles": {
+		"nom": "Damoclès",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 120,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "double-edge",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 199,
+		"effets": {
+			"recul": 33,
+			"meta": 0
+		},
+		"description_en": "User receives 1/3 the damage inflicted in recoil."
+	},
+	"mimi_queue": {
+		"nom": "Mimi-Queue",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 30,
+		"id_en": "tail-whip",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 20,
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s Defense by one stage."
+	},
+	"dard_venin": {
+		"nom": "Dard-Venin",
+		"type": "poison",
+		"categorie": "physique",
+		"puissance": 15,
+		"precision": 100,
+		"pp": 35,
+		"id_en": "poison-sting",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 3,
+		"chance_effet": 30,
+		"effets": {
+			"statut": "poison",
+			"statut_chance": 30,
+			"meta": 4
+		},
+		"description_en": "Has a chance to poison the target."
+	},
+	"double_dard": {
+		"nom": "Double Dard",
+		"type": "insecte",
+		"categorie": "physique",
+		"puissance": 25,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "twineedle",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 78,
+		"chance_effet": 20,
+		"effets": {
+			"statut": "poison",
+			"statut_chance": 20,
+			"coups": [
+				2,
+				2
+			],
+			"meta": 4
+		},
+		"description_en": "Hits twice in the same turn.  Has a chance to poison the target."
+	},
+	"dard_nuee": {
+		"nom": "Dard-Nuée",
+		"type": "insecte",
+		"categorie": "physique",
+		"puissance": 25,
+		"precision": 95,
+		"pp": 20,
+		"id_en": "pin-missile",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 30,
+		"effets": {
+			"coups": [
+				2,
+				5
+			],
+			"meta": 0
+		},
+		"description_en": "Hits 2-5 times in one turn."
+	},
+	"grozyeux": {
+		"nom": "Groz’Yeux",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 30,
+		"id_en": "leer",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 20,
+		"chance_effet": 100,
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s Defense by one stage."
+	},
+	"morsure": {
+		"nom": "Morsure",
+		"type": "tenebres",
+		"categorie": "physique",
+		"puissance": 60,
+		"precision": 100,
+		"pp": 25,
+		"id_en": "bite",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 32,
+		"chance_effet": 30,
+		"effets": {
+			"peur": 30,
+			"meta": 0
+		},
+		"description_en": "Has a chance to make the target flinch."
+	},
+	"rugissement": {
+		"nom": "Rugissement",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 40,
+		"id_en": "growl",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 19,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s Attack by one stage."
+	},
+	"hurlement": {
+		"nom": "Hurlement",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "roar",
+		"priorite": -6,
+		"cible": "selected-pokemon",
+		"effet_id": 29,
+		"machine": "CT05",
+		"effets": {
+			"meta": 12
+		},
+		"description_en": "Immediately ends wild battles.  Forces trainers to switch Pokémon."
+	},
+	"berceuse": {
+		"nom": "Berceuse",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 55,
+		"pp": 15,
+		"id_en": "sing",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 2,
+		"effets": {
+			"statut": "sommeil",
+			"statut_chance": 100,
+			"tours": [
+				2,
+				4
+			],
+			"meta": 1
+		},
+		"description_en": "Puts the target to sleep."
+	},
+	"ultrason": {
+		"nom": "Ultrason",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 55,
+		"pp": 20,
+		"id_en": "supersonic",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 50,
+		"effets": {
+			"statut": "confusion",
+			"statut_chance": 100,
+			"tours": [
+				2,
+				5
+			],
+			"meta": 1
+		},
+		"description_en": "Confuses the target."
+	},
+	"sonic_boom": {
+		"nom": "Sonic Boom",
+		"type": "normal",
+		"categorie": "speciale",
+		"puissance": 0,
+		"precision": 90,
+		"pp": 20,
+		"id_en": "sonic-boom",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 131,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts 20 points of damage."
+	},
+	"entrave": {
+		"nom": "Entrave",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "disable",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 87,
+		"effets": {
+			"statut": "entrave",
+			"statut_chance": 100,
+			"tours": [
+				4,
+				4
+			],
+			"meta": 13
+		},
+		"description_en": "Disables the target’s last used move for 1-8 turns."
+	},
+	"acide": {
+		"nom": "Acide",
+		"type": "poison",
+		"categorie": "speciale",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 30,
+		"id_en": "acid",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 73,
+		"chance_effet": 10,
+		"effets": {
+			"stades": [
+				{
+					"stat": "spd",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 10,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Special Defense by one stage."
+	},
+	"flammeche": {
+		"nom": "Flammèche",
+		"type": "feu",
+		"categorie": "speciale",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 25,
+		"id_en": "ember",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 5,
+		"chance_effet": 10,
+		"effets": {
+			"statut": "brulure",
+			"statut_chance": 10,
+			"meta": 4
+		},
+		"description_en": "Has a chance to burn the target."
+	},
+	"lance_flammes": {
+		"nom": "Lance-Flammes",
+		"type": "feu",
+		"categorie": "speciale",
+		"puissance": 90,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "flamethrower",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 5,
+		"chance_effet": 10,
+		"machine": "CT35",
+		"effets": {
+			"statut": "brulure",
+			"statut_chance": 10,
+			"meta": 4
+		},
+		"description_en": "Has a chance to burn the target."
+	},
+	"brume": {
+		"nom": "Brume",
+		"type": "glace",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 30,
+		"id_en": "mist",
+		"priorite": 0,
+		"cible": "users-field",
+		"effet_id": 47,
+		"effets": {
+			"meta": 11
+		},
+		"description_en": "Protects the user’s stats from being changed by enemy moves."
+	},
+	"pistolet_a_o": {
+		"nom": "Pistolet à O",
+		"type": "eau",
+		"categorie": "speciale",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 25,
+		"id_en": "water-gun",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"hydrocanon": {
+		"nom": "Hydrocanon",
+		"type": "eau",
+		"categorie": "speciale",
+		"puissance": 110,
+		"precision": 80,
+		"pp": 5,
+		"id_en": "hydro-pump",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"surf": {
+		"nom": "Surf",
+		"type": "eau",
+		"categorie": "speciale",
+		"puissance": 90,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "surf",
+		"priorite": 0,
+		"cible": "all-other-pokemon",
+		"effet_id": 258,
+		"machine": "CS03",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage and can hit Dive users."
+	},
+	"laser_glace": {
+		"nom": "Laser Glace",
+		"type": "glace",
+		"categorie": "speciale",
+		"puissance": 90,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "ice-beam",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 6,
+		"chance_effet": 10,
+		"machine": "CT13",
+		"effets": {
+			"statut": "gel",
+			"statut_chance": 10,
+			"meta": 4
+		},
+		"description_en": "Has a chance to freeze the target."
+	},
+	"blizzard": {
+		"nom": "Blizzard",
+		"type": "glace",
+		"categorie": "speciale",
+		"puissance": 110,
+		"precision": 70,
+		"pp": 5,
+		"id_en": "blizzard",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 261,
+		"chance_effet": 10,
+		"machine": "CT14",
+		"effets": {
+			"statut": "gel",
+			"statut_chance": 10,
+			"meta": 4
+		},
+		"description_en": "Has a chance to freeze the target."
+	},
+	"rafale_psy": {
+		"nom": "Rafale Psy",
+		"type": "psy",
+		"categorie": "speciale",
+		"puissance": 65,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "psybeam",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 77,
+		"chance_effet": 10,
+		"effets": {
+			"statut": "confusion",
+			"statut_chance": 10,
+			"tours": [
+				2,
+				5
+			],
+			"meta": 4
+		},
+		"description_en": "Has a chance to confuse the target."
+	},
+	"bulles_do": {
+		"nom": "Bulles d’O",
+		"type": "eau",
+		"categorie": "speciale",
+		"puissance": 65,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "bubble-beam",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 71,
+		"chance_effet": 10,
+		"effets": {
+			"stades": [
+				{
+					"stat": "vit",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 10,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Speed by one stage."
+	},
+	"onde_boreale": {
+		"nom": "Onde Boréale",
+		"type": "glace",
+		"categorie": "speciale",
+		"puissance": 65,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "aurora-beam",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 69,
+		"chance_effet": 10,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 10,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Attack by one stage."
+	},
+	"ultralaser": {
+		"nom": "Ultralaser",
+		"type": "normal",
+		"categorie": "speciale",
+		"puissance": 150,
+		"precision": 90,
+		"pp": 5,
+		"id_en": "hyper-beam",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 81,
+		"machine": "CT15",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "User foregoes its next turn to recharge."
+	},
+	"picpic": {
+		"nom": "Picpic",
+		"type": "vol",
+		"categorie": "physique",
+		"puissance": 35,
+		"precision": 100,
+		"pp": 35,
+		"id_en": "peck",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"bec_vrille": {
+		"nom": "Bec Vrille",
+		"type": "vol",
+		"categorie": "physique",
+		"puissance": 80,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "drill-peck",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"sacrifice": {
+		"nom": "Sacrifice",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 80,
+		"precision": 80,
+		"pp": 20,
+		"id_en": "submission",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 49,
+		"effets": {
+			"recul": 25,
+			"meta": 0
+		},
+		"description_en": "User receives 1/4 the damage it inflicts in recoil."
+	},
+	"balayage": {
+		"nom": "Balayage",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "low-kick",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 197,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts more damage to heavier targets, with a maximum of 120 power."
+	},
+	"riposte": {
+		"nom": "Riposte",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "counter",
+		"priorite": -5,
+		"cible": "specific-move",
+		"effet_id": 90,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts twice the damage the user received from the last physical hit it took."
+	},
+	"frappe_atlas": {
+		"nom": "Frappe Atlas",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "seismic-toss",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 88,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts damage equal to the user’s level."
+	},
+	"force": {
+		"nom": "Force",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 80,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "strength",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"machine": "CS04",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"vole_vie": {
+		"nom": "Vole-Vie",
+		"type": "plante",
+		"categorie": "speciale",
+		"puissance": 20,
+		"precision": 100,
+		"pp": 25,
+		"id_en": "absorb",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 4,
+		"effets": {
+			"drain": 50,
+			"meta": 8
+		},
+		"description_en": "Drains half the damage inflicted to heal the user."
+	},
+	"mega_sangsue": {
+		"nom": "Méga-Sangsue",
+		"type": "plante",
+		"categorie": "speciale",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "mega-drain",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 4,
+		"effets": {
+			"drain": 50,
+			"meta": 8
+		},
+		"description_en": "Drains half the damage inflicted to heal the user."
+	},
+	"vampigraine": {
+		"nom": "Vampigraine",
+		"type": "plante",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 90,
+		"pp": 10,
+		"id_en": "leech-seed",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 85,
+		"effets": {
+			"statut": "vampigraine",
+			"statut_chance": 100,
+			"meta": 1
+		},
+		"description_en": "Seeds the target, stealing HP from it every turn."
+	},
+	"croissance": {
+		"nom": "Croissance",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "growth",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 317,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": 1,
+					"sur": "soi"
+				},
+				{
+					"stat": "spa",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Attack and Special Attack by one stage."
+	},
+	"tranchherbe": {
+		"nom": "Tranch’Herbe",
+		"type": "plante",
+		"categorie": "physique",
+		"puissance": 55,
+		"precision": 95,
+		"pp": 25,
+		"id_en": "razor-leaf",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 44,
+		"effets": {
+			"crit": 1,
+			"meta": 0
+		},
+		"description_en": "Has an increased chance for a critical hit."
+	},
+	"lance_soleil": {
+		"nom": "Lance-Soleil",
+		"type": "plante",
+		"categorie": "speciale",
+		"puissance": 120,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "solar-beam",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 152,
+		"machine": "CT22",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Requires a turn to charge before attacking."
+	},
+	"poudre_toxik": {
+		"nom": "Poudre Toxik",
+		"type": "poison",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 75,
+		"pp": 35,
+		"id_en": "poison-powder",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 67,
+		"effets": {
+			"statut": "poison",
+			"statut_chance": 100,
+			"meta": 1
+		},
+		"description_en": "Poisons the target."
+	},
+	"para_spore": {
+		"nom": "Para-Spore",
+		"type": "plante",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 75,
+		"pp": 30,
+		"id_en": "stun-spore",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 68,
+		"effets": {
+			"statut": "paralysie",
+			"statut_chance": 100,
+			"meta": 1
+		},
+		"description_en": "Paralyzes the target."
+	},
+	"poudre_dodo": {
+		"nom": "Poudre Dodo",
+		"type": "plante",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 75,
+		"pp": 15,
+		"id_en": "sleep-powder",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 2,
+		"effets": {
+			"statut": "sommeil",
+			"statut_chance": 100,
+			"tours": [
+				2,
+				4
+			],
+			"meta": 1
+		},
+		"description_en": "Puts the target to sleep."
+	},
+	"danse_fleurs": {
+		"nom": "Danse Fleurs",
+		"type": "plante",
+		"categorie": "speciale",
+		"puissance": 120,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "petal-dance",
+		"priorite": 0,
+		"cible": "random-opponent",
+		"effet_id": 28,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Hits every turn for 2-3 turns, then confuses the user."
+	},
+	"secretion": {
+		"nom": "Sécrétion",
+		"type": "insecte",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 95,
+		"pp": 40,
+		"id_en": "string-shot",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 61,
+		"effets": {
+			"stades": [
+				{
+					"stat": "vit",
+					"delta": -2,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s Speed by two stages."
+	},
+	"draco_rage": {
+		"nom": "Draco-Rage",
+		"type": "dragon",
+		"categorie": "speciale",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "dragon-rage",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 42,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts 40 points of damage."
+	},
+	"danse_flammes": {
+		"nom": "Danse Flammes",
+		"type": "feu",
+		"categorie": "speciale",
+		"puissance": 35,
+		"precision": 85,
+		"pp": 15,
+		"id_en": "fire-spin",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 43,
+		"chance_effet": 100,
+		"effets": {
+			"statut": "piege",
+			"statut_chance": 100,
+			"tours": [
+				5,
+				6
+			],
+			"meta": 4
+		},
+		"description_en": "Prevents the target from fleeing and inflicts damage for 2-5 turns."
+	},
+	"eclair": {
+		"nom": "Éclair",
+		"type": "electrik",
+		"categorie": "speciale",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 30,
+		"id_en": "thunder-shock",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 7,
+		"chance_effet": 10,
+		"effets": {
+			"statut": "paralysie",
+			"statut_chance": 10,
+			"meta": 4
+		},
+		"description_en": "Has a chance to paralyze the target."
+	},
+	"tonnerre": {
+		"nom": "Tonnerre",
+		"type": "electrik",
+		"categorie": "speciale",
+		"puissance": 90,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "thunderbolt",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 7,
+		"chance_effet": 10,
+		"machine": "CT24",
+		"effets": {
+			"statut": "paralysie",
+			"statut_chance": 10,
+			"meta": 4
+		},
+		"description_en": "Has a chance to paralyze the target."
+	},
+	"cage_eclair": {
+		"nom": "Cage Éclair",
+		"type": "electrik",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 90,
+		"pp": 20,
+		"id_en": "thunder-wave",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 68,
+		"effets": {
+			"statut": "paralysie",
+			"statut_chance": 100,
+			"meta": 1
+		},
+		"description_en": "Paralyzes the target."
+	},
+	"fatal_foudre": {
+		"nom": "Fatal-Foudre",
+		"type": "electrik",
+		"categorie": "speciale",
+		"puissance": 110,
+		"precision": 70,
+		"pp": 10,
+		"id_en": "thunder",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 153,
+		"chance_effet": 30,
+		"machine": "CT25",
+		"effets": {
+			"statut": "paralysie",
+			"statut_chance": 30,
+			"meta": 4
+		},
+		"description_en": "Has a chance to paralyze the target."
+	},
+	"jet_pierres": {
+		"nom": "Jet-Pierres",
+		"type": "roche",
+		"categorie": "physique",
+		"puissance": 50,
+		"precision": 90,
+		"pp": 15,
+		"id_en": "rock-throw",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"seisme": {
+		"nom": "Séisme",
+		"type": "sol",
+		"categorie": "physique",
+		"puissance": 100,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "earthquake",
+		"priorite": 0,
+		"cible": "all-other-pokemon",
+		"effet_id": 148,
+		"machine": "CT26",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage and can hit Dig users."
+	},
+	"abime": {
+		"nom": "Abîme",
+		"type": "sol",
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 30,
+		"pp": 5,
+		"id_en": "fissure",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 39,
+		"effets": {
+			"meta": 9
+		},
+		"description_en": "Causes a one-hit KO."
+	},
+	"tunnel": {
+		"nom": "Tunnel",
+		"type": "sol",
+		"categorie": "physique",
+		"puissance": 80,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "dig",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 257,
+		"machine": "CT28",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "User digs underground, dodging all attacks, and hits next turn."
+	},
+	"toxik": {
+		"nom": "Toxik",
+		"type": "poison",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 90,
+		"pp": 10,
+		"id_en": "toxic",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 34,
+		"machine": "CT06",
+		"effets": {
+			"statut": "poison",
+			"statut_chance": 100,
+			"tours": [
+				15,
+				15
+			],
+			"meta": 1
+		},
+		"description_en": "Badly poisons the target, inflicting more damage every turn."
+	},
+	"choc_mental": {
+		"nom": "Choc Mental",
+		"type": "psy",
+		"categorie": "speciale",
+		"puissance": 50,
+		"precision": 100,
+		"pp": 25,
+		"id_en": "confusion",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 77,
+		"chance_effet": 10,
+		"effets": {
+			"statut": "confusion",
+			"statut_chance": 10,
+			"tours": [
+				2,
+				5
+			],
+			"meta": 4
+		},
+		"description_en": "Has a chance to confuse the target."
+	},
+	"psyko": {
+		"nom": "Psyko",
+		"type": "psy",
+		"categorie": "speciale",
+		"puissance": 90,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "psychic",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 73,
+		"chance_effet": 10,
+		"machine": "CT29",
+		"effets": {
+			"stades": [
+				{
+					"stat": "spd",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 10,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Special Defense by one stage."
+	},
+	"hypnose": {
+		"nom": "Hypnose",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 60,
+		"pp": 20,
+		"id_en": "hypnosis",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 2,
+		"effets": {
+			"statut": "sommeil",
+			"statut_chance": 100,
+			"tours": [
+				2,
+				4
+			],
+			"meta": 1
+		},
+		"description_en": "Puts the target to sleep."
+	},
+	"yoga": {
+		"nom": "Yoga",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 40,
+		"id_en": "meditate",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 11,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Attack by one stage."
+	},
+	"hate": {
+		"nom": "Hâte",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 30,
+		"id_en": "agility",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 53,
+		"effets": {
+			"stades": [
+				{
+					"stat": "vit",
+					"delta": 2,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Speed by two stages."
+	},
+	"vive_attaque": {
+		"nom": "Vive-Attaque",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 30,
+		"id_en": "quick-attack",
+		"priorite": 1,
+		"cible": "selected-pokemon",
+		"effet_id": 104,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"frenesie": {
+		"nom": "Frénésie",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 20,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "rage",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 82,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "If the user is hit after using this move, its Attack rises by one stage."
+	},
+	"teleport": {
+		"nom": "Téléport",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "teleport",
+		"priorite": -6,
+		"cible": "user",
+		"effet_id": 154,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Immediately ends wild battles.  No effect otherwise."
+	},
+	"ombre_nocturne": {
+		"nom": "Ombre Nocturne",
+		"type": "spectre",
+		"categorie": "speciale",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "night-shade",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 88,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts damage equal to the user’s level."
+	},
+	"copie": {
+		"nom": "Copie",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "mimic",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 83,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Copies the target’s last used move."
+	},
+	"grincement": {
+		"nom": "Grincement",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 85,
+		"pp": 40,
+		"id_en": "screech",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 60,
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": -2,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s Defense by two stages."
+	},
+	"reflet": {
+		"nom": "Reflet",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 15,
+		"id_en": "double-team",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 17,
+		"machine": "CT32",
+		"effets": {
+			"stades": [
+				{
+					"stat": "esquive",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s evasion by one stage."
+	},
+	"soin": {
+		"nom": "Soin",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "recover",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 33,
+		"effets": {
+			"soin": 50,
+			"meta": 3
+		},
+		"description_en": "Heals the user by half its max HP."
+	},
+	"armure": {
+		"nom": "Armure",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 30,
+		"id_en": "harden",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 12,
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Defense by one stage."
+	},
+	"lilliput": {
+		"nom": "Lilliput",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "minimize",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 109,
+		"effets": {
+			"stades": [
+				{
+					"stat": "esquive",
+					"delta": 2,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s evasion by two stages."
+	},
+	"brouillard": {
+		"nom": "Brouillard",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "smokescreen",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 24,
+		"effets": {
+			"stades": [
+				{
+					"stat": "precision",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s accuracy by one stage."
+	},
+	"onde_folie": {
+		"nom": "Onde Folie",
+		"type": "spectre",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "confuse-ray",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 50,
+		"effets": {
+			"statut": "confusion",
+			"statut_chance": 100,
+			"tours": [
+				2,
+				5
+			],
+			"meta": 1
+		},
+		"description_en": "Confuses the target."
+	},
+	"repli": {
+		"nom": "Repli",
+		"type": "eau",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 40,
+		"id_en": "withdraw",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 12,
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Defense by one stage."
+	},
+	"boularmure": {
+		"nom": "Boul’Armure",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 40,
+		"id_en": "defense-curl",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 157,
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises user’s Defense by one stage."
+	},
+	"bouclier": {
+		"nom": "Bouclier",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "barrier",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 52,
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": 2,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Defense by two stages."
+	},
+	"mur_lumiere": {
+		"nom": "Mur Lumière",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 30,
+		"id_en": "light-screen",
+		"priorite": 0,
+		"cible": "users-field",
+		"effet_id": 36,
+		"machine": "CT16",
+		"effets": {
+			"meta": 11
+		},
+		"description_en": "Reduces damage from special attacks by 50% for five turns."
+	},
+	"buee_noire": {
+		"nom": "Buée Noire",
+		"type": "glace",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 30,
+		"id_en": "haze",
+		"priorite": 0,
+		"cible": "entire-field",
+		"effet_id": 26,
+		"effets": {
+			"meta": 10
+		},
+		"description_en": "Resets all Pokémon’s stats, accuracy, and evasion."
+	},
+	"protection": {
+		"nom": "Protection",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "reflect",
+		"priorite": 0,
+		"cible": "users-field",
+		"effet_id": 66,
+		"machine": "CT33",
+		"effets": {
+			"meta": 11
+		},
+		"description_en": "Reduces damage from physical attacks by half."
+	},
+	"puissance": {
+		"nom": "Puissance",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 30,
+		"id_en": "focus-energy",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 48,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Increases the user’s chance to score a critical hit."
+	},
+	"patience": {
+		"nom": "Patience",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "bide",
+		"priorite": 1,
+		"cible": "user",
+		"effet_id": 27,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "User waits for two turns, then hits back for twice the damage it took."
+	},
+	"metronome": {
+		"nom": "Métronome",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "metronome",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 84,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Randomly selects and uses any move in the game."
+	},
+	"mimique": {
+		"nom": "Mimique",
+		"type": "vol",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "mirror-move",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 10,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Uses the target’s last used move."
+	},
+	"destruction": {
+		"nom": "Destruction",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 200,
+		"precision": 100,
+		"pp": 5,
+		"id_en": "self-destruct",
+		"priorite": 0,
+		"cible": "all-other-pokemon",
+		"effet_id": 8,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "User faints."
+	},
+	"bombe_uf": {
+		"nom": "Bombe Œuf",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 100,
+		"precision": 75,
+		"pp": 10,
+		"id_en": "egg-bomb",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"lechouille": {
+		"nom": "Léchouille",
+		"type": "spectre",
+		"categorie": "physique",
+		"puissance": 30,
+		"precision": 100,
+		"pp": 30,
+		"id_en": "lick",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 7,
+		"chance_effet": 30,
+		"effets": {
+			"statut": "paralysie",
+			"statut_chance": 30,
+			"meta": 4
+		},
+		"description_en": "Has a chance to paralyze the target."
+	},
+	"puredpois": {
+		"nom": "Purédpois",
+		"type": "poison",
+		"categorie": "speciale",
+		"puissance": 30,
+		"precision": 70,
+		"pp": 20,
+		"id_en": "smog",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 3,
+		"chance_effet": 40,
+		"effets": {
+			"statut": "poison",
+			"statut_chance": 40,
+			"meta": 4
+		},
+		"description_en": "Has a chance to poison the target."
+	},
+	"detritus": {
+		"nom": "Détritus",
+		"type": "poison",
+		"categorie": "speciale",
+		"puissance": 65,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "sludge",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 3,
+		"chance_effet": 30,
+		"effets": {
+			"statut": "poison",
+			"statut_chance": 30,
+			"meta": 4
+		},
+		"description_en": "Has a chance to poison the target."
+	},
+	"massdos": {
+		"nom": "Massd’Os",
+		"type": "sol",
+		"categorie": "physique",
+		"puissance": 65,
+		"precision": 85,
+		"pp": 20,
+		"id_en": "bone-club",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 32,
+		"chance_effet": 10,
+		"effets": {
+			"peur": 10,
+			"meta": 0
+		},
+		"description_en": "Has a chance to make the target flinch."
+	},
+	"deflagration": {
+		"nom": "Déflagration",
+		"type": "feu",
+		"categorie": "speciale",
+		"puissance": 110,
+		"precision": 85,
+		"pp": 5,
+		"id_en": "fire-blast",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 5,
+		"chance_effet": 10,
+		"machine": "CT38",
+		"effets": {
+			"statut": "brulure",
+			"statut_chance": 10,
+			"meta": 4
+		},
+		"description_en": "Has a chance to burn the target."
+	},
+	"cascade": {
+		"nom": "Cascade",
+		"type": "eau",
+		"categorie": "physique",
+		"puissance": 80,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "waterfall",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 32,
+		"chance_effet": 20,
+		"machine": "CS07",
+		"effets": {
+			"peur": 20,
+			"meta": 0
+		},
+		"description_en": "Has a chance to make the target flinch."
+	},
+	"claquoir": {
+		"nom": "Claquoir",
+		"type": "eau",
+		"categorie": "physique",
+		"puissance": 35,
+		"precision": 85,
+		"pp": 15,
+		"id_en": "clamp",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 43,
+		"chance_effet": 100,
+		"effets": {
+			"statut": "piege",
+			"statut_chance": 100,
+			"tours": [
+				5,
+				6
+			],
+			"meta": 4
+		},
+		"description_en": "Prevents the target from fleeing and inflicts damage for 2-5 turns."
+	},
+	"meteores": {
+		"nom": "Météores",
+		"type": "normal",
+		"categorie": "speciale",
+		"puissance": 60,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "swift",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 18,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Never misses."
+	},
+	"coudkrane": {
+		"nom": "Coud’Krâne",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 130,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "skull-bash",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 146,
+		"chance_effet": 100,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Raises the user’s Defense by one stage.  User charges for one turn before attacking."
+	},
+	"picanon": {
+		"nom": "Picanon",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 20,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "spike-cannon",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 30,
+		"effets": {
+			"coups": [
+				2,
+				5
+			],
+			"meta": 0
+		},
+		"description_en": "Hits 2-5 times in one turn."
+	},
+	"constriction": {
+		"nom": "Constriction",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 10,
+		"precision": 100,
+		"pp": 35,
+		"id_en": "constrict",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 71,
+		"chance_effet": 10,
+		"effets": {
+			"stades": [
+				{
+					"stat": "vit",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 10,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Speed by one stage."
+	},
+	"amnesie": {
+		"nom": "Amnésie",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "amnesia",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 55,
+		"effets": {
+			"stades": [
+				{
+					"stat": "spd",
+					"delta": 2,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Special Defense by two stages."
+	},
+	"telekinesie": {
+		"nom": "Télékinésie",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 80,
+		"pp": 15,
+		"id_en": "kinesis",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 24,
+		"effets": {
+			"stades": [
+				{
+					"stat": "precision",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s accuracy by one stage."
+	},
+	"e_coque": {
+		"nom": "E-Coque",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "soft-boiled",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 33,
+		"effets": {
+			"soin": 50,
+			"meta": 3
+		},
+		"description_en": "Heals the user by half its max HP."
+	},
+	"pied_voltige": {
+		"nom": "Pied Voltige",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 130,
+		"precision": 90,
+		"pp": 10,
+		"id_en": "high-jump-kick",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 46,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "If the user misses, it takes half the damage it would have inflicted in recoil."
+	},
+	"regard_medusant": {
+		"nom": "Regard Médusant",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 30,
+		"id_en": "glare",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 68,
+		"effets": {
+			"statut": "paralysie",
+			"statut_chance": 100,
+			"meta": 1
+		},
+		"description_en": "Paralyzes the target."
+	},
+	"devoreve": {
+		"nom": "Dévorêve",
+		"type": "psy",
+		"categorie": "speciale",
+		"puissance": 100,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "dream-eater",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 9,
+		"effets": {
+			"drain": 50,
+			"meta": 8
+		},
+		"description_en": "Only works on sleeping Pokémon.  Drains half the damage inflicted to heal the user."
+	},
+	"gaz_toxik": {
+		"nom": "Gaz Toxik",
+		"type": "poison",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 90,
+		"pp": 40,
+		"id_en": "poison-gas",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 67,
+		"effets": {
+			"statut": "poison",
+			"statut_chance": 100,
+			"meta": 1
+		},
+		"description_en": "Poisons the target."
+	},
+	"pilonnage": {
+		"nom": "Pilonnage",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 15,
+		"precision": 85,
+		"pp": 20,
+		"id_en": "barrage",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 30,
+		"effets": {
+			"coups": [
+				2,
+				5
+			],
+			"meta": 0
+		},
+		"description_en": "Hits 2-5 times in one turn."
+	},
+	"vampirisme": {
+		"nom": "Vampirisme",
+		"type": "insecte",
+		"categorie": "physique",
+		"puissance": 80,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "leech-life",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 4,
+		"effets": {
+			"drain": 50,
+			"meta": 8
+		},
+		"description_en": "Drains half the damage inflicted to heal the user."
+	},
+	"grobisou": {
+		"nom": "Grobisou",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 75,
+		"pp": 10,
+		"id_en": "lovely-kiss",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 2,
+		"effets": {
+			"statut": "sommeil",
+			"statut_chance": 100,
+			"tours": [
+				2,
+				4
+			],
+			"meta": 1
+		},
+		"description_en": "Puts the target to sleep."
+	},
+	"pique": {
+		"nom": "Piqué",
+		"type": "vol",
+		"categorie": "physique",
+		"puissance": 140,
+		"precision": 90,
+		"pp": 5,
+		"id_en": "sky-attack",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 76,
+		"chance_effet": 30,
+		"effets": {
+			"peur": 30,
+			"crit": 1,
+			"meta": 0
+		},
+		"description_en": "User charges for one turn before attacking.  Has a chance to make the target flinch."
+	},
+	"morphing": {
+		"nom": "Morphing",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "transform",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 58,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "User becomes a copy of the target until it leaves battle."
+	},
+	"ecume": {
+		"nom": "Écume",
+		"type": "eau",
+		"categorie": "speciale",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 30,
+		"id_en": "bubble",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 71,
+		"chance_effet": 10,
+		"effets": {
+			"stades": [
+				{
+					"stat": "vit",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 10,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Speed by one stage."
+	},
+	"uppercut": {
+		"nom": "Uppercut",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 70,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "dizzy-punch",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 77,
+		"chance_effet": 20,
+		"effets": {
+			"statut": "confusion",
+			"statut_chance": 20,
+			"tours": [
+				2,
+				5
+			],
+			"meta": 4
+		},
+		"description_en": "Has a chance to confuse the target."
+	},
+	"spore": {
+		"nom": "Spore",
+		"type": "plante",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "spore",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 2,
+		"effets": {
+			"statut": "sommeil",
+			"statut_chance": 100,
+			"tours": [
+				2,
+				4
+			],
+			"meta": 1
+		},
+		"description_en": "Puts the target to sleep."
+	},
+	"flash": {
+		"nom": "Flash",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "flash",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 24,
+		"machine": "CS05",
+		"effets": {
+			"stades": [
+				{
+					"stat": "precision",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s accuracy by one stage."
+	},
+	"vague_psy": {
+		"nom": "Vague Psy",
+		"type": "psy",
+		"categorie": "speciale",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "psywave",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 89,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts damage between 50% and 150% of the user’s level."
+	},
+	"trempette": {
+		"nom": "Trempette",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 40,
+		"id_en": "splash",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 86,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Does nothing."
+	},
+	"acidarmure": {
+		"nom": "Acidarmure",
+		"type": "poison",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "acid-armor",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 52,
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": 2,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Defense by two stages."
+	},
+	"pince_masse": {
+		"nom": "Pince-Masse",
+		"type": "eau",
+		"categorie": "physique",
+		"puissance": 100,
+		"precision": 90,
+		"pp": 10,
+		"id_en": "crabhammer",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 44,
+		"effets": {
+			"crit": 1,
+			"meta": 0
+		},
+		"description_en": "Has an increased chance for a critical hit."
+	},
+	"explosion": {
+		"nom": "Explosion",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 250,
+		"precision": 100,
+		"pp": 5,
+		"id_en": "explosion",
+		"priorite": 0,
+		"cible": "all-other-pokemon",
+		"effet_id": 8,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "User faints."
+	},
+	"combo_griffe": {
+		"nom": "Combo-Griffe",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 18,
+		"precision": 80,
+		"pp": 15,
+		"id_en": "fury-swipes",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 30,
+		"effets": {
+			"coups": [
+				2,
+				5
+			],
+			"meta": 0
+		},
+		"description_en": "Hits 2-5 times in one turn."
+	},
+	"osmerang": {
+		"nom": "Osmerang",
+		"type": "sol",
+		"categorie": "physique",
+		"puissance": 50,
+		"precision": 90,
+		"pp": 10,
+		"id_en": "bonemerang",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 45,
+		"effets": {
+			"coups": [
+				2,
+				2
+			],
+			"meta": 0
+		},
+		"description_en": "Hits twice in one turn."
+	},
+	"repos": {
+		"nom": "Repos",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "rest",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 38,
+		"machine": "CT44",
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "User sleeps for two turns, completely healing itself."
+	},
+	"eboulement": {
+		"nom": "Éboulement",
+		"type": "roche",
+		"categorie": "physique",
+		"puissance": 75,
+		"precision": 90,
+		"pp": 10,
+		"id_en": "rock-slide",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 32,
+		"chance_effet": 30,
+		"effets": {
+			"peur": 30,
+			"meta": 0
+		},
+		"description_en": "Has a chance to make the target flinch."
+	},
+	"croc_de_mort": {
+		"nom": "Croc de Mort",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 80,
+		"precision": 90,
+		"pp": 15,
+		"id_en": "hyper-fang",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 32,
+		"chance_effet": 10,
+		"effets": {
+			"peur": 10,
+			"meta": 0
+		},
+		"description_en": "Has a chance to make the target flinch."
+	},
+	"affutage": {
+		"nom": "Affûtage",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 30,
+		"id_en": "sharpen",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 11,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Attack by one stage."
+	},
+	"conversion": {
+		"nom": "Conversion",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 30,
+		"id_en": "conversion",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 31,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "User’s type changes to the type of one of its moves at random."
+	},
+	"triplattaque": {
+		"nom": "Triplattaque",
+		"type": "normal",
+		"categorie": "speciale",
+		"puissance": 80,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "tri-attack",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 37,
+		"chance_effet": 20,
+		"effets": {
+			"meta": 4
+		},
+		"description_en": "Has a chance to burn, freeze, or paralyze the target."
+	},
+	"croc_fatal": {
+		"nom": "Croc Fatal",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 90,
+		"pp": 10,
+		"id_en": "super-fang",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 41,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts damage equal to half the target’s HP."
+	},
+	"tranche": {
+		"nom": "Tranche",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 70,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "slash",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 44,
+		"effets": {
+			"crit": 1,
+			"meta": 0
+		},
+		"description_en": "Has an increased chance for a critical hit."
+	},
+	"clonage": {
+		"nom": "Clonage",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "substitute",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 80,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Transfers 1/4 of the user’s max HP into a doll, protecting the user from further damage or status changes until it breaks."
+	},
+	"lutte": {
+		"nom": "Lutte",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 50,
+		"precision": 0,
+		"pp": 1,
+		"id_en": "struggle",
+		"priorite": 0,
+		"cible": "random-opponent",
+		"effet_id": 255,
+		"effets": {
+			"soin": -25,
+			"meta": 0
+		},
+		"description_en": "User takes 1/4 its max HP in recoil."
+	},
+	"gribouille": {
+		"nom": "Gribouille",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 1,
+		"id_en": "sketch",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 96,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Permanently becomes the target’s last used move."
+	},
+	"triple_pied": {
+		"nom": "Triple Pied",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 10,
+		"precision": 90,
+		"pp": 10,
+		"id_en": "triple-kick",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 105,
+		"effets": {
+			"coups": [
+				3,
+				3
+			],
+			"meta": 0
+		},
+		"description_en": "Hits three times, increasing power by 100% with each successful hit."
+	},
+	"larcin": {
+		"nom": "Larcin",
+		"type": "tenebres",
+		"categorie": "physique",
+		"puissance": 60,
+		"precision": 100,
+		"pp": 25,
+		"id_en": "thief",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 106,
+		"machine": "CT46",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Takes the target’s item."
+	},
+	"toile": {
+		"nom": "Toile",
+		"type": "insecte",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "spider-web",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 107,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Prevents the target from leaving battle."
+	},
+	"lire_esprit": {
+		"nom": "Lire-Esprit",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "mind-reader",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 95,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Ensures that the user’s next move will hit the target."
+	},
+	"cauchemar": {
+		"nom": "Cauchemar",
+		"type": "spectre",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "nightmare",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 108,
+		"effets": {
+			"statut": "cauchemar",
+			"statut_chance": 100,
+			"meta": 1
+		},
+		"description_en": "Target loses 1/4 its max HP every turn as long as it’s asleep."
+	},
+	"roue_de_feu": {
+		"nom": "Roue de Feu",
+		"type": "feu",
+		"categorie": "physique",
+		"puissance": 60,
+		"precision": 100,
+		"pp": 25,
+		"id_en": "flame-wheel",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 126,
+		"chance_effet": 10,
+		"effets": {
+			"statut": "brulure",
+			"statut_chance": 10,
+			"meta": 4
+		},
+		"description_en": "Has a chance to burn the target.  Lets frozen Pokémon thaw themselves."
+	},
+	"ronflement": {
+		"nom": "Ronflement",
+		"type": "normal",
+		"categorie": "speciale",
+		"puissance": 50,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "snore",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 93,
+		"chance_effet": 30,
+		"effets": {
+			"peur": 30,
+			"meta": 0
+		},
+		"description_en": "Has a chance to make the target flinch.  Only works if the user is sleeping."
+	},
+	"malediction": {
+		"nom": "Malédiction",
+		"type": "spectre",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "curse",
+		"priorite": 0,
+		"cible": "specific-move",
+		"effet_id": 110,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Ghosts pay half their max HP to hurt the target every turn.  Others decrease Speed but raise Attack and Defense."
+	},
+	"gigotage": {
+		"nom": "Gigotage",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "flail",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 100,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts more damage when the user has less HP remaining, with a maximum of 200 power."
+	},
+	"conversion_2": {
+		"nom": "Conversion 2",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 30,
+		"id_en": "conversion-2",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 94,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Changes the user’s type to a random type either resistant or immune to the last move used against it."
+	},
+	"aeroblast": {
+		"nom": "Aéroblast",
+		"type": "vol",
+		"categorie": "speciale",
+		"puissance": 100,
+		"precision": 95,
+		"pp": 5,
+		"id_en": "aeroblast",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 44,
+		"effets": {
+			"crit": 1,
+			"meta": 0
+		},
+		"description_en": "Has an increased chance for a critical hit."
+	},
+	"spore_coton": {
+		"nom": "Spore Coton",
+		"type": "plante",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 40,
+		"id_en": "cotton-spore",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 61,
+		"effets": {
+			"stades": [
+				{
+					"stat": "vit",
+					"delta": -2,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s Speed by two stages."
+	},
+	"contre": {
+		"nom": "Contre",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "reversal",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 100,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts more damage when the user has less HP remaining, with a maximum of 200 power."
+	},
+	"depit": {
+		"nom": "Dépit",
+		"type": "spectre",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "spite",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 101,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Lowers the PP of the target’s last used move by 4."
+	},
+	"poudreuse": {
+		"nom": "Poudreuse",
+		"type": "glace",
+		"categorie": "speciale",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 25,
+		"id_en": "powder-snow",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 6,
+		"chance_effet": 10,
+		"effets": {
+			"statut": "gel",
+			"statut_chance": 10,
+			"meta": 4
+		},
+		"description_en": "Has a chance to freeze the target."
+	},
+	"abri": {
+		"nom": "Abri",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "protect",
+		"priorite": 4,
+		"cible": "user",
+		"effet_id": 112,
+		"machine": "CT17",
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Prevents any moves from hitting the user this turn."
+	},
+	"mach_punch": {
+		"nom": "Mach Punch",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 30,
+		"id_en": "mach-punch",
+		"priorite": 1,
+		"cible": "selected-pokemon",
+		"effet_id": 104,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"grimace": {
+		"nom": "Grimace",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "scary-face",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 61,
+		"effets": {
+			"stades": [
+				{
+					"stat": "vit",
+					"delta": -2,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s Speed by two stages."
+	},
+	"feinte": {
+		"nom": "Feinte",
+		"type": "tenebres",
+		"categorie": "physique",
+		"puissance": 60,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "feint-attack",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 18,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Never misses."
+	},
+	"doux_baiser": {
+		"nom": "Doux Baiser",
+		"type": "fee",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 75,
+		"pp": 10,
+		"id_en": "sweet-kiss",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 50,
+		"effets": {
+			"statut": "confusion",
+			"statut_chance": 100,
+			"tours": [
+				2,
+				5
+			],
+			"meta": 1
+		},
+		"description_en": "Confuses the target."
+	},
+	"cognobidon": {
+		"nom": "Cognobidon",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "belly-drum",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 143,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "User pays half its max HP to max out its Attack."
+	},
+	"bombe_beurk": {
+		"nom": "Bombe Beurk",
+		"type": "poison",
+		"categorie": "speciale",
+		"puissance": 90,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "sludge-bomb",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 3,
+		"chance_effet": 30,
+		"machine": "CT36",
+		"effets": {
+			"statut": "poison",
+			"statut_chance": 30,
+			"meta": 4
+		},
+		"description_en": "Has a chance to poison the target."
+	},
+	"coudboue": {
+		"nom": "Coud’Boue",
+		"type": "sol",
+		"categorie": "speciale",
+		"puissance": 20,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "mud-slap",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 74,
+		"chance_effet": 100,
+		"effets": {
+			"stades": [
+				{
+					"stat": "precision",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s accuracy by one stage."
+	},
+	"octazooka": {
+		"nom": "Octazooka",
+		"type": "eau",
+		"categorie": "speciale",
+		"puissance": 65,
+		"precision": 85,
+		"pp": 10,
+		"id_en": "octazooka",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 74,
+		"chance_effet": 50,
+		"effets": {
+			"stades": [
+				{
+					"stat": "precision",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 50,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s accuracy by one stage."
+	},
+	"picots": {
+		"nom": "Picots",
+		"type": "sol",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "spikes",
+		"priorite": 0,
+		"cible": "opponents-field",
+		"effet_id": 113,
+		"effets": {
+			"meta": 11
+		},
+		"description_en": "Scatters Spikes, hurting opposing Pokémon that switch in."
+	},
+	"elecanon": {
+		"nom": "Élecanon",
+		"type": "electrik",
+		"categorie": "speciale",
+		"puissance": 120,
+		"precision": 50,
+		"pp": 5,
+		"id_en": "zap-cannon",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 7,
+		"chance_effet": 100,
+		"effets": {
+			"statut": "paralysie",
+			"statut_chance": 100,
+			"meta": 4
+		},
+		"description_en": "Has a chance to paralyze the target."
+	},
+	"clairvoyance": {
+		"nom": "Clairvoyance",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 40,
+		"id_en": "foresight",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 114,
+		"effets": {
+			"statut": "sans_immunite",
+			"statut_chance": 100,
+			"meta": 1
+		},
+		"description_en": "Forces the target to have no Evade, and allows it to be hit by Normal and Fighting moves even if it’s a Ghost."
+	},
+	"lien_du_destin": {
+		"nom": "Lien du Destin",
+		"type": "spectre",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "destiny-bond",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 99,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "If the user faints this turn, the target automatically will, too."
+	},
+	"requiem": {
+		"nom": "Requiem",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "perish-song",
+		"priorite": 0,
+		"cible": "all-pokemon",
+		"effet_id": 115,
+		"effets": {
+			"statut": "requiem",
+			"statut_chance": 100,
+			"tours": [
+				4,
+				4
+			],
+			"meta": 1
+		},
+		"description_en": "User and target both faint after three turns."
+	},
+	"vent_glace": {
+		"nom": "Vent Glace",
+		"type": "glace",
+		"categorie": "speciale",
+		"puissance": 55,
+		"precision": 95,
+		"pp": 15,
+		"id_en": "icy-wind",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 71,
+		"chance_effet": 100,
+		"effets": {
+			"stades": [
+				{
+					"stat": "vit",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Speed by one stage."
+	},
+	"detection": {
+		"nom": "Détection",
+		"type": "combat",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "detect",
+		"priorite": 4,
+		"cible": "user",
+		"effet_id": 112,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Prevents any moves from hitting the user this turn."
+	},
+	"charge_os": {
+		"nom": "Charge Os",
+		"type": "sol",
+		"categorie": "physique",
+		"puissance": 25,
+		"precision": 90,
+		"pp": 10,
+		"id_en": "bone-rush",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 30,
+		"effets": {
+			"coups": [
+				2,
+				5
+			],
+			"meta": 0
+		},
+		"description_en": "Hits 2-5 times in one turn."
+	},
+	"verrouillage": {
+		"nom": "Verrouillage",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "lock-on",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 95,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Ensures that the user’s next move will hit the target."
+	},
+	"colere": {
+		"nom": "Colère",
+		"type": "dragon",
+		"categorie": "physique",
+		"puissance": 120,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "outrage",
+		"priorite": 0,
+		"cible": "random-opponent",
+		"effet_id": 28,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Hits every turn for 2-3 turns, then confuses the user."
+	},
+	"tempete_de_sable": {
+		"nom": "Tempête de Sable",
+		"type": "roche",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "sandstorm",
+		"priorite": 0,
+		"cible": "entire-field",
+		"effet_id": 116,
+		"machine": "CT37",
+		"effets": {
+			"meta": 10
+		},
+		"description_en": "Changes the weather to a sandstorm for five turns."
+	},
+	"giga_sangsue": {
+		"nom": "Giga-Sangsue",
+		"type": "plante",
+		"categorie": "speciale",
+		"puissance": 75,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "giga-drain",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 4,
+		"machine": "CT19",
+		"effets": {
+			"drain": 50,
+			"meta": 8
+		},
+		"description_en": "Drains half the damage inflicted to heal the user."
+	},
+	"tenacite": {
+		"nom": "Ténacité",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "endure",
+		"priorite": 4,
+		"cible": "user",
+		"effet_id": 117,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Prevents the user’s HP from lowering below 1 this turn."
+	},
+	"charme": {
+		"nom": "Charme",
+		"type": "fee",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "charm",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 59,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": -2,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s Attack by two stages."
+	},
+	"roulade": {
+		"nom": "Roulade",
+		"type": "roche",
+		"categorie": "physique",
+		"puissance": 30,
+		"precision": 90,
+		"pp": 20,
+		"id_en": "rollout",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 118,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Power doubles every turn this move is used in succession after the first, resetting after five turns."
+	},
+	"faux_chage": {
+		"nom": "Faux-Chage",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 40,
+		"id_en": "false-swipe",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 102,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Cannot lower the target’s HP below 1."
+	},
+	"vantardise": {
+		"nom": "Vantardise",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 85,
+		"pp": 15,
+		"id_en": "swagger",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 119,
+		"effets": {
+			"statut": "confusion",
+			"statut_chance": 100,
+			"tours": [
+				2,
+				5
+			],
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": 2,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 5
+		},
+		"description_en": "Raises the target’s Attack by two stages and confuses the target."
+	},
+	"lait_a_boire": {
+		"nom": "Lait à Boire",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "milk-drink",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 33,
+		"effets": {
+			"soin": 50,
+			"meta": 3
+		},
+		"description_en": "Heals the user by half its max HP."
+	},
+	"etincelle": {
+		"nom": "Étincelle",
+		"type": "electrik",
+		"categorie": "physique",
+		"puissance": 65,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "spark",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 7,
+		"chance_effet": 30,
+		"effets": {
+			"statut": "paralysie",
+			"statut_chance": 30,
+			"meta": 4
+		},
+		"description_en": "Has a chance to paralyze the target."
+	},
+	"taillade": {
+		"nom": "Taillade",
+		"type": "insecte",
+		"categorie": "physique",
+		"puissance": 40,
+		"precision": 95,
+		"pp": 20,
+		"id_en": "fury-cutter",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 120,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Power doubles every turn this move is used in succession after the first, maxing out after five turns."
+	},
+	"ailes_dacier": {
+		"nom": "Ailes d’Acier",
+		"type": "acier",
+		"categorie": "physique",
+		"puissance": 70,
+		"precision": 90,
+		"pp": 25,
+		"id_en": "steel-wing",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 139,
+		"chance_effet": 10,
+		"machine": "CT47",
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 10,
+			"meta": 7
+		},
+		"description_en": "Has a chance to raise the user’s Defense by one stage."
+	},
+	"regard_noir": {
+		"nom": "Regard Noir",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "mean-look",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 107,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Prevents the target from leaving battle."
+	},
+	"attraction": {
+		"nom": "Attraction",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "attract",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 121,
+		"machine": "CT45",
+		"effets": {
+			"statut": "attraction",
+			"statut_chance": 100,
+			"meta": 1
+		},
+		"description_en": "Target falls in love if it has the opposite gender, and has a 50% chance to refuse attacking the user."
+	},
+	"blabla_dodo": {
+		"nom": "Blabla Dodo",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "sleep-talk",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 98,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Randomly uses one of the user’s other three moves.  Only works if the user is sleeping."
+	},
+	"glas_de_soin": {
+		"nom": "Glas de Soin",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "heal-bell",
+		"priorite": 0,
+		"cible": "user-and-allies",
+		"effet_id": 103,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Cures the entire party of major status effects."
+	},
+	"retour": {
+		"nom": "Retour",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "return",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 122,
+		"machine": "CT27",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Power increases with happiness, up to a maximum of 102."
+	},
+	"cadeau": {
+		"nom": "Cadeau",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 90,
+		"pp": 15,
+		"id_en": "present",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 123,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Randomly inflicts damage with power from 40 to 120 or heals the target for 1/4 its max HP."
+	},
+	"frustration": {
+		"nom": "Frustration",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "frustration",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 124,
+		"machine": "CT21",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Power increases as happiness decreases, up to a maximum of 102."
+	},
+	"rune_protect": {
+		"nom": "Rune Protect",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 25,
+		"id_en": "safeguard",
+		"priorite": 0,
+		"cible": "users-field",
+		"effet_id": 125,
+		"machine": "CT20",
+		"effets": {
+			"meta": 11
+		},
+		"description_en": "Protects the user’s field from major status ailments and confusion for five turns."
+	},
+	"balance": {
+		"nom": "Balance",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "pain-split",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 92,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Sets the user’s and targets’s HP to the average of their current HP."
+	},
+	"feu_sacre": {
+		"nom": "Feu Sacré",
+		"type": "feu",
+		"categorie": "physique",
+		"puissance": 100,
+		"precision": 95,
+		"pp": 5,
+		"id_en": "sacred-fire",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 126,
+		"chance_effet": 50,
+		"effets": {
+			"statut": "brulure",
+			"statut_chance": 50,
+			"meta": 4
+		},
+		"description_en": "Has a chance to burn the target.  Lets frozen Pokémon thaw themselves."
+	},
+	"ampleur": {
+		"nom": "Ampleur",
+		"type": "sol",
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 30,
+		"id_en": "magnitude",
+		"priorite": 0,
+		"cible": "all-other-pokemon",
+		"effet_id": 127,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Power varies randomly from 10 to 150."
+	},
+	"dynamo_poing": {
+		"nom": "Dynamo-Poing",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 100,
+		"precision": 50,
+		"pp": 5,
+		"id_en": "dynamic-punch",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 77,
+		"chance_effet": 100,
+		"effets": {
+			"statut": "confusion",
+			"statut_chance": 100,
+			"tours": [
+				2,
+				5
+			],
+			"meta": 4
+		},
+		"description_en": "Has a chance to confuse the target."
+	},
+	"megacorne": {
+		"nom": "Mégacorne",
+		"type": "insecte",
+		"categorie": "physique",
+		"puissance": 120,
+		"precision": 85,
+		"pp": 10,
+		"id_en": "megahorn",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"draco_souffle": {
+		"nom": "Draco-Souffle",
+		"type": "dragon",
+		"categorie": "speciale",
+		"puissance": 60,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "dragon-breath",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 7,
+		"chance_effet": 30,
+		"effets": {
+			"statut": "paralysie",
+			"statut_chance": 30,
+			"meta": 4
+		},
+		"description_en": "Has a chance to paralyze the target."
+	},
+	"relais": {
+		"nom": "Relais",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 40,
+		"id_en": "baton-pass",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 128,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Allows the trainer to switch out the user and pass effects along to its replacement."
+	},
+	"encore": {
+		"nom": "Encore",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 5,
+		"id_en": "encore",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 91,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Forces the target to repeat its last used move every turn for 2 to 6 turns."
+	},
+	"poursuite": {
+		"nom": "Poursuite",
+		"type": "tenebres",
+		"categorie": "physique",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "pursuit",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 129,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Has double power against, and can hit, Pokémon attempting to switch out."
+	},
+	"tour_rapide": {
+		"nom": "Tour Rapide",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 50,
+		"precision": 100,
+		"pp": 40,
+		"id_en": "rapid-spin",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 130,
+		"chance_effet": 100,
+		"effets": {
+			"stades": [
+				{
+					"stat": "vit",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 7
+		},
+		"description_en": "Frees the user from binding moves, removes Leech Seed, and blows away Spikes."
+	},
+	"doux_parfum": {
+		"nom": "Doux Parfum",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "sweet-scent",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 25,
+		"effets": {
+			"stades": [
+				{
+					"stat": "esquive",
+					"delta": -2,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s evasion by one stage."
+	},
+	"queue_de_fer": {
+		"nom": "Queue de Fer",
+		"type": "acier",
+		"categorie": "physique",
+		"puissance": 100,
+		"precision": 75,
+		"pp": 15,
+		"id_en": "iron-tail",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 70,
+		"chance_effet": 30,
+		"machine": "CT23",
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 30,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Defense by one stage."
+	},
+	"griffe_acier": {
+		"nom": "Griffe Acier",
+		"type": "acier",
+		"categorie": "physique",
+		"puissance": 50,
+		"precision": 95,
+		"pp": 35,
+		"id_en": "metal-claw",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 140,
+		"chance_effet": 10,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 10,
+			"meta": 7
+		},
+		"description_en": "Has a chance to raise the user’s Attack by one stage."
+	},
+	"corps_perdu": {
+		"nom": "Corps Perdu",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 70,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "vital-throw",
+		"priorite": -1,
+		"cible": "selected-pokemon",
+		"effet_id": 79,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Never misses."
+	},
+	"aurore": {
+		"nom": "Aurore",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "morning-sun",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 133,
+		"effets": {
+			"soin": 50,
+			"meta": 3
+		},
+		"description_en": "Heals the user by half its max HP.  Affected by weather."
+	},
+	"synthese": {
+		"nom": "Synthèse",
+		"type": "plante",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "synthesis",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 133,
+		"effets": {
+			"soin": 50,
+			"meta": 3
+		},
+		"description_en": "Heals the user by half its max HP.  Affected by weather."
+	},
+	"rayon_lune": {
+		"nom": "Rayon Lune",
+		"type": "fee",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "moonlight",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 133,
+		"effets": {
+			"soin": 50,
+			"meta": 3
+		},
+		"description_en": "Heals the user by half its max HP.  Affected by weather."
+	},
+	"puissance_cachee": {
+		"nom": "Puissance Cachée",
+		"type": "normal",
+		"categorie": "speciale",
+		"puissance": 60,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "hidden-power",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 136,
+		"machine": "CT10",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Power and type depend upon user’s IVs.  Power can range from 30 to 70."
+	},
+	"coup_croix": {
+		"nom": "Coup Croix",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 100,
+		"precision": 80,
+		"pp": 5,
+		"id_en": "cross-chop",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 44,
+		"effets": {
+			"crit": 1,
+			"meta": 0
+		},
+		"description_en": "Has an increased chance for a critical hit."
+	},
+	"ouragan": {
+		"nom": "Ouragan",
+		"type": "dragon",
+		"categorie": "speciale",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "twister",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 147,
+		"chance_effet": 20,
+		"effets": {
+			"peur": 20,
+			"meta": 0
+		},
+		"description_en": "Has a chance to make the target flinch."
+	},
+	"danse_pluie": {
+		"nom": "Danse Pluie",
+		"type": "eau",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "rain-dance",
+		"priorite": 0,
+		"cible": "entire-field",
+		"effet_id": 137,
+		"machine": "CT18",
+		"effets": {
+			"meta": 10
+		},
+		"description_en": "Changes the weather to rain for five turns."
+	},
+	"zenith": {
+		"nom": "Zénith",
+		"type": "feu",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "sunny-day",
+		"priorite": 0,
+		"cible": "entire-field",
+		"effet_id": 138,
+		"machine": "CT11",
+		"effets": {
+			"meta": 10
+		},
+		"description_en": "Changes the weather to sunny for five turns."
+	},
+	"machouille": {
+		"nom": "Mâchouille",
+		"type": "tenebres",
+		"categorie": "physique",
+		"puissance": 80,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "crunch",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 70,
+		"chance_effet": 20,
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 20,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Defense by one stage."
+	},
+	"voile_miroir": {
+		"nom": "Voile Miroir",
+		"type": "psy",
+		"categorie": "speciale",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "mirror-coat",
+		"priorite": -5,
+		"cible": "specific-move",
+		"effet_id": 145,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts twice the damage the user received from the last special hit it took."
+	},
+	"boost": {
+		"nom": "Boost",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "psych-up",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 144,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Discards the user’s stat changes and copies the target’s."
+	},
+	"vitesse_extreme": {
+		"nom": "Vitesse Extrême",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 80,
+		"precision": 100,
+		"pp": 5,
+		"id_en": "extreme-speed",
+		"priorite": 2,
+		"cible": "selected-pokemon",
+		"effet_id": 104,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"pouvoir_antique": {
+		"nom": "Pouvoir Antique",
+		"type": "roche",
+		"categorie": "speciale",
+		"puissance": 60,
+		"precision": 100,
+		"pp": 5,
+		"id_en": "ancient-power",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 141,
+		"chance_effet": 10,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": 1,
+					"sur": "soi"
+				},
+				{
+					"stat": "def",
+					"delta": 1,
+					"sur": "soi"
+				},
+				{
+					"stat": "spa",
+					"delta": 1,
+					"sur": "soi"
+				},
+				{
+					"stat": "spd",
+					"delta": 1,
+					"sur": "soi"
+				},
+				{
+					"stat": "vit",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 10,
+			"meta": 7
+		},
+		"description_en": "Has a chance to raise all of the user’s stats by one stage."
+	},
+	"ballombre": {
+		"nom": "Ball’Ombre",
+		"type": "spectre",
+		"categorie": "speciale",
+		"puissance": 80,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "shadow-ball",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 73,
+		"chance_effet": 20,
+		"machine": "CT30",
+		"effets": {
+			"stades": [
+				{
+					"stat": "spd",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 20,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Special Defense by one stage."
+	},
+	"prescience": {
+		"nom": "Prescience",
+		"type": "psy",
+		"categorie": "speciale",
+		"puissance": 120,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "future-sight",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 149,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Hits the target two turns later."
+	},
+	"eclate_roc": {
+		"nom": "Éclate-Roc",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "rock-smash",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 70,
+		"chance_effet": 50,
+		"machine": "CS06",
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 50,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Defense by one stage."
+	},
+	"siphon": {
+		"nom": "Siphon",
+		"type": "eau",
+		"categorie": "speciale",
+		"puissance": 35,
+		"precision": 85,
+		"pp": 15,
+		"id_en": "whirlpool",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 262,
+		"chance_effet": 100,
+		"effets": {
+			"statut": "piege",
+			"statut_chance": 100,
+			"tours": [
+				5,
+				6
+			],
+			"meta": 4
+		},
+		"description_en": "Prevents the target from leaving battle and inflicts 1/16 its max HP in damage for 2-5 turns."
+	},
+	"baston": {
+		"nom": "Baston",
+		"type": "tenebres",
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "beat-up",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 155,
+		"effets": {
+			"coups": [
+				6,
+				6
+			],
+			"meta": 0
+		},
+		"description_en": "Hits once for every conscious Pokémon the trainer has."
+	},
+	"bluff": {
+		"nom": "Bluff",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 40,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "fake-out",
+		"priorite": 3,
+		"cible": "selected-pokemon",
+		"effet_id": 159,
+		"chance_effet": 100,
+		"effets": {
+			"peur": 100,
+			"meta": 0
+		},
+		"description_en": "Can only be used as the first move after the user enters battle.  Causes the target to flinch."
+	},
+	"brouhaha": {
+		"nom": "Brouhaha",
+		"type": "normal",
+		"categorie": "speciale",
+		"puissance": 90,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "uproar",
+		"priorite": 0,
+		"cible": "random-opponent",
+		"effet_id": 160,
+		"effets": {
+			"tours": [
+				3,
+				3
+			],
+			"meta": 0
+		},
+		"description_en": "Forced to use this move for several turns.  Pokémon cannot fall asleep in that time."
+	},
+	"stockage": {
+		"nom": "Stockage",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "stockpile",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 161,
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": 1,
+					"sur": "soi"
+				},
+				{
+					"stat": "spd",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 13
+		},
+		"description_en": "Stores energy up to three times for use with Spit Up and Swallow."
+	},
+	"relache": {
+		"nom": "Relâche",
+		"type": "normal",
+		"categorie": "speciale",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "spit-up",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 162,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Power is 100 times the amount of energy Stockpiled."
+	},
+	"avale": {
+		"nom": "Avale",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "swallow",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 163,
+		"effets": {
+			"soin": 25,
+			"meta": 3
+		},
+		"description_en": "Recovers 1/4 HP after one Stockpile, 1/2 HP after two Stockpiles, or full HP after three Stockpiles."
+	},
+	"canicule": {
+		"nom": "Canicule",
+		"type": "feu",
+		"categorie": "speciale",
+		"puissance": 95,
+		"precision": 90,
+		"pp": 10,
+		"id_en": "heat-wave",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 5,
+		"chance_effet": 10,
+		"effets": {
+			"statut": "brulure",
+			"statut_chance": 10,
+			"meta": 4
+		},
+		"description_en": "Has a chance to burn the target."
+	},
+	"grele": {
+		"nom": "Grêle",
+		"type": "glace",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "hail",
+		"priorite": 0,
+		"cible": "entire-field",
+		"effet_id": 165,
+		"machine": "CT07",
+		"effets": {
+			"meta": 10
+		},
+		"description_en": "Changes the weather to a hailstorm for five turns."
+	},
+	"tourmente": {
+		"nom": "Tourmente",
+		"type": "tenebres",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "torment",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 166,
+		"machine": "CT41",
+		"effets": {
+			"statut": "tourment",
+			"statut_chance": 100,
+			"meta": 1
+		},
+		"description_en": "Prevents the target from using the same move twice in a row."
+	},
+	"flatterie": {
+		"nom": "Flatterie",
+		"type": "tenebres",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "flatter",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 167,
+		"effets": {
+			"statut": "confusion",
+			"statut_chance": 100,
+			"tours": [
+				2,
+				5
+			],
+			"stades": [
+				{
+					"stat": "spa",
+					"delta": 1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 5
+		},
+		"description_en": "Raises the target’s Special Attack by one stage and confuses the target."
+	},
+	"feu_follet": {
+		"nom": "Feu Follet",
+		"type": "feu",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 85,
+		"pp": 15,
+		"id_en": "will-o-wisp",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 168,
+		"effets": {
+			"statut": "brulure",
+			"statut_chance": 100,
+			"meta": 1
+		},
+		"description_en": "Burns the target."
+	},
+	"souvenir": {
+		"nom": "Souvenir",
+		"type": "tenebres",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "memento",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 169,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": -2,
+					"sur": "cible"
+				},
+				{
+					"stat": "spa",
+					"delta": -2,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 13
+		},
+		"description_en": "Lowers the target’s Attack and Special Attack by two stages.  User faints."
+	},
+	"facade": {
+		"nom": "Façade",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 70,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "facade",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 170,
+		"machine": "CT42",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Power doubles if user is burned, paralyzed, or poisoned."
+	},
+	"mitra_poing": {
+		"nom": "Mitra-Poing",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 150,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "focus-punch",
+		"priorite": -3,
+		"cible": "selected-pokemon",
+		"effet_id": 171,
+		"machine": "CT01",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "If the user takes damage before attacking, the attack is canceled."
+	},
+	"stimulant": {
+		"nom": "Stimulant",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 70,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "smelling-salts",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 172,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "If the target is paralyzed, inflicts double damage and cures the paralysis."
+	},
+	"par_ici": {
+		"nom": "Par Ici",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "follow-me",
+		"priorite": 2,
+		"cible": "user",
+		"effet_id": 173,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Redirects the target’s single-target effects to the user for this turn."
+	},
+	"force_nature": {
+		"nom": "Force Nature",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "nature-power",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 174,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Uses a move which depends upon the terrain."
+	},
+	"chargeur": {
+		"nom": "Chargeur",
+		"type": "electrik",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "charge",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 175,
+		"effets": {
+			"stades": [
+				{
+					"stat": "spd",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Special Defense by one stage.  User’s Electric moves have doubled power next turn."
+	},
+	"provoc": {
+		"nom": "Provoc",
+		"type": "tenebres",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "taunt",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 176,
+		"machine": "CT12",
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "For the next few turns, the target can only use damaging moves."
+	},
+	"coup_dmain": {
+		"nom": "Coup d’Main",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "helping-hand",
+		"priorite": 5,
+		"cible": "ally",
+		"effet_id": 177,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Ally’s next move inflicts half more damage."
+	},
+	"tour_de_magie": {
+		"nom": "Tour de Magie",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "trick",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 178,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "User and target swap items."
+	},
+	"imitation": {
+		"nom": "Imitation",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "role-play",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 179,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Copies the target’s ability."
+	},
+	"vu": {
+		"nom": "Vœu",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "wish",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 180,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "User will recover half its max HP at the end of the next turn."
+	},
+	"assistance": {
+		"nom": "Assistance",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "assist",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 181,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Randomly selects and uses one of the trainer’s other Pokémon’s moves."
+	},
+	"racines": {
+		"nom": "Racines",
+		"type": "plante",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "ingrain",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 182,
+		"effets": {
+			"statut": "racines",
+			"statut_chance": 100,
+			"meta": 1
+		},
+		"description_en": "Prevents the user from leaving battle.  User regains 1/16 of its max HP every turn."
+	},
+	"surpuissance": {
+		"nom": "Surpuissance",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 120,
+		"precision": 100,
+		"pp": 5,
+		"id_en": "superpower",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 183,
+		"chance_effet": 100,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": -1,
+					"sur": "soi"
+				},
+				{
+					"stat": "def",
+					"delta": -1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 7
+		},
+		"description_en": "Lowers the user’s Attack and Defense by one stage after inflicting damage."
+	},
+	"reflet_magik": {
+		"nom": "Reflet Magik",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 15,
+		"id_en": "magic-coat",
+		"priorite": 4,
+		"cible": "user",
+		"effet_id": 184,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Reflects back the first effect move used on the user this turn."
+	},
+	"recyclage": {
+		"nom": "Recyclage",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "recycle",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 185,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "User recovers the item it last used up."
+	},
+	"vendetta": {
+		"nom": "Vendetta",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 60,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "revenge",
+		"priorite": -4,
+		"cible": "selected-pokemon",
+		"effet_id": 186,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts double damage if the user takes damage before attacking this turn."
+	},
+	"casse_brique": {
+		"nom": "Casse-Brique",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 75,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "brick-break",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 187,
+		"machine": "CT31",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Destroys Reflect and Light Screen."
+	},
+	"baillement": {
+		"nom": "Bâillement",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "yawn",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 188,
+		"effets": {
+			"statut": "bailler",
+			"statut_chance": 100,
+			"tours": [
+				2,
+				2
+			],
+			"meta": 1
+		},
+		"description_en": "Target sleeps at the end of the next turn."
+	},
+	"sabotage": {
+		"nom": "Sabotage",
+		"type": "tenebres",
+		"categorie": "physique",
+		"puissance": 65,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "knock-off",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 189,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Target drops its held item."
+	},
+	"effort": {
+		"nom": "Effort",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 5,
+		"id_en": "endeavor",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 190,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Lowers the target’s HP to equal the user’s."
+	},
+	"eruption": {
+		"nom": "Éruption",
+		"type": "feu",
+		"categorie": "speciale",
+		"puissance": 150,
+		"precision": 100,
+		"pp": 5,
+		"id_en": "eruption",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 191,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts more damage when the user has more HP remaining, with a maximum of 150 power."
+	},
+	"echange": {
+		"nom": "Échange",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "skill-swap",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 192,
+		"machine": "CT48",
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "User and target swap abilities."
+	},
+	"possessif": {
+		"nom": "Possessif",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "imprison",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 193,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Prevents the target from using any moves that the user also knows."
+	},
+	"regeneration": {
+		"nom": "Régénération",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "refresh",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 194,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Cleanses the user of a burn, paralysis, or poison."
+	},
+	"rancune": {
+		"nom": "Rancune",
+		"type": "spectre",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "grudge",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 195,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "If the user faints this turn, the PP of the move that fainted it drops to 0."
+	},
+	"saisie": {
+		"nom": "Saisie",
+		"type": "tenebres",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 10,
+		"id_en": "snatch",
+		"priorite": 4,
+		"cible": "user",
+		"effet_id": 196,
+		"machine": "CT49",
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Steals the target’s move, if it’s self-targeted."
+	},
+	"force_cachee": {
+		"nom": "Force Cachée",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 70,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "secret-power",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 198,
+		"chance_effet": 30,
+		"machine": "CT43",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Has a chance to inflict a status effect which depends upon the terrain."
+	},
+	"plongee": {
+		"nom": "Plongée",
+		"type": "eau",
+		"categorie": "physique",
+		"puissance": 80,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "dive",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 256,
+		"machine": "CS08",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "User dives underwater, dodging all attacks, and hits next turn."
+	},
+	"cogne": {
+		"nom": "Cogne",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 15,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "arm-thrust",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 30,
+		"effets": {
+			"coups": [
+				2,
+				5
+			],
+			"meta": 0
+		},
+		"description_en": "Hits 2-5 times in one turn."
+	},
+	"camouflage": {
+		"nom": "Camouflage",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "camouflage",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 214,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "User’s type changes to match the terrain."
+	},
+	"lumi_queue": {
+		"nom": "Lumi-Queue",
+		"type": "insecte",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "tail-glow",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 322,
+		"effets": {
+			"stades": [
+				{
+					"stat": "spa",
+					"delta": 3,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Special Attack by three stages."
+	},
+	"lumi_eclat": {
+		"nom": "Lumi-Éclat",
+		"type": "psy",
+		"categorie": "speciale",
+		"puissance": 95,
+		"precision": 100,
+		"pp": 5,
+		"id_en": "luster-purge",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 73,
+		"chance_effet": 50,
+		"effets": {
+			"stades": [
+				{
+					"stat": "spd",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 50,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Special Defense by one stage."
+	},
+	"ballbrume": {
+		"nom": "Ball’Brume",
+		"type": "psy",
+		"categorie": "speciale",
+		"puissance": 95,
+		"precision": 100,
+		"pp": 5,
+		"id_en": "mist-ball",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 72,
+		"chance_effet": 50,
+		"effets": {
+			"stades": [
+				{
+					"stat": "spa",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 50,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Special Attack by one stage."
+	},
+	"danse_plumes": {
+		"nom": "Danse Plumes",
+		"type": "vol",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "feather-dance",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 59,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": -2,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s Attack by two stages."
+	},
+	"danse_folle": {
+		"nom": "Danse Folle",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "teeter-dance",
+		"priorite": 0,
+		"cible": "all-other-pokemon",
+		"effet_id": 200,
+		"effets": {
+			"statut": "confusion",
+			"statut_chance": 100,
+			"tours": [
+				2,
+				5
+			],
+			"meta": 1
+		},
+		"description_en": "Confuses the target."
+	},
+	"pied_bruleur": {
+		"nom": "Pied Brûleur",
+		"type": "feu",
+		"categorie": "physique",
+		"puissance": 85,
+		"precision": 90,
+		"pp": 10,
+		"id_en": "blaze-kick",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 201,
+		"chance_effet": 10,
+		"effets": {
+			"statut": "brulure",
+			"statut_chance": 10,
+			"crit": 1,
+			"meta": 4
+		},
+		"description_en": "Has an increased chance for a critical hit and a chance to burn the target."
+	},
+	"lance_boue": {
+		"nom": "Lance-Boue",
+		"type": "sol",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 15,
+		"id_en": "mud-sport",
+		"priorite": 0,
+		"cible": "entire-field",
+		"effet_id": 202,
+		"effets": {
+			"meta": 10
+		},
+		"description_en": "Halves all Electric-type damage."
+	},
+	"ballglace": {
+		"nom": "Ball’Glace",
+		"type": "glace",
+		"categorie": "physique",
+		"puissance": 30,
+		"precision": 90,
+		"pp": 20,
+		"id_en": "ice-ball",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 118,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Power doubles every turn this move is used in succession after the first, resetting after five turns."
+	},
+	"poing_dard": {
+		"nom": "Poing Dard",
+		"type": "plante",
+		"categorie": "physique",
+		"puissance": 60,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "needle-arm",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 32,
+		"chance_effet": 30,
+		"effets": {
+			"peur": 30,
+			"meta": 0
+		},
+		"description_en": "Has a chance to make the target flinch."
+	},
+	"paresse": {
+		"nom": "Paresse",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "slack-off",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 33,
+		"effets": {
+			"soin": 50,
+			"meta": 3
+		},
+		"description_en": "Heals the user by half its max HP."
+	},
+	"megaphone": {
+		"nom": "Mégaphone",
+		"type": "normal",
+		"categorie": "speciale",
+		"puissance": 90,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "hyper-voice",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 1,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"crochet_venin": {
+		"nom": "Crochet Venin",
+		"type": "poison",
+		"categorie": "physique",
+		"puissance": 50,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "poison-fang",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 203,
+		"chance_effet": 50,
+		"effets": {
+			"statut": "poison",
+			"statut_chance": 50,
+			"meta": 4
+		},
+		"description_en": "Has a chance to badly poison the target."
+	},
+	"eclate_griffe": {
+		"nom": "Éclate Griffe",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 75,
+		"precision": 95,
+		"pp": 10,
+		"id_en": "crush-claw",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 70,
+		"chance_effet": 50,
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 50,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Defense by one stage."
+	},
+	"rafale_feu": {
+		"nom": "Rafale Feu",
+		"type": "feu",
+		"categorie": "speciale",
+		"puissance": 150,
+		"precision": 90,
+		"pp": 5,
+		"id_en": "blast-burn",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 81,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "User foregoes its next turn to recharge."
+	},
+	"hydroblast": {
+		"nom": "Hydroblast",
+		"type": "eau",
+		"categorie": "speciale",
+		"puissance": 150,
+		"precision": 90,
+		"pp": 5,
+		"id_en": "hydro-cannon",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 81,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "User foregoes its next turn to recharge."
+	},
+	"poing_meteore": {
+		"nom": "Poing Météore",
+		"type": "acier",
+		"categorie": "physique",
+		"puissance": 90,
+		"precision": 90,
+		"pp": 10,
+		"id_en": "meteor-mash",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 140,
+		"chance_effet": 20,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 20,
+			"meta": 7
+		},
+		"description_en": "Has a chance to raise the user’s Attack by one stage."
+	},
+	"etonnement": {
+		"nom": "Étonnement",
+		"type": "spectre",
+		"categorie": "physique",
+		"puissance": 30,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "astonish",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 32,
+		"chance_effet": 30,
+		"effets": {
+			"peur": 30,
+			"meta": 0
+		},
+		"description_en": "Has a chance to make the target flinch."
+	},
+	"ballmeteo": {
+		"nom": "Ball’Météo",
+		"type": "normal",
+		"categorie": "speciale",
+		"puissance": 50,
+		"precision": 100,
+		"pp": 10,
+		"id_en": "weather-ball",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 204,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "If there be weather, this move has doubled power and the weather’s type."
+	},
+	"aromatherapie": {
+		"nom": "Aromathérapie",
+		"type": "plante",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "aromatherapy",
+		"priorite": 0,
+		"cible": "user-and-allies",
+		"effet_id": 103,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Cures the entire party of major status effects."
+	},
+	"croco_larme": {
+		"nom": "Croco Larme",
+		"type": "tenebres",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "fake-tears",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 63,
+		"effets": {
+			"stades": [
+				{
+					"stat": "spd",
+					"delta": -2,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s Special Defense by two stages."
+	},
+	"tranchair": {
+		"nom": "Tranch’Air",
+		"type": "vol",
+		"categorie": "speciale",
+		"puissance": 60,
+		"precision": 95,
+		"pp": 25,
+		"id_en": "air-cutter",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 44,
+		"effets": {
+			"crit": 1,
+			"meta": 0
+		},
+		"description_en": "Has an increased chance for a critical hit."
+	},
+	"surchauffe": {
+		"nom": "Surchauffe",
+		"type": "feu",
+		"categorie": "speciale",
+		"puissance": 130,
+		"precision": 90,
+		"pp": 5,
+		"id_en": "overheat",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 205,
+		"chance_effet": 100,
+		"machine": "CT50",
+		"effets": {
+			"stades": [
+				{
+					"stat": "spa",
+					"delta": -2,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 7
+		},
+		"description_en": "Lowers the user’s Special Attack by two stages after inflicting damage."
+	},
+	"flair": {
+		"nom": "Flair",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 40,
+		"id_en": "odor-sleuth",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 114,
+		"effets": {
+			"statut": "sans_immunite",
+			"statut_chance": 100,
+			"meta": 1
+		},
+		"description_en": "Forces the target to have no Evade, and allows it to be hit by Normal and Fighting moves even if it’s a Ghost."
+	},
+	"tomberoche": {
+		"nom": "Tomberoche",
+		"type": "roche",
+		"categorie": "physique",
+		"puissance": 60,
+		"precision": 95,
+		"pp": 15,
+		"id_en": "rock-tomb",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 71,
+		"chance_effet": 100,
+		"machine": "CT39",
+		"effets": {
+			"stades": [
+				{
+					"stat": "vit",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Speed by one stage."
+	},
+	"vent_argente": {
+		"nom": "Vent Argenté",
+		"type": "insecte",
+		"categorie": "speciale",
+		"puissance": 60,
+		"precision": 100,
+		"pp": 5,
+		"id_en": "silver-wind",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 141,
+		"chance_effet": 10,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": 1,
+					"sur": "soi"
+				},
+				{
+					"stat": "def",
+					"delta": 1,
+					"sur": "soi"
+				},
+				{
+					"stat": "spa",
+					"delta": 1,
+					"sur": "soi"
+				},
+				{
+					"stat": "spd",
+					"delta": 1,
+					"sur": "soi"
+				},
+				{
+					"stat": "vit",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 10,
+			"meta": 7
+		},
+		"description_en": "Has a chance to raise all of the user’s stats by one stage."
+	},
+	"strido_son": {
+		"nom": "Strido-Son",
+		"type": "acier",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 85,
+		"pp": 40,
+		"id_en": "metal-sound",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 63,
+		"effets": {
+			"stades": [
+				{
+					"stat": "spd",
+					"delta": -2,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s Special Defense by two stages."
+	},
+	"sifflherbe": {
+		"nom": "Siffl’Herbe",
+		"type": "plante",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 55,
+		"pp": 15,
+		"id_en": "grass-whistle",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 2,
+		"effets": {
+			"statut": "sommeil",
+			"statut_chance": 100,
+			"tours": [
+				2,
+				4
+			],
+			"meta": 1
+		},
+		"description_en": "Puts the target to sleep."
+	},
+	"chatouille": {
+		"nom": "Chatouille",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "tickle",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 206,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": -1,
+					"sur": "cible"
+				},
+				{
+					"stat": "def",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Lowers the target’s Attack and Defense by one stage."
+	},
+	"force_cosmique": {
+		"nom": "Force Cosmique",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "cosmic-power",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 207,
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": 1,
+					"sur": "soi"
+				},
+				{
+					"stat": "spd",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Defense and Special Defense by one stage."
+	},
+	"gicledo": {
+		"nom": "Giclédo",
+		"type": "eau",
+		"categorie": "speciale",
+		"puissance": 150,
+		"precision": 100,
+		"pp": 5,
+		"id_en": "water-spout",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 191,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts more damage when the user has more HP remaining, with a maximum of 150 power."
+	},
+	"rayon_signal": {
+		"nom": "Rayon Signal",
+		"type": "insecte",
+		"categorie": "speciale",
+		"puissance": 75,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "signal-beam",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 77,
+		"chance_effet": 10,
+		"effets": {
+			"statut": "confusion",
+			"statut_chance": 10,
+			"tours": [
+				2,
+				5
+			],
+			"meta": 4
+		},
+		"description_en": "Has a chance to confuse the target."
+	},
+	"poing_ombre": {
+		"nom": "Poing Ombre",
+		"type": "spectre",
+		"categorie": "physique",
+		"puissance": 60,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "shadow-punch",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 18,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Never misses."
+	},
+	"extrasenseur": {
+		"nom": "Extrasenseur",
+		"type": "psy",
+		"categorie": "speciale",
+		"puissance": 80,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "extrasensory",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 32,
+		"chance_effet": 10,
+		"effets": {
+			"peur": 10,
+			"meta": 0
+		},
+		"description_en": "Has a chance to make the target flinch."
+	},
+	"stratopercut": {
+		"nom": "Stratopercut",
+		"type": "combat",
+		"categorie": "physique",
+		"puissance": 85,
+		"precision": 90,
+		"pp": 15,
+		"id_en": "sky-uppercut",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 208,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage and can hit Bounce and Fly users."
+	},
+	"tourbi_sable": {
+		"nom": "Tourbi-Sable",
+		"type": "sol",
+		"categorie": "physique",
+		"puissance": 35,
+		"precision": 85,
+		"pp": 15,
+		"id_en": "sand-tomb",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 43,
+		"chance_effet": 100,
+		"effets": {
+			"statut": "piege",
+			"statut_chance": 100,
+			"tours": [
+				5,
+				6
+			],
+			"meta": 4
+		},
+		"description_en": "Prevents the target from fleeing and inflicts damage for 2-5 turns."
+	},
+	"glaciation": {
+		"nom": "Glaciation",
+		"type": "glace",
+		"categorie": "speciale",
+		"puissance": 0,
+		"precision": 30,
+		"pp": 5,
+		"id_en": "sheer-cold",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 39,
+		"effets": {
+			"meta": 9
+		},
+		"description_en": "Causes a one-hit KO."
+	},
+	"ocroupi": {
+		"nom": "Ocroupi",
+		"type": "eau",
+		"categorie": "speciale",
+		"puissance": 90,
+		"precision": 85,
+		"pp": 10,
+		"id_en": "muddy-water",
+		"priorite": 0,
+		"cible": "all-opponents",
+		"effet_id": 74,
+		"chance_effet": 30,
+		"effets": {
+			"stades": [
+				{
+					"stat": "precision",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 30,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s accuracy by one stage."
+	},
+	"balle_graine": {
+		"nom": "Balle Graine",
+		"type": "plante",
+		"categorie": "physique",
+		"puissance": 25,
+		"precision": 100,
+		"pp": 30,
+		"id_en": "bullet-seed",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 30,
+		"machine": "CT09",
+		"effets": {
+			"coups": [
+				2,
+				5
+			],
+			"meta": 0
+		},
+		"description_en": "Hits 2-5 times in one turn."
+	},
+	"aeropique": {
+		"nom": "Aéropique",
+		"type": "vol",
+		"categorie": "physique",
+		"puissance": 60,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "aerial-ace",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 18,
+		"machine": "CT40",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Never misses."
+	},
+	"stalactite": {
+		"nom": "Stalactite",
+		"type": "glace",
+		"categorie": "physique",
+		"puissance": 25,
+		"precision": 100,
+		"pp": 30,
+		"id_en": "icicle-spear",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 30,
+		"effets": {
+			"coups": [
+				2,
+				5
+			],
+			"meta": 0
+		},
+		"description_en": "Hits 2-5 times in one turn."
+	},
+	"mur_de_fer": {
+		"nom": "Mur de Fer",
+		"type": "acier",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 15,
+		"id_en": "iron-defense",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 52,
+		"effets": {
+			"stades": [
+				{
+					"stat": "def",
+					"delta": 2,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Defense by two stages."
+	},
+	"barrage": {
+		"nom": "Barrage",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 5,
+		"id_en": "block",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 107,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Prevents the target from leaving battle."
+	},
+	"grondement": {
+		"nom": "Grondement",
+		"type": "normal",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 40,
+		"id_en": "howl",
+		"priorite": 0,
+		"cible": "user-and-allies",
+		"effet_id": 11,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": 1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Attack by one stage."
+	},
+	"draco_griffe": {
+		"nom": "Draco-Griffe",
+		"type": "dragon",
+		"categorie": "physique",
+		"puissance": 80,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "dragon-claw",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 1,
+		"machine": "CT02",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Inflicts regular damage with no additional effect."
+	},
+	"vege_attaque": {
+		"nom": "Végé-Attaque",
+		"type": "plante",
+		"categorie": "speciale",
+		"puissance": 150,
+		"precision": 90,
+		"pp": 5,
+		"id_en": "frenzy-plant",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 81,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "User foregoes its next turn to recharge."
+	},
+	"gonflette": {
+		"nom": "Gonflette",
+		"type": "combat",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "bulk-up",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 209,
+		"machine": "CT08",
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": 1,
+					"sur": "soi"
+				},
+				{
+					"stat": "def",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Attack and Defense by one stage."
+	},
+	"rebond": {
+		"nom": "Rebond",
+		"type": "vol",
+		"categorie": "physique",
+		"puissance": 85,
+		"precision": 85,
+		"pp": 5,
+		"id_en": "bounce",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 264,
+		"chance_effet": 30,
+		"effets": {
+			"statut": "paralysie",
+			"statut_chance": 30,
+			"meta": 4
+		},
+		"description_en": "User bounces high into the air, dodging all attacks, and hits next turn."
+	},
+	"tir_de_boue": {
+		"nom": "Tir de Boue",
+		"type": "sol",
+		"categorie": "speciale",
+		"puissance": 55,
+		"precision": 95,
+		"pp": 15,
+		"id_en": "mud-shot",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 71,
+		"chance_effet": 100,
+		"effets": {
+			"stades": [
+				{
+					"stat": "vit",
+					"delta": -1,
+					"sur": "cible"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 6
+		},
+		"description_en": "Has a chance to lower the target’s Speed by one stage."
+	},
+	"queue_poison": {
+		"nom": "Queue-Poison",
+		"type": "poison",
+		"categorie": "physique",
+		"puissance": 50,
+		"precision": 100,
+		"pp": 25,
+		"id_en": "poison-tail",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 210,
+		"chance_effet": 10,
+		"effets": {
+			"statut": "poison",
+			"statut_chance": 10,
+			"crit": 1,
+			"meta": 4
+		},
+		"description_en": "Has an increased chance for a critical hit and a chance to poison the target."
+	},
+	"implore": {
+		"nom": "Implore",
+		"type": "normal",
+		"categorie": "physique",
+		"puissance": 60,
+		"precision": 100,
+		"pp": 25,
+		"id_en": "covet",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 106,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Takes the target’s item."
+	},
+	"electacle": {
+		"nom": "Électacle",
+		"type": "electrik",
+		"categorie": "physique",
+		"puissance": 120,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "volt-tackle",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 263,
+		"chance_effet": 10,
+		"effets": {
+			"statut": "paralysie",
+			"statut_chance": 10,
+			"recul": 33,
+			"meta": 4
+		},
+		"description_en": "User takes 1/3 the damage inflicted in recoil.  Has a chance to paralyze the target."
+	},
+	"feuille_magik": {
+		"nom": "Feuille Magik",
+		"type": "plante",
+		"categorie": "speciale",
+		"puissance": 60,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "magical-leaf",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 18,
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Never misses."
+	},
+	"tourniquet": {
+		"nom": "Tourniquet",
+		"type": "eau",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 15,
+		"id_en": "water-sport",
+		"priorite": 0,
+		"cible": "entire-field",
+		"effet_id": 211,
+		"effets": {
+			"meta": 10
+		},
+		"description_en": "Halves all Fire-type damage."
+	},
+	"plenitude": {
+		"nom": "Plénitude",
+		"type": "psy",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "calm-mind",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 212,
+		"machine": "CT04",
+		"effets": {
+			"stades": [
+				{
+					"stat": "spa",
+					"delta": 1,
+					"sur": "soi"
+				},
+				{
+					"stat": "spd",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Special Attack and Special Defense by one stage."
+	},
+	"lame_feuille": {
+		"nom": "Lame Feuille",
+		"type": "plante",
+		"categorie": "physique",
+		"puissance": 90,
+		"precision": 100,
+		"pp": 15,
+		"id_en": "leaf-blade",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 44,
+		"effets": {
+			"crit": 1,
+			"meta": 0
+		},
+		"description_en": "Has an increased chance for a critical hit."
+	},
+	"danse_draco": {
+		"nom": "Danse Draco",
+		"type": "dragon",
+		"categorie": "statut",
+		"puissance": 0,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "dragon-dance",
+		"priorite": 0,
+		"cible": "user",
+		"effet_id": 213,
+		"effets": {
+			"stades": [
+				{
+					"stat": "atk",
+					"delta": 1,
+					"sur": "soi"
+				},
+				{
+					"stat": "vit",
+					"delta": 1,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 2
+		},
+		"description_en": "Raises the user’s Attack and Speed by one stage."
+	},
+	"boule_roc": {
+		"nom": "Boule Roc",
+		"type": "roche",
+		"categorie": "physique",
+		"puissance": 25,
+		"precision": 90,
+		"pp": 10,
+		"id_en": "rock-blast",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 30,
+		"effets": {
+			"coups": [
+				2,
+				5
+			],
+			"meta": 0
+		},
+		"description_en": "Hits 2-5 times in one turn."
+	},
+	"onde_de_choc": {
+		"nom": "Onde de Choc",
+		"type": "electrik",
+		"categorie": "speciale",
+		"puissance": 60,
+		"precision": 0,
+		"pp": 20,
+		"id_en": "shock-wave",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 18,
+		"machine": "CT34",
+		"effets": {
+			"meta": 0
+		},
+		"description_en": "Never misses."
+	},
+	"vibraqua": {
+		"nom": "Vibraqua",
+		"type": "eau",
+		"categorie": "speciale",
+		"puissance": 60,
+		"precision": 100,
+		"pp": 20,
+		"id_en": "water-pulse",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 77,
+		"chance_effet": 20,
+		"machine": "CT03",
+		"effets": {
+			"statut": "confusion",
+			"statut_chance": 20,
+			"tours": [
+				2,
+				5
+			],
+			"meta": 4
+		},
+		"description_en": "Has a chance to confuse the target."
+	},
+	"vu_destructeur": {
+		"nom": "Vœu Destructeur",
+		"type": "acier",
+		"categorie": "speciale",
+		"puissance": 140,
+		"precision": 100,
+		"pp": 5,
+		"id_en": "doom-desire",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 149,
+		"effets": {
+			"meta": 13
+		},
+		"description_en": "Hits the target two turns later."
+	},
+	"psycho_boost": {
+		"nom": "Psycho-Boost",
+		"type": "psy",
+		"categorie": "speciale",
+		"puissance": 140,
+		"precision": 90,
+		"pp": 5,
+		"id_en": "psycho-boost",
+		"priorite": 0,
+		"cible": "selected-pokemon",
+		"effet_id": 205,
+		"chance_effet": 100,
+		"effets": {
+			"stades": [
+				{
+					"stat": "spa",
+					"delta": -2,
+					"sur": "soi"
+				}
+			],
+			"stades_chance": 100,
+			"meta": 7
+		},
+		"description_en": "Lowers the user’s Special Attack by two stages after inflicting damage."
 	}
 }

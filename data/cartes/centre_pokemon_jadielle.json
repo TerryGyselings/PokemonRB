@@ -32,7 +32,9 @@
 			"y": 0,
 			"texte": [
 				"Un ordinateur. Il est éteint."
-			]
+			],
+			"evenement": "pc_ouvrir",
+			"si": "starter_choisi"
 		}
 	],
 	"pnj": [

@@ -26,6 +26,7 @@ func b(main, nom: String) -> void:
 	main.boutique.appuyer(nom)
 	await create_timer(0.06).timeout
 func _init() -> void:
+	load("res://scripts/pokemon.gd").deterministe = true
 	var main = load("res://scene/main.tscn").instantiate()
 	root.add_child(main)
 	await process_frame

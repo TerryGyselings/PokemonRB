@@ -252,6 +252,14 @@ func est_coupable(c: Vector2i) -> bool:
 	var l: Vector2i = c - r["origine"]
 	return bool(r["legende"].get(String(r["lignes"][l.y])[l.x], {}).get("coupable", false))
 
+# type de rencontre sauvage de la case ("herbe"... legende : "rencontre"), "" si aucune
+func rencontre_a(c: Vector2i) -> String:
+	var r := _region_a(c)
+	if r.is_empty():
+		return ""
+	var l: Vector2i = c - r["origine"]
+	return String(r["legende"].get(symbole(c), {}).get("rencontre", ""))
+
 # coordonnees locales (dans sa carte JSON) de la case c du monde
 func local_de(c: Vector2i) -> Vector2i:
 	var r := _region_a(c)

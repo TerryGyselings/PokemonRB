@@ -20,6 +20,7 @@ func ouvrir(main) -> void:
 	main._unhandled_input(e)
 	await process_frame
 func _init() -> void:
+	load("res://scripts/pokemon.gd").deterministe = true
 	var Sauvegarde := load("res://scripts/sauvegarde.gd")
 	Sauvegarde.dossier = "user://test_sauvegardes"
 	for s in range(1, 4): Sauvegarde.supprimer(s)

@@ -1,0 +1,11 @@
+{
+	"proba_shiny": 4096,
+	"niveau_max": 100,
+	"iv_max": 31,
+	"ev_max_stat": 252,
+	"ev_max_total": 510,
+	"taille_equipe": 6,
+	"attaques_max": 4,
+	"nb_boites": 14,
+	"taille_boite": 30
+}

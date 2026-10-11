@@ -1,0 +1,572 @@
+{
+	"engrais": {
+		"nom": "Engrais",
+		"description": "Renforce les capacités Plante pour infliger 1.5× de dégâts à 1/3 des PV max ou moins.",
+		"id_anglais": "overgrow"
+	},
+	"chlorophylle": {
+		"nom": "Chlorophylle",
+		"description": "Double la Vitesse sous le soleil intense.",
+		"id_anglais": "chlorophyll"
+	},
+	"brasier": {
+		"nom": "Brasier",
+		"description": "Renforce les capacités Feu pour infliger 1.5× de dégâts à 1/3 des PV max ou moins.",
+		"id_anglais": "blaze"
+	},
+	"force_soleil": {
+		"nom": "Force Soleil",
+		"description": "Augmente l'Attaque Spéciale de 1.5× mais coûte 1/8 des PV max après chaque tour sous soleil intense.",
+		"id_anglais": "solar-power"
+	},
+	"torrent": {
+		"nom": "Torrent",
+		"description": "Renforce les capacités Eau pour infliger 1.5× de dégâts à 1/3 des PV max ou moins.",
+		"id_anglais": "torrent"
+	},
+	"cuvette": {
+		"nom": "Cuvette",
+		"description": "Soigne 1/16 des PV max après chaque tour sous la pluie.",
+		"id_anglais": "rain-dish"
+	},
+	"ecran_poudre": {
+		"nom": "Écran Poudre",
+		"description": "Protège contre les effets additionnels des capacités subies.",
+		"id_anglais": "shield-dust"
+	},
+	"fuite": {
+		"nom": "Fuite",
+		"description": "Garantit la fuite lors de combats sauvages.",
+		"id_anglais": "run-away"
+	},
+	"mue": {
+		"nom": "Mue",
+		"description": "A 33% de chances de soigner n'importe quelle altération majeure de statut après chaque tour.",
+		"id_anglais": "shed-skin"
+	},
+	"il_compose": {
+		"nom": "Œil Composé",
+		"description": "Augmente la précision des capacités de 30%.",
+		"id_anglais": "compound-eyes"
+	},
+	"lentiteintee": {
+		"nom": "Lentiteintée",
+		"description": "Double les dégâts infligés avec les capacités pas très efficaces moves.",
+		"id_anglais": "tinted-lens"
+	},
+	"essaim": {
+		"nom": "Essaim",
+		"description": "Renforce les capacités Insecte pour infliger 1.5× de dégâts à 1/3 des PV max ou moins.",
+		"id_anglais": "swarm"
+	},
+	"sniper": {
+		"nom": "Sniper",
+		"description": "Renforce les coups critiques pour infliger 3× les dégâts plutôt que 2×.",
+		"id_anglais": "sniper"
+	},
+	"regard_vif": {
+		"nom": "Regard Vif",
+		"description": "Empêche la précision d'être baissée.",
+		"id_anglais": "keen-eye"
+	},
+	"pieds_confus": {
+		"nom": "Pieds Confus",
+		"description": "Double l'esquive quand confus.",
+		"id_anglais": "tangled-feet"
+	},
+	"cur_de_coq": {
+		"nom": "Cœur de Coq",
+		"description": "Protège contre les baisses de Défense.",
+		"id_anglais": "big-pecks"
+	},
+	"cran": {
+		"nom": "Cran",
+		"description": "Augmente l'Attaque d'1.5× avec une altération majeure de statut.",
+		"id_anglais": "guts"
+	},
+	"agitation": {
+		"nom": "Agitation",
+		"description": "Renforce les capacités physiques pour augmenter les dégâts de 1.5×, mais diminue leur précision de 0.8×.",
+		"id_anglais": "hustle"
+	},
+	"intimidation": {
+		"nom": "Intimidation",
+		"description": "Diminue l'Attaque des adversaires d'un niveau en entrant au combat.",
+		"id_anglais": "intimidate"
+	},
+	"tension": {
+		"nom": "Tension",
+		"description": "Empêche les Pokémon adverses de manger des Baies tenues.",
+		"id_anglais": "unnerve"
+	},
+	"statik": {
+		"nom": "Statik",
+		"description": "A 30% de chances de paralyser le Pokémon attaquant en cas de contact.",
+		"id_anglais": "static"
+	},
+	"paratonnerre": {
+		"nom": "Paratonnerre",
+		"description": "Redirige les capacités Électrik à cible unique sur ce Pokémon quand c'est possible.  Absorbe les capacités Électrik, augmentant l'Attaque Spéciale d'un niveau.",
+		"id_anglais": "lightning-rod"
+	},
+	"voile_sable": {
+		"nom": "Voile Sable",
+		"description": "Augmente l'esquive de 25% pendant une tempête de sable.  Protège contre les dégâts de la tempête de sable.",
+		"id_anglais": "sand-veil"
+	},
+	"baigne_sable": {
+		"nom": "Baigne Sable",
+		"description": "Double la Vitesse sous une tempête de sable.  Protège contre les dégâts de la tempête de sable.",
+		"id_anglais": "sand-rush"
+	},
+	"point_poison": {
+		"nom": "Point Poison",
+		"description": "A 30% de chances d'empoisonner le Pokémon attaquant en cas de contact.",
+		"id_anglais": "poison-point"
+	},
+	"rivalite": {
+		"nom": "Rivalité",
+		"description": "Augmente les dégâts infligés de 1.25× contre les Pokémon du même genre, mais diminue les dégâts de 0.75× contre ceux du genre opposé.",
+		"id_anglais": "rivalry"
+	},
+	"sans_limite": {
+		"nom": "Sans Limite",
+		"description": "Renforce les capacités avec effets supplémentaires d'1.3× leur puissance, mais empêche leurs effets additionnels.",
+		"id_anglais": "sheer-force"
+	},
+	"joli_sourire": {
+		"nom": "Joli Sourire",
+		"description": "A 30% de chances de rendre amoureux le Pokémon attaquant lors d'un contact.",
+		"id_anglais": "cute-charm"
+	},
+	"garde_magik": {
+		"nom": "Garde Magik",
+		"description": "Protège contre les dégâts non directement causés par une capacité.",
+		"id_anglais": "magic-guard"
+	},
+	"garde_ami": {
+		"nom": "Garde-Ami",
+		"description": "Diminue tous les dégâts directs subis par les Pokémon alliés de 0.75×.",
+		"id_anglais": "friend-guard"
+	},
+	"inconscient": {
+		"nom": "Inconscient",
+		"description": "Ignore les modifications de stat des autres Pokémon pour le calcul des dégâts et précision.",
+		"id_anglais": "unaware"
+	},
+	"torche": {
+		"nom": "Torche",
+		"description": "Protège contre les capacités Feu.  Une fois qu'une a été bloquée, les propres attaques Feu du Pokémon infligent 50% de dégats supplémentaires jusqu'à ce qu'il quitte le combat.",
+		"id_anglais": "flash-fire"
+	},
+	"secheresse": {
+		"nom": "Sécheresse",
+		"description": "Invoque le soleil intense qui dure indéfiniment en entrant au combat.",
+		"id_anglais": "drought"
+	},
+	"battant": {
+		"nom": "Battant",
+		"description": "Augmente l'Attaque Spéciale de deux niveaux quand n'importe quelle stat est diminuée.",
+		"id_anglais": "competitive"
+	},
+	"fouille": {
+		"nom": "Fouille",
+		"description": "Révèle un objet tenu de l'adversaire en entrant au combat.",
+		"id_anglais": "frisk"
+	},
+	"attention": {
+		"nom": "Attention",
+		"description": "Empêche l'apeurement.",
+		"id_anglais": "inner-focus"
+	},
+	"infiltration": {
+		"nom": "Infiltration",
+		"description": "Outrepasse Mur Lumière, Protection, et Rune Protect.",
+		"id_anglais": "infiltrator"
+	},
+	"puanteur": {
+		"nom": "Puanteur",
+		"description": "A 10% de chances d'apeurer le Pokémon cible à chaque coup.",
+		"id_anglais": "stench"
+	},
+	"pose_spore": {
+		"nom": "Pose Spore",
+		"description": "A 30% de chances d'infliger soit la paralysie, le poison, ou le sommeil au Pokémon attaquant lors d'un contact.",
+		"id_anglais": "effect-spore"
+	},
+	"peau_seche": {
+		"nom": "Peau Sèche",
+		"description": "Inflige 1/8 des PV max en dégâts à chaque tour durant un soleil intense, mais soigne 1/8 des PV max sous pluie.  Augmente les dégâts des capacités Feu de 1.25×, mais absorbe les capacités Eau, soignant 1/4 des PV max.",
+		"id_anglais": "dry-skin"
+	},
+	"moiteur": {
+		"nom": "Moiteur",
+		"description": "Empêche Destruction, Explosion, et Boom Final de s'activer tant que le Pokémon est au combat.",
+		"id_anglais": "damp"
+	},
+	"peau_miracle": {
+		"nom": "Peau Miracle",
+		"description": "Diminue la précision de base des capacités non offensives subies à exactement 50%.",
+		"id_anglais": "wonder-skin"
+	},
+	"piege_sable": {
+		"nom": "Piège Sable",
+		"description": "Empêche les adversaires de fuir ou se retirer.  Ne concerne pas les types Vol et les Pokémon dans les airs.",
+		"id_anglais": "arena-trap"
+	},
+	"force_sable": {
+		"nom": "Force Sable",
+		"description": "Renforce les capacités Roche, Sol, et Acier d'1.3× leur puissance sous une tempête de sable.  Protège contre les dégâts de la tempête de sable.",
+		"id_anglais": "sand-force"
+	},
+	"ramassage": {
+		"nom": "Ramassage",
+		"description": "Ramasse les objets tenus utilisés par d'autres Pokémon et lancés.  Peut aussi ramasser un objet après un combat.",
+		"id_anglais": "pickup"
+	},
+	"technicien": {
+		"nom": "Technicien",
+		"description": "Renforce les capacités à 60 de puissance de base ou moins d'1.5× leur puissance.",
+		"id_anglais": "technician"
+	},
+	"echauffement": {
+		"nom": "Échauffement",
+		"description": "Empêche la paralysie.",
+		"id_anglais": "limber"
+	},
+	"ciel_gris": {
+		"nom": "Ciel Gris",
+		"description": "Annule tous les effets de la météo, mais n'empêche pas la météo elle-même.",
+		"id_anglais": "cloud-nine"
+	},
+	"glissade": {
+		"nom": "Glissade",
+		"description": "Double la Vitesse sous la pluie.",
+		"id_anglais": "swift-swim"
+	},
+	"esprit_vital": {
+		"nom": "Esprit Vital",
+		"description": "Empêche le sommeil.",
+		"id_anglais": "vital-spirit"
+	},
+	"colerique": {
+		"nom": "Colérique",
+		"description": "Augmente l'Attaque au maximum des six niveaux en recevant un coup critique.",
+		"id_anglais": "anger-point"
+	},
+	"acharne": {
+		"nom": "Acharné",
+		"description": "Augmente l'Attaque de deux niveaux en ayant n'importe quelle stat baissée.",
+		"id_anglais": "defiant"
+	},
+	"cur_noble": {
+		"nom": "Cœur Noble",
+		"description": "Augmente l'Attaque d'un niveau en subissant des dégâts d'une capacité Ténèbres.",
+		"id_anglais": "justified"
+	},
+	"absorbe_eau": {
+		"nom": "Absorbe-Eau",
+		"description": "Absorbe les capacités Eau, soignant 1/4 des PV max.",
+		"id_anglais": "water-absorb"
+	},
+	"synchro": {
+		"nom": "Synchro",
+		"description": "Copie la brûlure, la paralysie, et le poison reçus au Pokémon qui les a infligés.",
+		"id_anglais": "synchronize"
+	},
+	"annule_garde": {
+		"nom": "Annule Garde",
+		"description": "Assure que toutes les capacités utilisés par et contre le Pokémon touchent.",
+		"id_anglais": "no-guard"
+	},
+	"impassible": {
+		"nom": "Impassible",
+		"description": "Augmente la Vitesse d'un niveau lors d'un apeurement.",
+		"id_anglais": "steadfast"
+	},
+	"gloutonnerie": {
+		"nom": "Gloutonnerie",
+		"description": "Fait manger au Pokémon n'importe quelle Baie tenue déclenchée par des PV bas sous la moitié de ses PV max.",
+		"id_anglais": "gluttony"
+	},
+	"corps_sain": {
+		"nom": "Corps Sain",
+		"description": "Empêche les stats d'être diminuées par d'autres Pokémon.",
+		"id_anglais": "clear-body"
+	},
+	"suintement": {
+		"nom": "Suintement",
+		"description": "Inflige des dégâts aux adversaires qui utilisent des capacités drainantes d'autant qu'elles soigneraient.",
+		"id_anglais": "liquid-ooze"
+	},
+	"tete_de_roc": {
+		"nom": "Tête de Roc",
+		"description": "Protège contre les contrecoups.",
+		"id_anglais": "rock-head"
+	},
+	"fermete": {
+		"nom": "Fermeté",
+		"description": "Empêche d'être mis KO en ayant tous ses PV, laissant 1 PV à la place.  Protège contre les capacités OHKO peu importe son nombre de PV.",
+		"id_anglais": "sturdy"
+	},
+	"corps_ardent": {
+		"nom": "Corps Ardent",
+		"description": "A 30% de chances de brûler le Pokémon attaquant en cas de contact.",
+		"id_anglais": "flame-body"
+	},
+	"benet": {
+		"nom": "Benêt",
+		"description": "Empêche l'attirance et protège contre Séduction.",
+		"id_anglais": "oblivious"
+	},
+	"tempo_perso": {
+		"nom": "Tempo Perso",
+		"description": "Empêche la confusion.",
+		"id_anglais": "own-tempo"
+	},
+	"rege_force": {
+		"nom": "Régé-Force",
+		"description": "Soigne 1/3 des PV max en se retirant.",
+		"id_anglais": "regenerator"
+	},
+	"magnepiege": {
+		"nom": "Magnépiège",
+		"description": "Empêche les adversaires Acier de fuir ou se retirer.",
+		"id_anglais": "magnet-pull"
+	},
+	"analyste": {
+		"nom": "Analyste",
+		"description": "Renforce les capacités de 1.3× leur puissance en agissant en dernier.",
+		"id_anglais": "analytic"
+	},
+	"matinal": {
+		"nom": "Matinal",
+		"description": "Fait passer le sommeil deux fois plus rapidement.",
+		"id_anglais": "early-bird"
+	},
+	"isograisse": {
+		"nom": "Isograisse",
+		"description": "Divise par deux les dommages des capacités Feu et Glace.",
+		"id_anglais": "thick-fat"
+	},
+	"hydratation": {
+		"nom": "Hydratation",
+		"description": "Soigne n'importe quelle altération majeure de statut après chaque tour sous pluie.",
+		"id_anglais": "hydration"
+	},
+	"corps_gel": {
+		"nom": "Corps Gel",
+		"description": "Soigne 1/16 des PV max après chaque tour sous grêle.  Protège contre les dégâts de la grêle.",
+		"id_anglais": "ice-body"
+	},
+	"glu": {
+		"nom": "Glu",
+		"description": "Empêche un objet tenu d'être retiré par un autre Pokémon.",
+		"id_anglais": "sticky-hold"
+	},
+	"toxitouche": {
+		"nom": "Toxitouche",
+		"description": "A 30% de chances d'empoisonner le Pokémon cible lors d'un contact.",
+		"id_anglais": "poison-touch"
+	},
+	"coque_armure": {
+		"nom": "Coque Armure",
+		"description": "Protège contre les coups critiques.",
+		"id_anglais": "shell-armor"
+	},
+	"multi_coups": {
+		"nom": "Multi-Coups",
+		"description": "Étend les capacités de deux à cinq coups et Triple Pied à leur longueur complète à chaque fois.",
+		"id_anglais": "skill-link"
+	},
+	"envelocape": {
+		"nom": "Envelocape",
+		"description": "Protège contre les dégâts de la météo.",
+		"id_anglais": "overcoat"
+	},
+	"levitation": {
+		"nom": "Lévitation",
+		"description": "Évite les capacités Sol.",
+		"id_anglais": "levitate"
+	},
+	"corps_maudit": {
+		"nom": "Corps Maudit",
+		"description": "A 30% de chances d'Entraver n'importe quelle capacité qui frappe le Pokémon.",
+		"id_anglais": "cursed-body"
+	},
+	"armurouillee": {
+		"nom": "Armurouillée",
+		"description": "Augmente la Vitesse et diminue la Défense d'un niveau chacune après être touché par une capacité physique.",
+		"id_anglais": "weak-armor"
+	},
+	"insomnia": {
+		"nom": "Insomnia",
+		"description": "Empêche le sommeil.",
+		"id_anglais": "insomnia"
+	},
+	"prediction": {
+		"nom": "Prédiction",
+		"description": "Révèle la capacité la plus puissante des adversaires en entrant au combat.",
+		"id_anglais": "forewarn"
+	},
+	"hyper_cutter": {
+		"nom": "Hyper Cutter",
+		"description": "Empêche l'Attaque d'être baissée.",
+		"id_anglais": "hyper-cutter"
+	},
+	"anti_bruit": {
+		"nom": "Anti-Bruit",
+		"description": "Protège contre les capacités basées sur le son.",
+		"id_anglais": "soundproof"
+	},
+	"boom_final": {
+		"nom": "Boom Final",
+		"description": "Inflige des dégâts à l'attaquant d'1/4 de ses PV max quand mis KO par une capacité à contact.",
+		"id_anglais": "aftermath"
+	},
+	"recolte": {
+		"nom": "Récolte",
+		"description": "A 50% de chances de restaurer une Baie utilisée après chaque tour si le Pokémon n'a tenu aucun objet entretemps.",
+		"id_anglais": "harvest"
+	},
+	"armurbaston": {
+		"nom": "Armurbaston",
+		"description": "Protège contre les coups critiques.",
+		"id_anglais": "battle-armor"
+	},
+	"temeraire": {
+		"nom": "Téméraire",
+		"description": "Renforce les capacités avec contrecoup d'1.2× leur puissance.",
+		"id_anglais": "reckless"
+	},
+	"delestage": {
+		"nom": "Délestage",
+		"description": "Double la Vitesse en utilisant ou perdant un objet tenu.",
+		"id_anglais": "unburden"
+	},
+	"poing_de_fer": {
+		"nom": "Poing de Fer",
+		"description": "Renforce les capacités à base de coups de poings d'1.2× leur puissance.",
+		"id_anglais": "iron-fist"
+	},
+	"gaz_inhibiteur": {
+		"nom": "Gaz Inhibiteur",
+		"description": "Neutralise les talents de tous les Pokémon au combat.",
+		"id_anglais": "neutralizing-gas"
+	},
+	"medic_nature": {
+		"nom": "Médic Nature",
+		"description": "Soigne n'importe quelle altération majeure de statut en se retirant.",
+		"id_anglais": "natural-cure"
+	},
+	"serenite": {
+		"nom": "Sérénité",
+		"description": "Double les chances d'activation des effets additionnels des capacités.",
+		"id_anglais": "serene-grace"
+	},
+	"cur_soin": {
+		"nom": "Cœur Soin",
+		"description": "A 30% de chances de soigner n'importe quel allié adjacent de n'importe quelle altération majeure de statut après chaque tour.",
+		"id_anglais": "healer"
+	},
+	"feuille_garde": {
+		"nom": "Feuille Garde",
+		"description": "Protège contre les altérations majeures de statut sous soleil intense.",
+		"id_anglais": "leaf-guard"
+	},
+	"querelleur": {
+		"nom": "Querelleur",
+		"description": "Laisse les capacités Normal et Combat du Pokémon frapper les Pokémon Spectre.",
+		"id_anglais": "scrappy"
+	},
+	"ignifu_voile": {
+		"nom": "Ignifu-Voile",
+		"description": "Empêche la brûlure.",
+		"id_anglais": "water-veil"
+	},
+	"lumiattirance": {
+		"nom": "Lumiattirance",
+		"description": "Double le taux de rencontre sauvage.",
+		"id_anglais": "illuminate"
+	},
+	"filtre": {
+		"nom": "Filtre",
+		"description": "Réduit les dégâts subis des capacités super efficaces d'1/4.",
+		"id_anglais": "filter"
+	},
+	"brise_moule": {
+		"nom": "Brise Moule",
+		"description": "Outrepasse les talents des cibles si elles peuvent entraver ou empêcher une capacité.",
+		"id_anglais": "mold-breaker"
+	},
+	"impudence": {
+		"nom": "Impudence",
+		"description": "Augmente l'Attaque d'un niveau en mettant un Pokémon KO.",
+		"id_anglais": "moxie"
+	},
+	"phobique": {
+		"nom": "Phobique",
+		"description": "Augmente la Vitesse d'un niveau en étant frappé par une capacité Ténèbres, Spectre, ou Insecte.",
+		"id_anglais": "rattled"
+	},
+	"imposteur": {
+		"nom": "Imposteur",
+		"description": "Se transforme en entrant au combat.",
+		"id_anglais": "imposter"
+	},
+	"adaptabilite": {
+		"nom": "Adaptabilité",
+		"description": "Augmente le STAB d'1.5× à 2×.",
+		"id_anglais": "adaptability"
+	},
+	"anticipation": {
+		"nom": "Anticipation",
+		"description": "Notifie tous les dresseurs en entrant au combat si un adversaire a une capacité super efficace, Destruction, Explosion, ou une capacité OHKO.",
+		"id_anglais": "anticipation"
+	},
+	"absorbe_volt": {
+		"nom": "Absorbe-Volt",
+		"description": "Absorbe les capacités Électrik, soignant 1/4 des PV max.",
+		"id_anglais": "volt-absorb"
+	},
+	"pied_veloce": {
+		"nom": "Pied Véloce",
+		"description": "Augmente la Vitesse de 1.5× avec une altération majeure de statut.",
+		"id_anglais": "quick-feet"
+	},
+	"calque": {
+		"nom": "Calque",
+		"description": "Copie le talent d'un adversaire en entrant au combat.",
+		"id_anglais": "trace"
+	},
+	"telecharge": {
+		"nom": "Télécharge",
+		"description": "Augmente la stat d'attaque correspondant à la défense la plus faible de l'adversaire d'un niveau en entrant au combat.",
+		"id_anglais": "download"
+	},
+	"pression": {
+		"nom": "Pression",
+		"description": "Augmente le coût de PP des capacités ciblant ce Pokémon de un.",
+		"id_anglais": "pressure"
+	},
+	"vaccin": {
+		"nom": "Vaccin",
+		"description": "Empêche le poison.",
+		"id_anglais": "immunity"
+	},
+	"rideau_neige": {
+		"nom": "Rideau Neige",
+		"description": "Augmente l'esquive de 1.25× sous grêle.  Protège contre les dégâts de la grêle.",
+		"id_anglais": "snow-cloak"
+	},
+	"ecaille_speciale": {
+		"nom": "Écaille Spéciale",
+		"description": "Augmente la Défense d'1.5× avec une altération majeure de statut.",
+		"id_anglais": "marvel-scale"
+	},
+	"multiecaille": {
+		"nom": "Multiécaille",
+		"description": "Divise par deux les dégâts subis en ayant tous ses PV.",
+		"id_anglais": "multiscale"
+	}
+}

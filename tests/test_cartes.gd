@@ -6,6 +6,7 @@ func ko(msg: String) -> void:
 	print("FAIL " + msg)
 	erreurs += 1
 func _init() -> void:
+	load("res://scripts/pokemon.gd").deterministe = true
 	var C = load("res://scripts/carte.gd")
 	var ids: Array = []
 	for f in DirAccess.get_files_at("res://data/cartes"):

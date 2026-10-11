@@ -36,8 +36,25 @@ static func attaque(id: String) -> Dictionary:
 		return {}
 	return d[id]
 
-static func categorie_speciale(type_attaque: String) -> bool:
-	return _lire("types").get("speciaux", []).has(type_attaque)
+# regles generales modifiables (data/regles.json) : proba_shiny, niveau_max, tailles d'equipe/boites...
+static func regle(nom: String, defaut = 0):
+	return _lire("regles").get(nom, defaut)
+
+# nature : { "nom", "plus", "moins" } ; talent : { "nom", "description" } ; courbe : liste des EXP de niv. 1 a 100
+static func nature(id: String) -> Dictionary:
+	return _lire("natures").get(id, {})
+
+static func toutes_les_natures() -> Array:
+	return _lire("natures").keys()
+
+static func talent(id: String) -> Dictionary:
+	return _lire("talents").get(id, {})
+
+static func courbe(id: String) -> Array:
+	return _lire("courbes").get(id, _lire("courbes").get("moyenne_lente", []))
+
+static func nom_type(id: String) -> String:
+	return String(_lire("types").get("noms", {}).get(id, id.capitalize()))
 
 # multiplicateur d'efficacite d'un type d'attaque contre une liste de types defenseurs
 static func efficacite(type_attaque: String, types_defenseur: Array) -> float:
@@ -61,3 +78,22 @@ static func objet(id: String) -> Dictionary:
 
 static func nom_objet(id: String) -> String:
 	return String(objet(id).get("nom", id.replace("_", " ").to_upper()))
+
+# table de rencontres sauvages d'une carte (data/rencontres.json) : { "taux": %/pas, "pokemon": [{espece, min, max, poids}] }
+static func rencontres(carte_id: String, type: String) -> Dictionary:
+	return _lire("rencontres").get(carte_id, {}).get(type, {})
+
+# tire un Pokemon dans une table (selon les poids) : { "espece", "niveau" } ; {} si la table est vide
+static func tirer_rencontre(table: Dictionary, rng: RandomNumberGenerator) -> Dictionary:
+	var liste: Array = table.get("pokemon", [])
+	var total := 0
+	for e in liste:
+		total += int(e.get("poids", 1))
+	if total <= 0:
+		return {}
+	var t := rng.randi_range(1, total)
+	for e in liste:
+		t -= int(e.get("poids", 1))
+		if t <= 0:
+			return {"espece": String(e["espece"]), "niveau": rng.randi_range(int(e["min"]), int(e["max"]))}
+	return {}

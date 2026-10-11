@@ -6,13 +6,14 @@ func ok(c: bool, msg: String) -> void:
 	print(("OK   " if c else "FAIL ") + msg)
 	if not c: erreurs += 1
 func _init() -> void:
+	load("res://scripts/pokemon.gd").deterministe = true
 	var main = load("res://scene/main.tscn").instantiate()
 	root.add_child(main)
 	await process_frame
 	var j = main.joueur
 	var o := Vector2i(0, -40)     # coin haut-gauche de la Route 1 dans le monde
 	main.charger_carte("bourg_palette", Vector2i(12, 3))
-	ok(main.carte.origine.y == -79 and main.carte.hauteur == 101, "monde : hauteur %d (39 + 40 + 22)" % main.carte.hauteur)
+	ok(main.carte.origine.y == -156 and main.carte.hauteur == 178, "monde : hauteur %d (77 + 39 + 40 + 22)" % main.carte.hauteur)
 	ok(main.carte.region_id_a(Vector2i(12, -1)) == "route_1" and main.carte.region_id_a(Vector2i(12, 0)) == "bourg_palette", "pas de superposition")
 	ok(main.carte.symbole(Vector2i(12, -1)) == "g" or main.carte.symbole(Vector2i(12, -1)) == "", "raccord au bourg (symbole %s)" % main.carte.symbole(Vector2i(12, -1)))
 	var rebord := o + Vector2i(3, 5)

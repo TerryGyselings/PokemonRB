@@ -6,6 +6,7 @@ func ko(m: String) -> void:
 	print("FAIL " + m)
 	erreurs += 1
 func _init() -> void:
+	load("res://scripts/pokemon.gd").deterministe = true
 	var f := FileAccess.open("res://data/legende.json", FileAccess.READ)
 	var g: Dictionary = JSON.parse_string(f.get_as_text())
 	var noms := {}

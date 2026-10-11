@@ -1,0 +1,3305 @@
+{
+	"route_1": {
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "roucool",
+					"min": 3,
+					"max": 3,
+					"poids": 35
+				},
+				{
+					"espece": "rattata",
+					"min": 3,
+					"max": 3,
+					"poids": 35
+				},
+				{
+					"espece": "roucool",
+					"min": 2,
+					"max": 2,
+					"poids": 10
+				},
+				{
+					"espece": "rattata",
+					"min": 2,
+					"max": 2,
+					"poids": 10
+				},
+				{
+					"espece": "rattata",
+					"min": 4,
+					"max": 4,
+					"poids": 5
+				},
+				{
+					"espece": "roucool",
+					"min": 4,
+					"max": 4,
+					"poids": 4
+				},
+				{
+					"espece": "roucool",
+					"min": 5,
+					"max": 5,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_10": {
+		"canne": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 5,
+					"poids": 100
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 15,
+					"max": 25,
+					"poids": 80
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 5,
+					"max": 15,
+					"poids": 60
+				},
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "krabby",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "leviator",
+					"min": 15,
+					"max": 25,
+					"poids": 15
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 25,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 35,
+					"poids": 1
+				}
+			]
+		},
+		"eau": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "tentacool",
+					"min": 5,
+					"max": 10,
+					"poids": 60
+				},
+				{
+					"espece": "tentacool",
+					"min": 10,
+					"max": 20,
+					"poids": 30
+				},
+				{
+					"espece": "tentacool",
+					"min": 20,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "tentacool",
+					"min": 30,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "tentacool",
+					"min": 35,
+					"max": 40,
+					"poids": 1
+				}
+			]
+		},
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "piafabec",
+					"min": 16,
+					"max": 16,
+					"poids": 20
+				},
+				{
+					"espece": "voltorbe",
+					"min": 16,
+					"max": 16,
+					"poids": 20
+				},
+				{
+					"espece": "voltorbe",
+					"min": 14,
+					"max": 14,
+					"poids": 15
+				},
+				{
+					"espece": "abo",
+					"min": 11,
+					"max": 11,
+					"poids": 10
+				},
+				{
+					"espece": "abo",
+					"min": 15,
+					"max": 15,
+					"poids": 10
+				},
+				{
+					"espece": "piafabec",
+					"min": 13,
+					"max": 13,
+					"poids": 10
+				},
+				{
+					"espece": "piafabec",
+					"min": 17,
+					"max": 17,
+					"poids": 5
+				},
+				{
+					"espece": "voltorbe",
+					"min": 17,
+					"max": 17,
+					"poids": 5
+				},
+				{
+					"espece": "abo",
+					"min": 13,
+					"max": 13,
+					"poids": 4
+				},
+				{
+					"espece": "abo",
+					"min": 17,
+					"max": 17,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_11": {
+		"canne": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 5,
+					"poids": 100
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 15,
+					"max": 25,
+					"poids": 80
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 5,
+					"max": 15,
+					"poids": 60
+				},
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "krabby",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "leviator",
+					"min": 15,
+					"max": 25,
+					"poids": 15
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 25,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 35,
+					"poids": 1
+				}
+			]
+		},
+		"eau": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "tentacool",
+					"min": 5,
+					"max": 10,
+					"poids": 60
+				},
+				{
+					"espece": "tentacool",
+					"min": 10,
+					"max": 20,
+					"poids": 30
+				},
+				{
+					"espece": "tentacool",
+					"min": 20,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "tentacool",
+					"min": 30,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "tentacool",
+					"min": 35,
+					"max": 40,
+					"poids": 1
+				}
+			]
+		},
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "abo",
+					"min": 14,
+					"max": 14,
+					"poids": 20
+				},
+				{
+					"espece": "piafabec",
+					"min": 15,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "abo",
+					"min": 12,
+					"max": 12,
+					"poids": 15
+				},
+				{
+					"espece": "piafabec",
+					"min": 13,
+					"max": 13,
+					"poids": 10
+				},
+				{
+					"espece": "soporifik",
+					"min": 11,
+					"max": 11,
+					"poids": 10
+				},
+				{
+					"espece": "soporifik",
+					"min": 13,
+					"max": 13,
+					"poids": 10
+				},
+				{
+					"espece": "abo",
+					"min": 15,
+					"max": 15,
+					"poids": 5
+				},
+				{
+					"espece": "piafabec",
+					"min": 17,
+					"max": 17,
+					"poids": 5
+				},
+				{
+					"espece": "soporifik",
+					"min": 15,
+					"max": 15,
+					"poids": 5
+				}
+			]
+		}
+	},
+	"route_12": {
+		"canne": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 5,
+					"poids": 100
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 15,
+					"max": 25,
+					"poids": 80
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 5,
+					"max": 15,
+					"poids": 60
+				},
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "krabby",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "leviator",
+					"min": 15,
+					"max": 25,
+					"poids": 15
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 25,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 35,
+					"poids": 1
+				}
+			]
+		},
+		"eau": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "tentacool",
+					"min": 5,
+					"max": 10,
+					"poids": 60
+				},
+				{
+					"espece": "tentacool",
+					"min": 10,
+					"max": 20,
+					"poids": 30
+				},
+				{
+					"espece": "tentacool",
+					"min": 20,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "tentacool",
+					"min": 30,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "tentacool",
+					"min": 35,
+					"max": 40,
+					"poids": 1
+				}
+			]
+		},
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "mystherbe",
+					"min": 24,
+					"max": 24,
+					"poids": 20
+				},
+				{
+					"espece": "mimitoss",
+					"min": 24,
+					"max": 24,
+					"poids": 20
+				},
+				{
+					"espece": "roucool",
+					"min": 23,
+					"max": 23,
+					"poids": 15
+				},
+				{
+					"espece": "mystherbe",
+					"min": 22,
+					"max": 22,
+					"poids": 10
+				},
+				{
+					"espece": "roucool",
+					"min": 25,
+					"max": 25,
+					"poids": 10
+				},
+				{
+					"espece": "mimitoss",
+					"min": 26,
+					"max": 26,
+					"poids": 10
+				},
+				{
+					"espece": "mystherbe",
+					"min": 26,
+					"max": 26,
+					"poids": 5
+				},
+				{
+					"espece": "roucool",
+					"min": 27,
+					"max": 27,
+					"poids": 5
+				},
+				{
+					"espece": "ortide",
+					"min": 28,
+					"max": 28,
+					"poids": 4
+				},
+				{
+					"espece": "ortide",
+					"min": 30,
+					"max": 30,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_13": {
+		"canne": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 5,
+					"poids": 100
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 15,
+					"max": 25,
+					"poids": 80
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 5,
+					"max": 15,
+					"poids": 60
+				},
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "krabby",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "leviator",
+					"min": 15,
+					"max": 25,
+					"poids": 15
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 25,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 35,
+					"poids": 1
+				}
+			]
+		},
+		"eau": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "tentacool",
+					"min": 5,
+					"max": 10,
+					"poids": 60
+				},
+				{
+					"espece": "tentacool",
+					"min": 10,
+					"max": 20,
+					"poids": 30
+				},
+				{
+					"espece": "tentacool",
+					"min": 20,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "tentacool",
+					"min": 30,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "tentacool",
+					"min": 35,
+					"max": 40,
+					"poids": 1
+				}
+			]
+		},
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "mystherbe",
+					"min": 24,
+					"max": 24,
+					"poids": 20
+				},
+				{
+					"espece": "mimitoss",
+					"min": 24,
+					"max": 24,
+					"poids": 20
+				},
+				{
+					"espece": "mystherbe",
+					"min": 22,
+					"max": 22,
+					"poids": 10
+				},
+				{
+					"espece": "roucool",
+					"min": 27,
+					"max": 27,
+					"poids": 10
+				},
+				{
+					"espece": "roucool",
+					"min": 25,
+					"max": 25,
+					"poids": 10
+				},
+				{
+					"espece": "mimitoss",
+					"min": 26,
+					"max": 26,
+					"poids": 10
+				},
+				{
+					"espece": "mystherbe",
+					"min": 26,
+					"max": 26,
+					"poids": 5
+				},
+				{
+					"espece": "metamorph",
+					"min": 25,
+					"max": 25,
+					"poids": 5
+				},
+				{
+					"espece": "roucoups",
+					"min": 29,
+					"max": 29,
+					"poids": 5
+				},
+				{
+					"espece": "ortide",
+					"min": 28,
+					"max": 28,
+					"poids": 4
+				},
+				{
+					"espece": "ortide",
+					"min": 30,
+					"max": 30,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_14": {
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "mystherbe",
+					"min": 24,
+					"max": 24,
+					"poids": 20
+				},
+				{
+					"espece": "mimitoss",
+					"min": 24,
+					"max": 24,
+					"poids": 20
+				},
+				{
+					"espece": "metamorph",
+					"min": 23,
+					"max": 23,
+					"poids": 15
+				},
+				{
+					"espece": "mystherbe",
+					"min": 22,
+					"max": 22,
+					"poids": 10
+				},
+				{
+					"espece": "roucool",
+					"min": 27,
+					"max": 27,
+					"poids": 10
+				},
+				{
+					"espece": "mimitoss",
+					"min": 26,
+					"max": 26,
+					"poids": 10
+				},
+				{
+					"espece": "mystherbe",
+					"min": 26,
+					"max": 26,
+					"poids": 5
+				},
+				{
+					"espece": "ortide",
+					"min": 30,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "roucoups",
+					"min": 29,
+					"max": 29,
+					"poids": 5
+				}
+			]
+		}
+	},
+	"route_15": {
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "mystherbe",
+					"min": 24,
+					"max": 24,
+					"poids": 20
+				},
+				{
+					"espece": "mimitoss",
+					"min": 24,
+					"max": 24,
+					"poids": 20
+				},
+				{
+					"espece": "mystherbe",
+					"min": 22,
+					"max": 22,
+					"poids": 10
+				},
+				{
+					"espece": "roucool",
+					"min": 27,
+					"max": 27,
+					"poids": 10
+				},
+				{
+					"espece": "roucool",
+					"min": 25,
+					"max": 25,
+					"poids": 10
+				},
+				{
+					"espece": "mimitoss",
+					"min": 26,
+					"max": 26,
+					"poids": 10
+				},
+				{
+					"espece": "mystherbe",
+					"min": 26,
+					"max": 26,
+					"poids": 5
+				},
+				{
+					"espece": "metamorph",
+					"min": 25,
+					"max": 25,
+					"poids": 5
+				},
+				{
+					"espece": "roucoups",
+					"min": 29,
+					"max": 29,
+					"poids": 5
+				},
+				{
+					"espece": "ortide",
+					"min": 28,
+					"max": 28,
+					"poids": 4
+				},
+				{
+					"espece": "ortide",
+					"min": 30,
+					"max": 30,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_16": {
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "piafabec",
+					"min": 20,
+					"max": 20,
+					"poids": 20
+				},
+				{
+					"espece": "doduo",
+					"min": 18,
+					"max": 18,
+					"poids": 20
+				},
+				{
+					"espece": "rattata",
+					"min": 18,
+					"max": 18,
+					"poids": 15
+				},
+				{
+					"espece": "rattata",
+					"min": 20,
+					"max": 20,
+					"poids": 10
+				},
+				{
+					"espece": "piafabec",
+					"min": 22,
+					"max": 22,
+					"poids": 10
+				},
+				{
+					"espece": "doduo",
+					"min": 20,
+					"max": 20,
+					"poids": 10
+				},
+				{
+					"espece": "rattata",
+					"min": 22,
+					"max": 22,
+					"poids": 5
+				},
+				{
+					"espece": "doduo",
+					"min": 22,
+					"max": 22,
+					"poids": 5
+				},
+				{
+					"espece": "rattatac",
+					"min": 23,
+					"max": 23,
+					"poids": 4
+				},
+				{
+					"espece": "rattatac",
+					"min": 25,
+					"max": 25,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_17": {
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "piafabec",
+					"min": 20,
+					"max": 20,
+					"poids": 20
+				},
+				{
+					"espece": "doduo",
+					"min": 24,
+					"max": 24,
+					"poids": 20
+				},
+				{
+					"espece": "piafabec",
+					"min": 22,
+					"max": 22,
+					"poids": 10
+				},
+				{
+					"espece": "doduo",
+					"min": 26,
+					"max": 26,
+					"poids": 10
+				},
+				{
+					"espece": "rattatac",
+					"min": 25,
+					"max": 25,
+					"poids": 10
+				},
+				{
+					"espece": "rattatac",
+					"min": 27,
+					"max": 27,
+					"poids": 10
+				},
+				{
+					"espece": "doduo",
+					"min": 28,
+					"max": 28,
+					"poids": 5
+				},
+				{
+					"espece": "rattatac",
+					"min": 29,
+					"max": 29,
+					"poids": 5
+				},
+				{
+					"espece": "rattata",
+					"min": 22,
+					"max": 22,
+					"poids": 5
+				},
+				{
+					"espece": "rapasdepic",
+					"min": 25,
+					"max": 25,
+					"poids": 4
+				},
+				{
+					"espece": "rapasdepic",
+					"min": 27,
+					"max": 27,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_18": {
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "piafabec",
+					"min": 20,
+					"max": 20,
+					"poids": 20
+				},
+				{
+					"espece": "doduo",
+					"min": 24,
+					"max": 24,
+					"poids": 20
+				},
+				{
+					"espece": "piafabec",
+					"min": 22,
+					"max": 22,
+					"poids": 10
+				},
+				{
+					"espece": "doduo",
+					"min": 26,
+					"max": 26,
+					"poids": 10
+				},
+				{
+					"espece": "rattatac",
+					"min": 25,
+					"max": 25,
+					"poids": 10
+				},
+				{
+					"espece": "rapasdepic",
+					"min": 25,
+					"max": 25,
+					"poids": 10
+				},
+				{
+					"espece": "doduo",
+					"min": 28,
+					"max": 28,
+					"poids": 5
+				},
+				{
+					"espece": "rattatac",
+					"min": 29,
+					"max": 29,
+					"poids": 5
+				},
+				{
+					"espece": "rattata",
+					"min": 22,
+					"max": 22,
+					"poids": 5
+				},
+				{
+					"espece": "rapasdepic",
+					"min": 27,
+					"max": 27,
+					"poids": 4
+				},
+				{
+					"espece": "rapasdepic",
+					"min": 29,
+					"max": 29,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"sea_route_19": {
+		"canne": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 5,
+					"poids": 100
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 15,
+					"max": 25,
+					"poids": 80
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 5,
+					"max": 15,
+					"poids": 60
+				},
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "krabby",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "leviator",
+					"min": 15,
+					"max": 25,
+					"poids": 15
+				},
+				{
+					"espece": "hypocean",
+					"min": 25,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 35,
+					"poids": 1
+				}
+			]
+		},
+		"eau": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "tentacool",
+					"min": 5,
+					"max": 10,
+					"poids": 60
+				},
+				{
+					"espece": "tentacool",
+					"min": 10,
+					"max": 20,
+					"poids": 30
+				},
+				{
+					"espece": "tentacool",
+					"min": 20,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "tentacool",
+					"min": 30,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "tentacool",
+					"min": 35,
+					"max": 40,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_2": {
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "rattata",
+					"min": 3,
+					"max": 3,
+					"poids": 20
+				},
+				{
+					"espece": "roucool",
+					"min": 3,
+					"max": 3,
+					"poids": 20
+				},
+				{
+					"espece": "rattata",
+					"min": 4,
+					"max": 4,
+					"poids": 10
+				},
+				{
+					"espece": "roucool",
+					"min": 4,
+					"max": 4,
+					"poids": 10
+				},
+				{
+					"espece": "rattata",
+					"min": 2,
+					"max": 2,
+					"poids": 10
+				},
+				{
+					"espece": "roucool",
+					"min": 2,
+					"max": 2,
+					"poids": 10
+				},
+				{
+					"espece": "rattata",
+					"min": 5,
+					"max": 5,
+					"poids": 5
+				},
+				{
+					"espece": "roucool",
+					"min": 5,
+					"max": 5,
+					"poids": 5
+				},
+				{
+					"espece": "chenipan",
+					"min": 4,
+					"max": 4,
+					"poids": 4
+				},
+				{
+					"espece": "aspicot",
+					"min": 4,
+					"max": 4,
+					"poids": 4
+				},
+				{
+					"espece": "chenipan",
+					"min": 5,
+					"max": 5,
+					"poids": 1
+				},
+				{
+					"espece": "aspicot",
+					"min": 5,
+					"max": 5,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"sea_route_20": {
+		"canne": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 5,
+					"poids": 100
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 15,
+					"max": 25,
+					"poids": 80
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 5,
+					"max": 15,
+					"poids": 60
+				},
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "krabby",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "leviator",
+					"min": 15,
+					"max": 25,
+					"poids": 15
+				},
+				{
+					"espece": "hypocean",
+					"min": 25,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 35,
+					"poids": 1
+				}
+			]
+		},
+		"eau": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "tentacool",
+					"min": 5,
+					"max": 10,
+					"poids": 60
+				},
+				{
+					"espece": "tentacool",
+					"min": 10,
+					"max": 20,
+					"poids": 30
+				},
+				{
+					"espece": "tentacool",
+					"min": 20,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "tentacool",
+					"min": 30,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "tentacool",
+					"min": 35,
+					"max": 40,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"sea_route_21": {
+		"canne": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 5,
+					"poids": 100
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 15,
+					"max": 25,
+					"poids": 80
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 5,
+					"max": 15,
+					"poids": 60
+				},
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "krabby",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "leviator",
+					"min": 15,
+					"max": 25,
+					"poids": 15
+				},
+				{
+					"espece": "hypocean",
+					"min": 25,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 35,
+					"poids": 1
+				}
+			]
+		},
+		"eau": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "tentacool",
+					"min": 5,
+					"max": 10,
+					"poids": 60
+				},
+				{
+					"espece": "tentacool",
+					"min": 10,
+					"max": 20,
+					"poids": 30
+				},
+				{
+					"espece": "tentacool",
+					"min": 20,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "tentacool",
+					"min": 30,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "tentacool",
+					"min": 35,
+					"max": 40,
+					"poids": 1
+				}
+			]
+		},
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "saquedeneu",
+					"min": 22,
+					"max": 22,
+					"poids": 20
+				},
+				{
+					"espece": "saquedeneu",
+					"min": 23,
+					"max": 23,
+					"poids": 20
+				},
+				{
+					"espece": "saquedeneu",
+					"min": 24,
+					"max": 24,
+					"poids": 10
+				},
+				{
+					"espece": "saquedeneu",
+					"min": 21,
+					"max": 21,
+					"poids": 10
+				},
+				{
+					"espece": "saquedeneu",
+					"min": 25,
+					"max": 25,
+					"poids": 10
+				},
+				{
+					"espece": "saquedeneu",
+					"min": 20,
+					"max": 20,
+					"poids": 10
+				},
+				{
+					"espece": "saquedeneu",
+					"min": 19,
+					"max": 19,
+					"poids": 5
+				},
+				{
+					"espece": "saquedeneu",
+					"min": 26,
+					"max": 26,
+					"poids": 5
+				},
+				{
+					"espece": "saquedeneu",
+					"min": 18,
+					"max": 18,
+					"poids": 4
+				},
+				{
+					"espece": "saquedeneu",
+					"min": 27,
+					"max": 27,
+					"poids": 4
+				},
+				{
+					"espece": "saquedeneu",
+					"min": 17,
+					"max": 17,
+					"poids": 1
+				},
+				{
+					"espece": "saquedeneu",
+					"min": 28,
+					"max": 28,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_22": {
+		"canne": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 5,
+					"poids": 100
+				},
+				{
+					"espece": "ptitard",
+					"min": 5,
+					"max": 15,
+					"poids": 60
+				},
+				{
+					"espece": "ptitard",
+					"min": 15,
+					"max": 25,
+					"poids": 40
+				},
+				{
+					"espece": "tetarte",
+					"min": 20,
+					"max": 30,
+					"poids": 40
+				},
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "poissirene",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "leviator",
+					"min": 15,
+					"max": 25,
+					"poids": 15
+				},
+				{
+					"espece": "psykokwak",
+					"min": 15,
+					"max": 25,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 35,
+					"poids": 1
+				}
+			]
+		},
+		"eau": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "psykokwak",
+					"min": 20,
+					"max": 25,
+					"poids": 90
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "psykokwak",
+					"min": 30,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 35,
+					"max": 40,
+					"poids": 1
+				}
+			]
+		},
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "rattata",
+					"min": 3,
+					"max": 3,
+					"poids": 20
+				},
+				{
+					"espece": "ferosinge",
+					"min": 3,
+					"max": 3,
+					"poids": 20
+				},
+				{
+					"espece": "rattata",
+					"min": 4,
+					"max": 4,
+					"poids": 10
+				},
+				{
+					"espece": "ferosinge",
+					"min": 4,
+					"max": 4,
+					"poids": 10
+				},
+				{
+					"espece": "rattata",
+					"min": 2,
+					"max": 2,
+					"poids": 10
+				},
+				{
+					"espece": "ferosinge",
+					"min": 2,
+					"max": 2,
+					"poids": 10
+				},
+				{
+					"espece": "piafabec",
+					"min": 3,
+					"max": 3,
+					"poids": 5
+				},
+				{
+					"espece": "piafabec",
+					"min": 5,
+					"max": 5,
+					"poids": 5
+				},
+				{
+					"espece": "rattata",
+					"min": 5,
+					"max": 5,
+					"poids": 5
+				},
+				{
+					"espece": "ferosinge",
+					"min": 5,
+					"max": 5,
+					"poids": 5
+				}
+			]
+		}
+	},
+	"route_24": {
+		"canne": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 5,
+					"poids": 100
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 15,
+					"max": 25,
+					"poids": 80
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 5,
+					"max": 15,
+					"poids": 60
+				},
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "krabby",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "leviator",
+					"min": 15,
+					"max": 25,
+					"poids": 15
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 25,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 35,
+					"poids": 1
+				}
+			]
+		},
+		"eau": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "tentacool",
+					"min": 5,
+					"max": 10,
+					"poids": 60
+				},
+				{
+					"espece": "tentacool",
+					"min": 10,
+					"max": 20,
+					"poids": 30
+				},
+				{
+					"espece": "tentacool",
+					"min": 20,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "tentacool",
+					"min": 30,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "tentacool",
+					"min": 35,
+					"max": 40,
+					"poids": 1
+				}
+			]
+		},
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "aspicot",
+					"min": 7,
+					"max": 7,
+					"poids": 20
+				},
+				{
+					"espece": "chenipan",
+					"min": 7,
+					"max": 7,
+					"poids": 20
+				},
+				{
+					"espece": "roucool",
+					"min": 11,
+					"max": 11,
+					"poids": 10
+				},
+				{
+					"espece": "mystherbe",
+					"min": 12,
+					"max": 12,
+					"poids": 10
+				},
+				{
+					"espece": "mystherbe",
+					"min": 13,
+					"max": 13,
+					"poids": 10
+				},
+				{
+					"espece": "abra",
+					"min": 10,
+					"max": 10,
+					"poids": 10
+				},
+				{
+					"espece": "roucool",
+					"min": 13,
+					"max": 13,
+					"poids": 5
+				},
+				{
+					"espece": "mystherbe",
+					"min": 14,
+					"max": 14,
+					"poids": 5
+				},
+				{
+					"espece": "coconfort",
+					"min": 8,
+					"max": 8,
+					"poids": 4
+				},
+				{
+					"espece": "abra",
+					"min": 8,
+					"max": 8,
+					"poids": 4
+				},
+				{
+					"espece": "chrysacier",
+					"min": 8,
+					"max": 8,
+					"poids": 1
+				},
+				{
+					"espece": "abra",
+					"min": 12,
+					"max": 12,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_25": {
+		"canne": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 5,
+					"poids": 100
+				},
+				{
+					"espece": "ptitard",
+					"min": 5,
+					"max": 15,
+					"poids": 60
+				},
+				{
+					"espece": "ptitard",
+					"min": 15,
+					"max": 25,
+					"poids": 40
+				},
+				{
+					"espece": "tetarte",
+					"min": 20,
+					"max": 30,
+					"poids": 40
+				},
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "poissirene",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "leviator",
+					"min": 15,
+					"max": 25,
+					"poids": 15
+				},
+				{
+					"espece": "psykokwak",
+					"min": 15,
+					"max": 25,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 35,
+					"poids": 1
+				}
+			]
+		},
+		"eau": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "psykokwak",
+					"min": 20,
+					"max": 25,
+					"poids": 90
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "psykokwak",
+					"min": 30,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 35,
+					"max": 40,
+					"poids": 1
+				}
+			]
+		},
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "aspicot",
+					"min": 8,
+					"max": 8,
+					"poids": 20
+				},
+				{
+					"espece": "chenipan",
+					"min": 8,
+					"max": 8,
+					"poids": 20
+				},
+				{
+					"espece": "roucool",
+					"min": 13,
+					"max": 13,
+					"poids": 10
+				},
+				{
+					"espece": "mystherbe",
+					"min": 14,
+					"max": 14,
+					"poids": 10
+				},
+				{
+					"espece": "mystherbe",
+					"min": 13,
+					"max": 13,
+					"poids": 10
+				},
+				{
+					"espece": "abra",
+					"min": 11,
+					"max": 11,
+					"poids": 10
+				},
+				{
+					"espece": "roucool",
+					"min": 11,
+					"max": 11,
+					"poids": 5
+				},
+				{
+					"espece": "mystherbe",
+					"min": 12,
+					"max": 12,
+					"poids": 5
+				},
+				{
+					"espece": "coconfort",
+					"min": 9,
+					"max": 9,
+					"poids": 4
+				},
+				{
+					"espece": "abra",
+					"min": 9,
+					"max": 9,
+					"poids": 4
+				},
+				{
+					"espece": "chrysacier",
+					"min": 9,
+					"max": 9,
+					"poids": 1
+				},
+				{
+					"espece": "abra",
+					"min": 13,
+					"max": 13,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_3": {
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "piafabec",
+					"min": 6,
+					"max": 6,
+					"poids": 20
+				},
+				{
+					"espece": "roucool",
+					"min": 6,
+					"max": 6,
+					"poids": 20
+				},
+				{
+					"espece": "piafabec",
+					"min": 7,
+					"max": 7,
+					"poids": 10
+				},
+				{
+					"espece": "ferosinge",
+					"min": 7,
+					"max": 7,
+					"poids": 10
+				},
+				{
+					"espece": "nidoran_m",
+					"min": 6,
+					"max": 6,
+					"poids": 10
+				},
+				{
+					"espece": "roucool",
+					"min": 7,
+					"max": 7,
+					"poids": 10
+				},
+				{
+					"espece": "piafabec",
+					"min": 8,
+					"max": 8,
+					"poids": 5
+				},
+				{
+					"espece": "rondoudou",
+					"min": 3,
+					"max": 3,
+					"poids": 5
+				},
+				{
+					"espece": "nidoran_m",
+					"min": 7,
+					"max": 7,
+					"poids": 4
+				},
+				{
+					"espece": "rondoudou",
+					"min": 5,
+					"max": 5,
+					"poids": 4
+				},
+				{
+					"espece": "nidoran_f",
+					"min": 6,
+					"max": 6,
+					"poids": 1
+				},
+				{
+					"espece": "rondoudou",
+					"min": 7,
+					"max": 7,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_4": {
+		"canne": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 5,
+					"poids": 100
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 15,
+					"max": 25,
+					"poids": 80
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 5,
+					"max": 15,
+					"poids": 60
+				},
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "krabby",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "leviator",
+					"min": 15,
+					"max": 25,
+					"poids": 15
+				},
+				{
+					"espece": "hypotrempe",
+					"min": 25,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 35,
+					"poids": 1
+				}
+			]
+		},
+		"eau": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "tentacool",
+					"min": 5,
+					"max": 10,
+					"poids": 60
+				},
+				{
+					"espece": "tentacool",
+					"min": 10,
+					"max": 20,
+					"poids": 30
+				},
+				{
+					"espece": "tentacool",
+					"min": 20,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "tentacool",
+					"min": 30,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "tentacool",
+					"min": 35,
+					"max": 40,
+					"poids": 1
+				}
+			]
+		},
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "piafabec",
+					"min": 10,
+					"max": 10,
+					"poids": 20
+				},
+				{
+					"espece": "rattata",
+					"min": 10,
+					"max": 10,
+					"poids": 20
+				},
+				{
+					"espece": "abo",
+					"min": 6,
+					"max": 6,
+					"poids": 10
+				},
+				{
+					"espece": "abo",
+					"min": 10,
+					"max": 10,
+					"poids": 10
+				},
+				{
+					"espece": "piafabec",
+					"min": 8,
+					"max": 8,
+					"poids": 10
+				},
+				{
+					"espece": "rattata",
+					"min": 8,
+					"max": 8,
+					"poids": 10
+				},
+				{
+					"espece": "piafabec",
+					"min": 12,
+					"max": 12,
+					"poids": 5
+				},
+				{
+					"espece": "rattata",
+					"min": 12,
+					"max": 12,
+					"poids": 5
+				},
+				{
+					"espece": "ferosinge",
+					"min": 10,
+					"max": 10,
+					"poids": 4
+				},
+				{
+					"espece": "abo",
+					"min": 8,
+					"max": 8,
+					"poids": 4
+				},
+				{
+					"espece": "ferosinge",
+					"min": 12,
+					"max": 12,
+					"poids": 1
+				},
+				{
+					"espece": "abo",
+					"min": 12,
+					"max": 12,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_5": {
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "miaouss",
+					"min": 10,
+					"max": 10,
+					"poids": 20
+				},
+				{
+					"espece": "roucool",
+					"min": 13,
+					"max": 13,
+					"poids": 20
+				},
+				{
+					"espece": "roucool",
+					"min": 15,
+					"max": 15,
+					"poids": 15
+				},
+				{
+					"espece": "mystherbe",
+					"min": 13,
+					"max": 13,
+					"poids": 10
+				},
+				{
+					"espece": "miaouss",
+					"min": 12,
+					"max": 12,
+					"poids": 10
+				},
+				{
+					"espece": "mystherbe",
+					"min": 15,
+					"max": 15,
+					"poids": 10
+				},
+				{
+					"espece": "mystherbe",
+					"min": 16,
+					"max": 16,
+					"poids": 5
+				},
+				{
+					"espece": "roucool",
+					"min": 16,
+					"max": 16,
+					"poids": 5
+				},
+				{
+					"espece": "miaouss",
+					"min": 14,
+					"max": 14,
+					"poids": 4
+				},
+				{
+					"espece": "miaouss",
+					"min": 16,
+					"max": 16,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_6": {
+		"canne": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 5,
+					"poids": 100
+				},
+				{
+					"espece": "ptitard",
+					"min": 5,
+					"max": 15,
+					"poids": 60
+				},
+				{
+					"espece": "ptitard",
+					"min": 15,
+					"max": 25,
+					"poids": 40
+				},
+				{
+					"espece": "tetarte",
+					"min": 20,
+					"max": 30,
+					"poids": 40
+				},
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "poissirene",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "leviator",
+					"min": 15,
+					"max": 25,
+					"poids": 15
+				},
+				{
+					"espece": "psykokwak",
+					"min": 15,
+					"max": 25,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 35,
+					"poids": 1
+				}
+			]
+		},
+		"eau": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "psykokwak",
+					"min": 20,
+					"max": 25,
+					"poids": 90
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "psykokwak",
+					"min": 30,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 35,
+					"max": 40,
+					"poids": 1
+				}
+			]
+		},
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "miaouss",
+					"min": 10,
+					"max": 10,
+					"poids": 20
+				},
+				{
+					"espece": "roucool",
+					"min": 13,
+					"max": 13,
+					"poids": 20
+				},
+				{
+					"espece": "roucool",
+					"min": 15,
+					"max": 15,
+					"poids": 15
+				},
+				{
+					"espece": "mystherbe",
+					"min": 13,
+					"max": 13,
+					"poids": 10
+				},
+				{
+					"espece": "miaouss",
+					"min": 12,
+					"max": 12,
+					"poids": 10
+				},
+				{
+					"espece": "mystherbe",
+					"min": 15,
+					"max": 15,
+					"poids": 10
+				},
+				{
+					"espece": "mystherbe",
+					"min": 16,
+					"max": 16,
+					"poids": 5
+				},
+				{
+					"espece": "roucool",
+					"min": 16,
+					"max": 16,
+					"poids": 5
+				},
+				{
+					"espece": "miaouss",
+					"min": 14,
+					"max": 14,
+					"poids": 4
+				},
+				{
+					"espece": "miaouss",
+					"min": 16,
+					"max": 16,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_7": {
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "miaouss",
+					"min": 17,
+					"max": 17,
+					"poids": 25
+				},
+				{
+					"espece": "roucool",
+					"min": 19,
+					"max": 19,
+					"poids": 20
+				},
+				{
+					"espece": "mystherbe",
+					"min": 19,
+					"max": 19,
+					"poids": 10
+				},
+				{
+					"espece": "miaouss",
+					"min": 18,
+					"max": 18,
+					"poids": 10
+				},
+				{
+					"espece": "roucool",
+					"min": 22,
+					"max": 22,
+					"poids": 10
+				},
+				{
+					"espece": "mystherbe",
+					"min": 22,
+					"max": 22,
+					"poids": 10
+				},
+				{
+					"espece": "caninos",
+					"min": 18,
+					"max": 18,
+					"poids": 5
+				},
+				{
+					"espece": "caninos",
+					"min": 20,
+					"max": 20,
+					"poids": 5
+				},
+				{
+					"espece": "miaouss",
+					"min": 19,
+					"max": 19,
+					"poids": 4
+				},
+				{
+					"espece": "miaouss",
+					"min": 20,
+					"max": 20,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_8": {
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "roucool",
+					"min": 18,
+					"max": 18,
+					"poids": 20
+				},
+				{
+					"espece": "miaouss",
+					"min": 18,
+					"max": 18,
+					"poids": 20
+				},
+				{
+					"espece": "abo",
+					"min": 17,
+					"max": 17,
+					"poids": 15
+				},
+				{
+					"espece": "caninos",
+					"min": 16,
+					"max": 16,
+					"poids": 10
+				},
+				{
+					"espece": "roucool",
+					"min": 20,
+					"max": 20,
+					"poids": 10
+				},
+				{
+					"espece": "miaouss",
+					"min": 20,
+					"max": 20,
+					"poids": 10
+				},
+				{
+					"espece": "caninos",
+					"min": 17,
+					"max": 17,
+					"poids": 5
+				},
+				{
+					"espece": "abo",
+					"min": 19,
+					"max": 19,
+					"poids": 5
+				},
+				{
+					"espece": "caninos",
+					"min": 15,
+					"max": 15,
+					"poids": 4
+				},
+				{
+					"espece": "caninos",
+					"min": 18,
+					"max": 18,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_9": {
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "piafabec",
+					"min": 16,
+					"max": 16,
+					"poids": 20
+				},
+				{
+					"espece": "rattata",
+					"min": 16,
+					"max": 16,
+					"poids": 20
+				},
+				{
+					"espece": "rattata",
+					"min": 14,
+					"max": 14,
+					"poids": 15
+				},
+				{
+					"espece": "abo",
+					"min": 11,
+					"max": 11,
+					"poids": 10
+				},
+				{
+					"espece": "abo",
+					"min": 15,
+					"max": 15,
+					"poids": 10
+				},
+				{
+					"espece": "piafabec",
+					"min": 13,
+					"max": 13,
+					"poids": 10
+				},
+				{
+					"espece": "piafabec",
+					"min": 17,
+					"max": 17,
+					"poids": 5
+				},
+				{
+					"espece": "rattata",
+					"min": 17,
+					"max": 17,
+					"poids": 5
+				},
+				{
+					"espece": "abo",
+					"min": 13,
+					"max": 13,
+					"poids": 4
+				},
+				{
+					"espece": "abo",
+					"min": 17,
+					"max": 17,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"route_23": {
+		"canne": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 5,
+					"poids": 100
+				},
+				{
+					"espece": "ptitard",
+					"min": 5,
+					"max": 15,
+					"poids": 60
+				},
+				{
+					"espece": "ptitard",
+					"min": 15,
+					"max": 25,
+					"poids": 40
+				},
+				{
+					"espece": "tetarte",
+					"min": 20,
+					"max": 30,
+					"poids": 40
+				},
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "poissirene",
+					"min": 5,
+					"max": 15,
+					"poids": 20
+				},
+				{
+					"espece": "leviator",
+					"min": 15,
+					"max": 25,
+					"poids": 15
+				},
+				{
+					"espece": "psykokwak",
+					"min": 15,
+					"max": 25,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 35,
+					"poids": 1
+				}
+			]
+		},
+		"eau": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "psykokwak",
+					"min": 20,
+					"max": 25,
+					"poids": 90
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "psykokwak",
+					"min": 30,
+					"max": 35,
+					"poids": 4
+				},
+				{
+					"espece": "psykokwak",
+					"min": 35,
+					"max": 40,
+					"poids": 1
+				}
+			]
+		},
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "ferosinge",
+					"min": 32,
+					"max": 32,
+					"poids": 20
+				},
+				{
+					"espece": "rapasdepic",
+					"min": 40,
+					"max": 40,
+					"poids": 20
+				},
+				{
+					"espece": "ferosinge",
+					"min": 34,
+					"max": 34,
+					"poids": 10
+				},
+				{
+					"espece": "piafabec",
+					"min": 34,
+					"max": 34,
+					"poids": 10
+				},
+				{
+					"espece": "abo",
+					"min": 32,
+					"max": 32,
+					"poids": 10
+				},
+				{
+					"espece": "abo",
+					"min": 34,
+					"max": 34,
+					"poids": 10
+				},
+				{
+					"espece": "colossinge",
+					"min": 42,
+					"max": 42,
+					"poids": 5
+				},
+				{
+					"espece": "arbok",
+					"min": 44,
+					"max": 44,
+					"poids": 5
+				},
+				{
+					"espece": "piafabec",
+					"min": 32,
+					"max": 32,
+					"poids": 5
+				},
+				{
+					"espece": "rapasdepic",
+					"min": 42,
+					"max": 42,
+					"poids": 4
+				},
+				{
+					"espece": "rapasdepic",
+					"min": 44,
+					"max": 44,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"power_plant": {
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "voltorbe",
+					"min": 22,
+					"max": 22,
+					"poids": 20
+				},
+				{
+					"espece": "magneti",
+					"min": 22,
+					"max": 22,
+					"poids": 20
+				},
+				{
+					"espece": "voltorbe",
+					"min": 25,
+					"max": 25,
+					"poids": 10
+				},
+				{
+					"espece": "magneti",
+					"min": 25,
+					"max": 25,
+					"poids": 10
+				},
+				{
+					"espece": "pikachu",
+					"min": 22,
+					"max": 22,
+					"poids": 10
+				},
+				{
+					"espece": "pikachu",
+					"min": 24,
+					"max": 24,
+					"poids": 10
+				},
+				{
+					"espece": "magneton",
+					"min": 31,
+					"max": 31,
+					"poids": 5
+				},
+				{
+					"espece": "magneton",
+					"min": 34,
+					"max": 34,
+					"poids": 5
+				},
+				{
+					"espece": "pikachu",
+					"min": 26,
+					"max": 26,
+					"poids": 5
+				},
+				{
+					"espece": "elektek",
+					"min": 32,
+					"max": 32,
+					"poids": 4
+				},
+				{
+					"espece": "elektek",
+					"min": 35,
+					"max": 35,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"victory_road_2": {
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "machoc",
+					"min": 32,
+					"max": 32,
+					"poids": 40
+				},
+				{
+					"espece": "racaillou",
+					"min": 32,
+					"max": 32,
+					"poids": 40
+				},
+				{
+					"espece": "onix",
+					"min": 40,
+					"max": 40,
+					"poids": 20
+				},
+				{
+					"espece": "onix",
+					"min": 43,
+					"max": 43,
+					"poids": 20
+				},
+				{
+					"espece": "onix",
+					"min": 46,
+					"max": 46,
+					"poids": 20
+				},
+				{
+					"espece": "nosferapti",
+					"min": 32,
+					"max": 32,
+					"poids": 20
+				},
+				{
+					"espece": "machoc",
+					"min": 34,
+					"max": 34,
+					"poids": 20
+				},
+				{
+					"espece": "racaillou",
+					"min": 34,
+					"max": 34,
+					"poids": 20
+				},
+				{
+					"espece": "arbok",
+					"min": 44,
+					"max": 44,
+					"poids": 10
+				},
+				{
+					"espece": "nosferalto",
+					"min": 44,
+					"max": 44,
+					"poids": 10
+				},
+				{
+					"espece": "colossinge",
+					"min": 42,
+					"max": 42,
+					"poids": 10
+				},
+				{
+					"espece": "onix",
+					"min": 45,
+					"max": 45,
+					"poids": 10
+				},
+				{
+					"espece": "onix",
+					"min": 48,
+					"max": 48,
+					"poids": 10
+				},
+				{
+					"espece": "nosferapti",
+					"min": 34,
+					"max": 34,
+					"poids": 10
+				},
+				{
+					"espece": "ossatueur",
+					"min": 44,
+					"max": 44,
+					"poids": 8
+				},
+				{
+					"espece": "machopeur",
+					"min": 44,
+					"max": 44,
+					"poids": 8
+				},
+				{
+					"espece": "machopeur",
+					"min": 46,
+					"max": 46,
+					"poids": 6
+				},
+				{
+					"espece": "ossatueur",
+					"min": 46,
+					"max": 46,
+					"poids": 6
+				},
+				{
+					"espece": "arbok",
+					"min": 46,
+					"max": 46,
+					"poids": 5
+				},
+				{
+					"espece": "nosferalto",
+					"min": 46,
+					"max": 46,
+					"poids": 5
+				},
+				{
+					"espece": "machopeur",
+					"min": 48,
+					"max": 48,
+					"poids": 1
+				},
+				{
+					"espece": "ossatueur",
+					"min": 48,
+					"max": 48,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"safari_zone": {
+		"canne": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 5,
+					"poids": 400
+				},
+				{
+					"espece": "poissirene",
+					"min": 5,
+					"max": 15,
+					"poids": 240
+				},
+				{
+					"espece": "poissirene",
+					"min": 15,
+					"max": 25,
+					"poids": 160
+				},
+				{
+					"espece": "poissoroy",
+					"min": 20,
+					"max": 30,
+					"poids": 160
+				},
+				{
+					"espece": "magicarpe",
+					"min": 5,
+					"max": 15,
+					"poids": 80
+				},
+				{
+					"espece": "ptitard",
+					"min": 5,
+					"max": 15,
+					"poids": 80
+				},
+				{
+					"espece": "minidraco",
+					"min": 15,
+					"max": 25,
+					"poids": 60
+				},
+				{
+					"espece": "psykokwak",
+					"min": 15,
+					"max": 35,
+					"poids": 16
+				},
+				{
+					"espece": "draco",
+					"min": 25,
+					"max": 35,
+					"poids": 4
+				}
+			]
+		},
+		"eau": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "psykokwak",
+					"min": 20,
+					"max": 25,
+					"poids": 360
+				},
+				{
+					"espece": "psykokwak",
+					"min": 25,
+					"max": 30,
+					"poids": 20
+				},
+				{
+					"espece": "psykokwak",
+					"min": 30,
+					"max": 35,
+					"poids": 16
+				},
+				{
+					"espece": "psykokwak",
+					"min": 35,
+					"max": 40,
+					"poids": 4
+				}
+			]
+		},
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "nidoran_m",
+					"min": 22,
+					"max": 22,
+					"poids": 40
+				},
+				{
+					"espece": "noeunoeuf",
+					"min": 25,
+					"max": 25,
+					"poids": 40
+				},
+				{
+					"espece": "doduo",
+					"min": 26,
+					"max": 26,
+					"poids": 40
+				},
+				{
+					"espece": "rhinocorne",
+					"min": 25,
+					"max": 25,
+					"poids": 20
+				},
+				{
+					"espece": "nidoran_m",
+					"min": 24,
+					"max": 24,
+					"poids": 20
+				},
+				{
+					"espece": "rhinocorne",
+					"min": 26,
+					"max": 26,
+					"poids": 20
+				},
+				{
+					"espece": "nidoran_m",
+					"min": 30,
+					"max": 30,
+					"poids": 20
+				},
+				{
+					"espece": "noeunoeuf",
+					"min": 27,
+					"max": 27,
+					"poids": 20
+				},
+				{
+					"espece": "nidorino",
+					"min": 30,
+					"max": 30,
+					"poids": 20
+				},
+				{
+					"espece": "mimitoss",
+					"min": 22,
+					"max": 22,
+					"poids": 15
+				},
+				{
+					"espece": "paras",
+					"min": 22,
+					"max": 22,
+					"poids": 15
+				},
+				{
+					"espece": "paras",
+					"min": 23,
+					"max": 23,
+					"poids": 15
+				},
+				{
+					"espece": "mimitoss",
+					"min": 23,
+					"max": 23,
+					"poids": 15
+				},
+				{
+					"espece": "noeunoeuf",
+					"min": 24,
+					"max": 24,
+					"poids": 10
+				},
+				{
+					"espece": "nidorino",
+					"min": 31,
+					"max": 31,
+					"poids": 10
+				},
+				{
+					"espece": "noeunoeuf",
+					"min": 23,
+					"max": 23,
+					"poids": 10
+				},
+				{
+					"espece": "nidorino",
+					"min": 33,
+					"max": 33,
+					"poids": 10
+				},
+				{
+					"espece": "aeromite",
+					"min": 32,
+					"max": 32,
+					"poids": 10
+				},
+				{
+					"espece": "nidorina",
+					"min": 31,
+					"max": 31,
+					"poids": 5
+				},
+				{
+					"espece": "parasect",
+					"min": 30,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "nidoran_f",
+					"min": 24,
+					"max": 24,
+					"poids": 5
+				},
+				{
+					"espece": "parasect",
+					"min": 25,
+					"max": 25,
+					"poids": 5
+				},
+				{
+					"espece": "nidorina",
+					"min": 30,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "nidoran_f",
+					"min": 30,
+					"max": 30,
+					"poids": 5
+				},
+				{
+					"espece": "insecateur",
+					"min": 23,
+					"max": 23,
+					"poids": 4
+				},
+				{
+					"espece": "kangourex",
+					"min": 25,
+					"max": 25,
+					"poids": 4
+				},
+				{
+					"espece": "leveinard",
+					"min": 26,
+					"max": 26,
+					"poids": 4
+				},
+				{
+					"espece": "tauros",
+					"min": 25,
+					"max": 25,
+					"poids": 4
+				},
+				{
+					"espece": "leveinard",
+					"min": 23,
+					"max": 23,
+					"poids": 1
+				},
+				{
+					"espece": "insecateur",
+					"min": 28,
+					"max": 28,
+					"poids": 1
+				},
+				{
+					"espece": "tauros",
+					"min": 28,
+					"max": 28,
+					"poids": 1
+				},
+				{
+					"espece": "kangourex",
+					"min": 28,
+					"max": 28,
+					"poids": 1
+				}
+			]
+		}
+	},
+	"altering_cave": {
+		"herbe": {
+			"taux": 10,
+			"pokemon": [
+				{
+					"espece": "nosferapti",
+					"min": 10,
+					"max": 10,
+					"poids": 30
+				},
+				{
+					"espece": "nosferapti",
+					"min": 12,
+					"max": 12,
+					"poids": 30
+				},
+				{
+					"espece": "nosferapti",
+					"min": 8,
+					"max": 8,
+					"poids": 15
+				},
+				{
+					"espece": "nosferapti",
+					"min": 14,
+					"max": 14,
+					"poids": 15
+				},
+				{
+					"espece": "nosferapti",
+					"min": 16,
+					"max": 16,
+					"poids": 5
+				},
+				{
+					"espece": "nosferapti",
+					"min": 6,
+					"max": 6,
+					"poids": 5
+				}
+			]
+		}
+	}
+}

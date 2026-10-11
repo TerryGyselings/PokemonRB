@@ -1,0 +1,117 @@
+{
+	"hardi": {
+		"nom": "Hardi"
+	},
+	"assure": {
+		"nom": "Assuré",
+		"plus": "def",
+		"moins": "atk"
+	},
+	"modeste": {
+		"nom": "Modeste",
+		"plus": "spa",
+		"moins": "atk"
+	},
+	"calme": {
+		"nom": "Calme",
+		"plus": "spd",
+		"moins": "atk"
+	},
+	"timide": {
+		"nom": "Timide",
+		"plus": "vit",
+		"moins": "atk"
+	},
+	"solo": {
+		"nom": "Solo",
+		"plus": "atk",
+		"moins": "def"
+	},
+	"docile": {
+		"nom": "Docile"
+	},
+	"doux": {
+		"nom": "Doux",
+		"plus": "spa",
+		"moins": "def"
+	},
+	"gentil": {
+		"nom": "Gentil",
+		"plus": "spd",
+		"moins": "def"
+	},
+	"presse": {
+		"nom": "Pressé",
+		"plus": "vit",
+		"moins": "def"
+	},
+	"rigide": {
+		"nom": "Rigide",
+		"plus": "atk",
+		"moins": "spa"
+	},
+	"malin": {
+		"nom": "Malin",
+		"plus": "def",
+		"moins": "spa"
+	},
+	"pudique": {
+		"nom": "Pudique"
+	},
+	"prudent": {
+		"nom": "Prudent",
+		"plus": "spd",
+		"moins": "spa"
+	},
+	"foufou": {
+		"nom": "Foufou",
+		"plus": "spa",
+		"moins": "spd"
+	},
+	"jovial": {
+		"nom": "Jovial",
+		"plus": "vit",
+		"moins": "spa"
+	},
+	"mauvais": {
+		"nom": "Mauvais",
+		"plus": "atk",
+		"moins": "spd"
+	},
+	"lache": {
+		"nom": "Lâche",
+		"plus": "def",
+		"moins": "spd"
+	},
+	"bizarre": {
+		"nom": "Bizarre"
+	},
+	"naif": {
+		"nom": "Naïf",
+		"plus": "vit",
+		"moins": "spd"
+	},
+	"brave": {
+		"nom": "Brave",
+		"plus": "atk",
+		"moins": "vit"
+	},
+	"relax": {
+		"nom": "Relax",
+		"plus": "def",
+		"moins": "vit"
+	},
+	"discret": {
+		"nom": "Discret",
+		"plus": "spa",
+		"moins": "vit"
+	},
+	"malpoli": {
+		"nom": "Malpoli",
+		"plus": "spd",
+		"moins": "vit"
+	},
+	"serieux": {
+		"nom": "Sérieux"
+	}
+}

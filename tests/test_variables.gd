@@ -5,6 +5,7 @@ func ok(c: bool, msg: String) -> void:
 	print(("OK   " if c else "FAIL ") + msg)
 	if not c: erreurs += 1
 func _init() -> void:
+	load("res://scripts/pokemon.gd").deterministe = true
 	var main = load("res://scene/main.tscn").instantiate()
 	root.add_child(main)
 	await process_frame

@@ -1,0 +1,38 @@
+{
+	"nom": "Poste de garde",
+	"lignes": [
+		"WWWWWPWWWW",
+		"W________W",
+		"W__e____eW",
+		"W________W",
+		"W_V____V_W",
+		"W________W",
+		"W________W",
+		"WWWWWpWWWW"
+	],
+	"depart": [
+		5,
+		6
+	],
+	"portes": [
+		{
+			"x": 5,
+			"y": 7,
+			"vers": "route_22",
+			"arrivee": [
+				-52,
+				-63
+			]
+		}
+	],
+	"interactions": [
+		{
+			"x": 5,
+			"y": 0,
+			"texte": [
+				"Cette porte est fermee. (La carte de l'autre cote n'est pas encore creee.)"
+			]
+		}
+	],
+	"pnj": []
+}

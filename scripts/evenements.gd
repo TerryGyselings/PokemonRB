@@ -20,6 +20,7 @@ extends RefCounted
 #   { "donne_objet": { "id": "colis_chen", "quantite": 1 } }  ajoute un objet au sac (data/objets.json) et le dit
 #   { "retire_objet": { "id": "colis_chen" } }                retire un objet du sac
 #   { "demo_capture": { "espece": "rattata", "niveau": 3, "dresseur": "VIEIL HOMME" } }   demonstration de capture (ecran de combat)
+#   { "pc": true }                                                ouvre le PC (stockage des POKeMON)
 #   { "boutique": { "stock": ["poke_ball", "potion"] } }       ouvre la boutique (ACHETER / VENDRE / SORTIR)
 #   { "soigner": true }                                       soigne toute l'equipe
 #   { "si": { "drapeau": "<nom>", "alors": [actions], "sinon": [actions] } }
@@ -161,6 +162,8 @@ func _action(a: Dictionary) -> void:
 		await t.finished
 		await _main.combat.demo_capture(String(dc["espece"]), int(dc.get("niveau", 3)), String(dc.get("dresseur", "Dresseur")))
 		_main.voile.modulate.a = 0.0
+	elif a.has("pc"):
+		await _main.pc.ouvrir()
 	elif a.has("boutique"):
 		await _main.boutique.ouvrir(a["boutique"].get("stock", []))
 	elif a.has("soigner"):
